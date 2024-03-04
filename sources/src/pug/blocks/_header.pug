@@ -1,2 +1,158 @@
-header.header
-    .container Header
+header.header    
+    .header__container
+        .header__logo
+            img(src="./images/logo.svg", alt="Логотип Вариант Авто" width="216" height="28")
+
+
+        .header__menu
+
+            .header__navigation
+
+                .header__catalog_menu.cmenu 
+                    p.cmenu__heading Каталог
+
+                    a.cmenu__link(href="#")
+                        span Последние поступления 
+                        include ./icon_arrow_right_dark
+
+                    a.cmenu__link(href="#")
+                        span Лучшие предложения
+                        include ./icon_arrow_right_dark
+
+                    button.cmenu__show(type="button")
+                        span.cmenu__burger
+                            span.header__icon
+                                span
+                        | Каталог авто
+
+
+                    .cmenu__wrapper
+                        .container.cmenu__container
+                            ul.cmenu__group.cmenu__group--popular
+                                li: a(href="#")
+                                    span Автомобили для семьи
+                                    span 240
+                                li: a(href="#")
+                                    span Электромобили
+                                    span 84
+                                li: a(href="#")
+                                    span Экономные и надежные
+                                    span 14
+
+
+                            .cmenu__group.cmenu__group--body
+
+                                p.cmenu__name По типу кузова #[span]
+
+                                .cmenu__block
+
+                                    ul.cmenu__list_body
+                                        li: a(href="#") 
+                                                include ./icon_car_body_1
+                                                span Хэтчбек
+                                        li: a(href="#") 
+                                                include ./icon_car_body_2
+                                                span Пикап
+                                        li: a(href="#") 
+                                                include ./icon_car_body_3
+                                                span Внедорожник
+                                        li: a(href="#") 
+                                                include ./icon_car_body_4
+                                                span Седан
+                                        li: a(href="#") 
+                                                include ./icon_car_body_5
+                                                span Минивэн
+
+                                        li: a(href="#") 
+                                                include ./icon_car_body_3
+                                                span Внедорожник 
+                                        li: a(href="#") 
+                                                include ./icon_car_body_4
+                                                span Седан
+                                        li: a(href="#") 
+                                                include ./icon_car_body_5
+                                                span Минивэн
+
+                                        li: button.cmenu__body_toggle(type="button" data-full="Свернуть" data-rolled="Показать все")
+                                            span
+                                                include ./icon_arrow_right_dark
+
+                                            span Показать все
+                                        
+
+
+                            .cmenu__group.cmenu__group--brand
+
+                                p.cmenu__name.cmenu__name_brand По маркам #[span]
+
+                                .cmenu__block
+
+                                    ul.cmenu__list_brand 
+
+                                        li: a(href="#") Lada (ВАЗ)
+                                        li: a(href="#") Lada (ВАЗ)
+                                        li: a(href="#") Daewoo
+                                        li: a(href="#") Audi
+                                        li: a(href="#") Audi
+                                        li: a(href="#") EXEED
+                                        li: a(href="#") Changan
+                                        li: a(href="#") Changan 
+                                        li: a(href="#") Ford
+                                        li: a(href="#") BMW
+                                        li: a(href="#") BMW
+                                        li: a(href="#") Geely
+                                        li: a(href="#") Haval
+                                        li: a(href="#") Haval
+                                        li: a(href="#") Lexus
+                                        li: a(href="#") Land Rover
+                                        li: a(href="#") Land Rover
+                                        li: a.cmenu__brand_toggle(href="#")
+                                            span Показать все
+                                            include ./icon_arrow_right_dark
+
+
+                nav.header__nav
+                    a.header__favorites_small(href="#")
+                        span Избранное
+                        span.header__favorites_amount 21
+
+                    ul.header__list_wide
+                        li: a(href="#") Выкуп
+                        li: a(href="#") Trade In
+                        li: a(href="#") Кредит
+                        li: a(href="#") Комиссионная продажа
+                        li: a(href="#") О компании
+                        li: a(href="#") Отзывы
+                        li: a(href="#") Контакты
+
+                    .header__more
+                        button.header__btn_more(type="button")
+                            span Ещё
+                            svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M7.41 8.58008L12 13.1701L16.59 8.58008L18 10.0001L12 16.0001L6 10.0001L7.41 8.58008Z" fill="#1A1A1A")
+
+                        ul.header__list_more
+                            li: a(href="#") Выкуп
+                            li: a(href="#") Trade In
+                            li: a(href="#") Кредит
+                            li: a(href="#") Комиссионная продажа
+                            li: a(href="#") О компании
+                            li: a(href="#") Отзывы
+                            li: a(href="#") Контакты
+
+            .header__panel
+                .header__contacts
+                    a.header__phone(href="tel:89284091449"): span 8 (928) 409-14-49
+
+                    p.header__adress ул. Ростовское ш., 20 корпус 1
+
+                a.header__favorites(href="#")
+                    svg(width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M10.0511 15.4213L10.051 15.4212L10.0493 15.423L9.99966 15.4726L9.94327 15.4213L9.94323 15.4213C7.96318 13.6247 6.32219 12.1354 5.17576 10.7946C4.02885 9.45323 3.38464 8.26905 3.38464 7.08333C3.38464 5.44428 4.61225 4.21667 6.2513 4.21667C7.5152 4.21667 8.74595 5.03842 9.17971 6.15149L9.19212 6.18333H9.2263H10.7763H10.8105L10.8229 6.15149C11.2567 5.03842 12.4874 4.21667 13.7513 4.21667C15.3904 4.21667 16.618 5.44428 16.618 7.08333C16.618 8.26904 15.9738 9.45322 14.8258 10.7946C13.6784 12.1354 12.0353 13.6246 10.0511 15.4213ZM9.96764 17.8286L10.0013 17.8593L10.035 17.8286L11.2432 16.7287C13.3881 14.7838 15.1725 13.1643 16.4202 11.6379C17.6684 10.1108 18.3846 8.6706 18.3846 7.08333C18.3846 4.48066 16.3455 2.45 13.7513 2.45C12.3062 2.45 10.9193 3.11324 10.0013 4.1571C9.08328 3.11324 7.69637 2.45 6.2513 2.45C3.65708 2.45 1.61797 4.48066 1.61797 7.08333C1.61797 8.6706 2.33415 10.1108 3.58238 11.6379C4.83006 13.1643 6.61453 14.7838 8.75938 16.7287L9.96764 17.8286Z" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0.1")
+                    span.header__favorites_amount 21
+
+        button.header__burger(type="button" aria-label="Открыть меню")
+            span.header__icon
+                span
+
+.overlay

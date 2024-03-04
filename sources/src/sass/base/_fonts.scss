@@ -1,0 +1,43 @@
+// .geologica-light {
+//   font-family: "Geologica", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: 300;
+//   font-style: normal;
+//   font-variation-settings:
+//     "slnt" 0,
+//     "CRSV" 0,
+//     "SHRP" 0;
+// }
+
+// .geologica-regular {
+//   font-family: "Geologica", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: 400;
+//   font-style: normal;
+//   font-variation-settings:
+//     "slnt" 0,
+//     "CRSV" 0,
+//     "SHRP" 0;
+// }
+
+// .geologica-medium {
+//   font-family: "Geologica", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: 500;
+//   font-style: normal;
+//   font-variation-settings:
+//     "slnt" 0,
+//     "CRSV" 0,
+//     "SHRP" 0;
+// }
+
+@font-face {
+  font-family: "Geologica";
+  src: local("../fonts/Geologica Roman Regular"),
+    local("../fonts/Geologica-Roman-Regular"),
+    url("../fonts/GeologicaRoman-Regular.woff2") format("woff2"),
+    url("../fonts/GeologicaRoman-Regular.woff") format("woff"),
+    url("../fonts/GeologicaRoman-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}

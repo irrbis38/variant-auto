@@ -1,7 +1,10 @@
 // colors
 $color_white: #fff;
 $color_black: #000;
+$color_dark: #1a1a1a;
+$color_dark_1c: #1c1c20;
 $color_red_deep: #b01525;
+$color_red_hover: #8e111d;
 $color_green: #36b555;
 $color_blur: #1c69d4;
 $color_grey_f7: #f7f7f7;
@@ -9,6 +12,12 @@ $color_grey_f8: #f8f8f8;
 $color_grey_f2: #f2f2f2;
 $color_grey_45: #454545;
 $color_grey_b6: #b6b6b6;
+$color_grey_7c: #7c7c7c;
+$color_grey_d8: #d8d8d8;
 
 // fonts
-$font_text: "Noto Sans", sans-serif;
+$font_300: "geologica-light", sans-serif;
+$font_400: "geologica-regular", sans-serif;
+$font_500: "geologica-medium", sans-serif;
+
+$font: "Geologica", sans-serif;

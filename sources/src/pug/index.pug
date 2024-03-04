@@ -4,3 +4,310 @@ block vars
 block head
     title Главная страница
 block page
+
+    -
+        var cars = [
+            {
+                name: 'Lada (ВАЗ)',
+                sup: '70'
+            },
+            {
+                name: 'Audi',
+                sup: '54'
+            },
+            {
+                name: 'Changan',
+                sup: '35'
+            },
+            {
+                name: 'BMW',
+                sup: '20'
+            },
+            {
+                name: 'Daewoo',
+                sup: '15'
+            },
+            {
+                name: 'EXEED',
+                sup: '5'
+            },
+            {
+                name: 'Ford',
+                sup: '25'
+            },
+            {
+                name: 'Geely',
+                sup: '45'
+            },
+            {
+                name: 'Haval',
+                sup: '25'
+            },
+            {
+                name: 'Honda',
+                sup: '15'
+            },
+            {
+                name: 'Hongqi',
+                sup: '54'
+            },
+            {
+                name: 'Land Rover',
+                sup: '70'
+            },
+            {
+                name: 'Lexus',
+                sup: '72'
+            },
+            {
+                name: 'Mazda',
+                sup: '15'
+            },
+            {
+                name: 'Mercedes-Benz',
+                sup: '5'
+            },
+            {
+                name: 'Mitsubishi',
+                sup: '12'
+            },
+            {
+                name: 'Volkswagen',
+                sup: '12'
+            },
+            {
+                name: 'Toyota',
+                sup: '54'
+            },
+            {
+                name: 'Skoda',
+                sup: '15'
+            },
+            {
+                name: 'Москвич',
+                sup: '5'
+            },
+            {
+                name: 'Daewoo',
+                sup: '53'
+            },
+            {
+                name: 'EXEED',
+                sup: '12'
+            },
+            {
+                name: 'Ford',
+                sup: '23'
+            },
+            {
+                name: 'Geely',
+                sup: '5'
+            }
+        ]
+
+    section.main_intro
+        .main_intro__container
+            h1.main_intro__title
+                span Авто с&nbsp;пробегом
+
+            p.main_intro__subtitle Которые #[span прошли необходимые] диагностику и подготовку
+
+            .main_intro__wrapper
+
+                -
+                    var main_intro_slides = [
+                        {
+                            src: 'main_intro/main_intro_slide1',
+                            isActive: true
+                        },
+                        {
+                            src: 'main_intro/main_intro_slide2',
+                            isActive: false
+                        },
+                        {
+                            src: 'main_intro/main_intro_slide3',
+                            isActive: false
+                        },
+                        {
+                            src: 'main_intro/main_intro_slide4',
+                            isActive: false
+                        },
+                        {
+                            src: 'main_intro/main_intro_slide5',
+                            isActive: false
+                        }
+                    ];
+
+                .main_intro__slider
+
+                    each slide in main_intro_slides
+
+                        if slide.isActive
+
+                            .main_intro__slide.active
+                                +picture(slide.src, 'jpg', 'x2')
+                                .main_intro__progress
+
+                        else 
+                            
+                            .main_intro__slide
+                                +picture(slide.src, 'jpg', 'x2')
+                                .main_intro__progress
+
+
+
+    .q_selection
+        .container 
+            .q_selection__wrapper
+
+                .q_selection__brand.q_selection__select
+                    input.q_selection__input(type="text" placeholder="Выберите или введите")
+                    span
+                    .q_selection__group
+                        ul.q_selection__list
+                            each item in cars
+                                li: input.q_selection__btn(type="button" value= item.name)
+
+                .q_selection__model.q_selection__select
+                    input.q_selection__input(type="text" placeholder="Модель")
+                    span
+                    .q_selection__group
+                        ul.q_selection__list
+                            each item in cars
+                                li: input.q_selection__btn(type="button" value= item.name)
+
+                .q_selection__price
+                    input(type="text" placeholder="Цена от" data-maska="#" data-maska-tokens="#:[0-9]:multiple")
+                    input(type="text" placeholder="Цена до" data-maska="#" data-maska-tokens="#:[0-9]:multiple")
+
+                a.q_selection__link.btn.btn__red(href="#") Подобрать
+
+
+
+
+
+    section.available 
+        .container 
+            h2.available__title.block__title Автомобили в&nbsp;наличии
+            ul.available__list
+
+                each item in cars
+
+                    li.available__item
+                        a.available__link(href="#")
+                            span= item.name
+                            sup= item.sup
+
+
+    .links 
+        .container 
+            .links__wrapper 
+
+                article.links__block.l_buy
+                    +picture('links/l_buy_bg', 'jpg', 'x2')
+                    h3.links__title 
+                        span Купить 
+                        span автомобиль
+                    p.links__subtitle Перейти в каталог
+                    a(href="#") 
+
+                article.links__block.l_buyback
+                    +picture('links/l_buyback_bg', 'jpg', 'x2')
+                    h3.links__title Выкуп автомобиля
+                    p.links__subtitle Продать по максимальной цене
+                    a(href="#")
+
+                article.links__block.l_exchange
+                    +picture('links/l_exchange_bg', 'jpg', 'x2')
+                    h3.links__title Обмен
+                    p.links__subtitle Сдать автомобиль
+                    a(href="#")
+
+                article.links__block.l_credit
+                    +picture('links/l_credit_bg', 'jpg', 'x2')
+                    h3.links__title Автокредит
+                    p.links__subtitle Подать заявку
+                    a(href="#")
+
+                article.links__block.l_commission
+                    +picture('links/l_commission_bg', 'jpg', 'x2')
+                    h3.links__title Комиссия
+                    p.links__subtitle Поставить на комиссию
+                    a(href="#")
+
+
+
+    section.best_offers 
+        .container 
+            .best_offers__top
+                h2.best_offers__title.block__title
+                    span.green_bg Лучшие  
+                    span предложения
+
+                .best_offers__nav.slider__nav
+                    button.best_offers__prev.slider__nav_btn(aria-label="Показать предыдущий слайд")
+                        include ./blocks/icon_slider_prev
+                    button.best_offers__next.slider__nav_btn(aria-label="Показать следующий слайд")
+                        include ./blocks/icon_slider_next
+
+
+            .best_offers__slider 
+                .best_offers__wrapper 
+
+                    article.best_offers__card.card
+                        button.card__favorites(type="button" aria-label="Добавить в избранное / Убрать из избранного")
+
+                        .card__full
+                            +pictureSize('card/card_full_1', 'jpg', 'x2', '342', '256')
+
+                        .card__previews.swiper
+                            .card__prev_list.swiper-wrapper
+
+                                .card__prev_item.active.swiper-slide(data-full="/images/card/card_full_1")
+                                    +pictureSize('card/card_preview_1', 'jpg', 'x2', '85', '64')
+
+                                .card__prev_item.swiper-slide(data-full="/images/card/card_full_2")
+                                    +pictureSize('card/card_preview_2', 'jpg', 'x2', '85', '64')
+
+                                .card__prev_item.swiper-slide(data-full="/images/card/card_full_3")
+                                    +pictureSize('card/card_preview_3', 'jpg', 'x2', '85', '64')
+                                    
+                                .card__prev_item.swiper-slide(data-full="/images/card/card_full_4")
+                                    +pictureSize('card/card_preview_4', 'jpg', 'x2', '85', '64')
+
+                                .card__prev_item.swiper-slide(data-full="/images/card/card_full_1")
+                                    +pictureSize('card/card_preview_1', 'jpg', 'x2', '85', '64')
+
+                                .card__prev_item.swiper-slide(data-full="/images/card/card_full_2")
+                                    +pictureSize('card/card_preview_2', 'jpg', 'x2', '85', '64')
+
+                        .card__descr
+
+                            h3.card__name BMW X5 2022
+
+                            ul.card__features
+                                li.card__feature Бензин
+                                li.card__feature 1,6
+                                li.card__feature Автомат
+                                li.card__feature 245,345 км
+                                li.card__feature Передний
+
+                            .card__price 985.000₽
+
+                            .card__credit 
+                                .card__cost от 15.067₽/мес.
+                                .card__info
+                                    .card__info_icon
+                                    .card__info_block
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,13 +7,15 @@
 
 // From libs:
 //@import "../libs/LIB_NAME/path/to/style.scss"
-// @import "../libs/swiper/swiper-bundle.min.css";
+@import "../libs/swiper/swiper-bundle.min.css";
 
 /*===== global styles =====*/
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  min-height: 0.001vw; // — Fixes Safari bug with viewport units in calc()
 }
-// min-height: 0.001vw; // — Fixes Safari bug with viewport units in calc()
 
 html {
   min-width: 320px;
@@ -28,7 +30,8 @@ body {
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // font-family: $font_text;
+  // font-family: $font_400;
+  font-family: $font;
   color: $color_black;
   background-color: $color_white;
 }
@@ -41,7 +44,6 @@ body.noscroll {
 .container {
   width: 100%;
   max-width: 1520px;
-  min-width: 320px;
   margin: 0 auto;
   padding: 0 40px;
 

@@ -1,0 +1,210 @@
+.card {
+  position: relative;
+  max-width: 342px;
+  background-color: $color_white;
+  transition: background-color 0.2s ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color_dark;
+
+      .card__descr {
+        border-color: $color_dark;
+      }
+
+      .card__name,
+      .card__price {
+        color: $color_white;
+      }
+
+      .card__feature {
+        color: $color_grey_b6;
+        background-color: $color_grey_45;
+      }
+
+      .card__cost {
+        color: $color_grey_b6;
+      }
+
+      .card__info_icon {
+        &::before {
+          opacity: 0;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.added-to-favoriter {
+    .card__favorites {
+      background: url("../images/heart-red.svg") center / contain no-repeat;
+    }
+  }
+}
+
+.card__favorites {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+  background: url("../images/heart.svg") center / contain no-repeat;
+  cursor: pointer;
+  transition: opacity 0.2s ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.card__full {
+  @include pictureSaveRatio(74.85%, cover);
+}
+
+.card__previews {
+  overflow-x: auto;
+
+  @include hidescrollbar();
+}
+
+.card__prev_list {
+  display: flex;
+  background-color: $color_white;
+}
+
+.card__prev_item {
+  @include pictureSaveRatio(74.29%, cover);
+
+  opacity: 0.5;
+  transition: opacity 0.2s ease-out;
+  cursor: pointer;
+
+  &.active {
+    position: relative;
+    opacity: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $color_red_deep;
+      pointer-events: none;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.card__prev_item {
+  width: 50%;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.card__descr {
+  padding: 0 18px 31px 24px;
+  border: 1px solid $color_grey_f2;
+  border-top: none;
+  transition: border-color 0.2s ease-out;
+}
+
+.card__name {
+  padding: 20px 0 20px;
+  font-weight: 400;
+  font-size: 24px;
+  color: $color_dark;
+  transition: color 0.2s ease-out;
+}
+
+.card__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 6px;
+  margin-bottom: 18px;
+}
+
+.card__feature {
+  padding: 1px 3px;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 169%;
+  color: $color_grey_7c;
+  background-color: $color_grey_f2;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+.card__price {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: $color_dark;
+  transition: color 0.2s ease-out;
+}
+
+.card__credit {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card__cost {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: $color_grey_7c;
+  transition: color 0.2s ease-out;
+}
+
+/////////////
+///
+.card__info_icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size: cover;
+    pointer-events: none;
+    transition: opacity 0.2s ease-out;
+  }
+
+  &::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.16602 14.9993H10.8327V13.3327H9.16602V14.9993ZM9.99935 1.66602C8.905 1.66602 7.82137 1.88156 6.81032 2.30035C5.79927 2.71914 4.88061 3.33297 4.10679 4.10679C2.54399 5.6696 1.66602 7.78921 1.66602 9.99935C1.66602 12.2095 2.54399 14.3291 4.10679 15.8919C4.88061 16.6657 5.79927 17.2796 6.81032 17.6983C7.82137 18.1171 8.905 18.3327 9.99935 18.3327C12.2095 18.3327 14.3291 17.4547 15.8919 15.8919C17.4547 14.3291 18.3327 12.2095 18.3327 9.99935C18.3327 8.905 18.1171 7.82137 17.6983 6.81032C17.2796 5.79927 16.6657 4.88061 15.8919 4.10679C15.1181 3.33297 14.1994 2.71914 13.1884 2.30035C12.1773 1.88156 11.0937 1.66602 9.99935 1.66602ZM9.99935 16.666C6.32435 16.666 3.33268 13.6743 3.33268 9.99935C3.33268 6.32435 6.32435 3.33268 9.99935 3.33268C13.6743 3.33268 16.666 6.32435 16.666 9.99935C16.666 13.6743 13.6743 16.666 9.99935 16.666ZM9.99935 4.99935C9.11529 4.99935 8.26745 5.35054 7.64233 5.97566C7.0172 6.60078 6.66602 7.44863 6.66602 8.33268H8.33268C8.33268 7.89065 8.50828 7.46673 8.82084 7.15417C9.1334 6.84161 9.55732 6.66602 9.99935 6.66602C10.4414 6.66602 10.8653 6.84161 11.1779 7.15417C11.4904 7.46673 11.666 7.89065 11.666 8.33268C11.666 9.99935 9.16602 9.79102 9.16602 12.4993H10.8327C10.8327 10.6243 13.3327 10.416 13.3327 8.33268C13.3327 7.44863 12.9815 6.60078 12.3564 5.97566C11.7312 5.35054 10.8834 4.99935 9.99935 4.99935Z' fill='%237C7C7C' /%3E%3C/svg%3E");
+  }
+
+  &::after {
+    opacity: 0;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.16602 14.9993H10.8327V13.3327H9.16602V14.9993ZM9.99935 1.66602C8.905 1.66602 7.82137 1.88156 6.81032 2.30035C5.79927 2.71914 4.88061 3.33297 4.10679 4.10679C2.54399 5.6696 1.66602 7.78921 1.66602 9.99935C1.66602 12.2095 2.54399 14.3291 4.10679 15.8919C4.88061 16.6657 5.79927 17.2796 6.81032 17.6983C7.82137 18.1171 8.905 18.3327 9.99935 18.3327C12.2095 18.3327 14.3291 17.4547 15.8919 15.8919C17.4547 14.3291 18.3327 12.2095 18.3327 9.99935C18.3327 8.905 18.1171 7.82137 17.6983 6.81032C17.2796 5.79927 16.6657 4.88061 15.8919 4.10679C15.1181 3.33297 14.1994 2.71914 13.1884 2.30035C12.1773 1.88156 11.0937 1.66602 9.99935 1.66602ZM9.99935 16.666C6.32435 16.666 3.33268 13.6743 3.33268 9.99935C3.33268 6.32435 6.32435 3.33268 9.99935 3.33268C13.6743 3.33268 16.666 6.32435 16.666 9.99935C16.666 13.6743 13.6743 16.666 9.99935 16.666ZM9.99935 4.99935C9.11529 4.99935 8.26745 5.35054 7.64233 5.97566C7.0172 6.60078 6.66602 7.44863 6.66602 8.33268H8.33268C8.33268 7.89065 8.50828 7.46673 8.82084 7.15417C9.1334 6.84161 9.55732 6.66602 9.99935 6.66602C10.4414 6.66602 10.8653 6.84161 11.1779 7.15417C11.4904 7.46673 11.666 7.89065 11.666 8.33268C11.666 9.99935 9.16602 9.79102 9.16602 12.4993H10.8327C10.8327 10.6243 13.3327 10.416 13.3327 8.33268C13.3327 7.44863 12.9815 6.60078 12.3564 5.97566C11.7312 5.35054 10.8834 4.99935 9.99935 4.99935Z' fill='%23b6b6b6' /%3E%3C/svg%3E");
+  }
+}

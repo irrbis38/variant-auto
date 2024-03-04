@@ -20,7 +20,7 @@ mixin picture(name,ext,x2)
             source.object-fit-cover(srcset="images/" + name + ".webp, images/" + name + "@2x.webp 2x" type="image/webp")
             img.picture__img.object-fit-cover(src="images/" + name + "." + ext srcset="images/" + name + "." + ext + ", images/" + name + "@2x." + ext + " 2x" alt="")
 
-mixin pictureSizeWithoutLazy(name,ext,x2,width,height)
+mixin pictureSize(name,ext,x2,width,height)
     if !x2
         picture.picture.object-fit-cover
             source.object-fit-cover(srcset="images/" + name + ".webp" type="image/webp")
@@ -29,6 +29,16 @@ mixin pictureSizeWithoutLazy(name,ext,x2,width,height)
         picture.picture.object-fit-cover
             source.object-fit-cover(srcset="images/" + name + ".webp, images/" + name + "@2x.webp 2x" type="image/webp")
             img.picture__img.object-fit-cover(src="images/" + name + "." + ext srcset="images/" + name + "." + ext + ", images/" + name + "@2x." + ext + " 2x" alt="" width= width height= height)
+
+mixin pictureSizeWithLazy(name,ext,x2,width,height)
+    if !x2
+        picture.picture.object-fit-cover
+            source.object-fit-cover(srcset="images/" + name + ".webp" type="image/webp")
+            img.picture__img.object-fit-cover(src="images/" + name + "." + ext alt="" width= width height= height loading="lazy")
+    else
+        picture.picture.object-fit-cover
+            source.object-fit-cover(srcset="images/" + name + ".webp, images/" + name + "@2x.webp 2x" type="image/webp")
+            img.picture__img.object-fit-cover(src="images/" + name + "." + ext srcset="images/" + name + "." + ext + ", images/" + name + "@2x." + ext + " 2x" alt="" width= width height= height loading="lazy")
 
 
 mixin pictureNew(name, ext, altText, big_size, mid_size, sm_size, width, height, customClass)
