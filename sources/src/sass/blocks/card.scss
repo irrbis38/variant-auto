@@ -1,8 +1,17 @@
 .card {
   position: relative;
-  max-width: 342px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
   background-color: $color_white;
   transition: background-color 0.2s ease-out;
+
+  @include xs {
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
 
   @media (hover: hover) {
     &:hover {
@@ -44,6 +53,18 @@
   }
 }
 
+.card__full,
+.card__previews {
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 100%;
+}
+
+.card__descr {
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
 .card__favorites {
   position: absolute;
   top: 24px;
@@ -55,6 +76,11 @@
   cursor: pointer;
   transition: opacity 0.2s ease-out;
 
+  @include xs {
+    top: 18px;
+    right: 18px;
+  }
+
   @media (hover: hover) {
     &:hover {
       opacity: 0.5;
@@ -63,13 +89,89 @@
 }
 
 .card__full {
-  @include pictureSaveRatio(74.85%, cover);
+  @include xs {
+    position: relative;
+  }
+}
+
+.card__full_paggination {
+  display: none;
+
+  &.swiper-pagination-bullets {
+    @include xs {
+      display: block;
+      position: absolute;
+      top: unset;
+      left: 20px;
+      bottom: 18px;
+      z-index: 2;
+      width: auto;
+      height: 4px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 100%;
+      background-color: $color_white;
+      border-radius: 0;
+    }
+  }
+}
+
+.card__full_wrapper {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 74.85%;
+  }
+
+  @include xs {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.card__full_item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  @include pictureSaveRatio(cover);
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  @include xs {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+
+    @include elementSaveRatio(74.85%, cover);
+  }
 }
 
 .card__previews {
   overflow-x: auto;
 
   @include hidescrollbar();
+
+  @include xs {
+    display: none;
+  }
 }
 
 .card__prev_list {
@@ -78,7 +180,7 @@
 }
 
 .card__prev_item {
-  @include pictureSaveRatio(74.29%, cover);
+  @include elementSaveRatio(74.29%, cover);
 
   opacity: 0.5;
   transition: opacity 0.2s ease-out;

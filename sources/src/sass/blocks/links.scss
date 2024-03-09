@@ -1,6 +1,10 @@
 .links {
   margin-bottom: 240px;
 
+  @include lg {
+    margin-bottom: 160px;
+  }
+
   @include xs {
     margin-bottom: 120px;
   }

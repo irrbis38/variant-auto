@@ -90,10 +90,11 @@
   gap: 0 20px;
   margin: 0 auto;
   padding: 0 40px;
-  overflow: hidden;
+  // overflow: hidden;
 
   @include sm {
     position: relative;
+    overflow: hidden;
 
     &::before {
       content: "";

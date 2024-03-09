@@ -18,7 +18,68 @@
   }
 }
 
+// map
+
+// reset copyright of yandex map
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+
 // title
+
+.main_fluid__title {
+  font-weight: 500;
+  font-size: 144px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $color_dark_1c;
+
+  @include fluidFontSize(68px, 144px, 992px, 1920px, 80px);
+
+  @include sm {
+    font-size: 68px;
+  }
+
+  @include xs {
+    max-width: 320px;
+    font-size: 44px;
+    text-align: left;
+    letter-spacing: normal;
+  }
+
+  @include r(360px) {
+    font-size: 38px;
+  }
+}
+
+.fluid__title {
+  font-weight: 500;
+  font-size: 121px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0.04em;
+  color: $color_dark_1c;
+
+  @include fluidFontSize(58px, 121px, 992px, 1920px, 80px);
+
+  @include sm {
+    font-size: 58px;
+  }
+
+  @include xs {
+    max-width: 320px;
+    font-size: 44px;
+    text-align: left;
+    letter-spacing: normal;
+  }
+
+  @include r(360px) {
+    font-size: 38px;
+  }
+}
 
 .block__title {
   font-weight: 500;
@@ -33,7 +94,7 @@
   }
 }
 
-.green_bg {
+.colored_bg {
   position: relative;
   padding-left: 10px;
   padding-right: 20px;
@@ -46,8 +107,37 @@
     left: 0;
     right: 15px;
     bottom: -3px;
-    background-color: $color_green;
     z-index: -1;
+  }
+
+  @include lg {
+    &::after {
+      top: 3px;
+      bottom: 3px;
+    }
+  }
+
+  @include xs {
+    padding: 0;
+
+    &::after {
+      top: 2px;
+      left: -2px;
+      right: -2px;
+      bottom: 2px;
+    }
+  }
+}
+
+.green_bg {
+  &::after {
+    background-color: $color_green;
+  }
+}
+
+.blue_bg {
+  &::after {
+    background-color: $color_blur;
   }
 }
 
@@ -56,12 +146,23 @@
 .btn__red {
   min-height: 60px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
   padding: 20px 20px;
   color: $color_white;
   background-color: $color_red_deep;
+  transition: background-color 0.2s ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color_red_hover;
+    }
+  }
+}
+
+.btn__arrow {
+  justify-content: space-between;
+  gap: 10px;
 
   &::after {
     content: "";
@@ -71,11 +172,92 @@
     height: 24px;
     background: url("../images/arrow-right-white.svg") center / contain
       no-repeat;
+    transition: transform 0.2s ease-out;
   }
 
   @media (hover: hover) {
     &:hover {
-      background-color: $color_red_hover;
+      &::after {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
+.btn__high {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 40px;
+  padding: 44px 80px 44px 40px;
+  font-weight: 400;
+  font-size: 24px;
+  transition: background-color 0.2s ease-out;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    transition: transform 0.2s ease-out;
+  }
+
+  @include lg {
+    padding: 44px 50px 44px 40px;
+  }
+
+  @include sm {
+    width: 100%;
+    justify-content: flex-start;
+    min-height: 60px;
+    padding: 20px 20px;
+    font-size: 16px;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @include xs {
+    gap: 0 20px;
+  }
+}
+
+.btn__agree_green {
+  color: $color_white;
+  background-color: $color_green;
+
+  &::before {
+    background: url("../images/check.svg") center / contain no-repeat;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color_green_hover;
+
+      &::before {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.btn__arrow_grey {
+  color: $color_dark;
+  background-color: $color_grey_f2;
+
+  &::before {
+    background: url("../images/arrow-right-dark.svg") center / contain no-repeat;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: #dadada;
+
+      &::before {
+        transform: translateX(5px);
+      }
     }
   }
 }
@@ -88,7 +270,8 @@
   gap: 75px;
 }
 
-.slider__nav_btn {
+.slider__prev_btn,
+.slider__next_btn {
   flex-shrink: 0;
   display: inline-block;
   width: 48px;
@@ -101,8 +284,22 @@
   @media (hover: hover) {
     &:hover {
       path {
-        fill: $color_grey_7c;
+        fill: $color_red_deep;
       }
     }
+  }
+
+  &.swiper-button-disabled {
+    cursor: default;
+
+    path {
+      fill: $color_grey_7c;
+    }
+  }
+}
+
+.block-slider-wrapper {
+  @include xs {
+    display: block;
   }
 }

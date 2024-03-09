@@ -1,0 +1,97 @@
+.reviews {
+  margin-bottom: 350px;
+
+  @include lg {
+    margin-bottom: 160px;
+  }
+
+  @include xs {
+    margin-bottom: 120px;
+  }
+}
+
+.reviews__title {
+  margin-bottom: 34px;
+}
+
+.reviews__subtitle {
+  margin-bottom: 76px;
+  font-weight: 400;
+  font-size: 24px;
+
+  span {
+    padding: 0 7px;
+    color: $color_white;
+    background-color: $color_red_deep;
+  }
+
+  @include xs {
+    font-size: 16px;
+
+    span {
+      padding: 0;
+      color: $color_dark;
+      background-color: transparent;
+    }
+  }
+}
+
+.reviews__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px 24px;
+  margin-bottom: 54px;
+
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include xs {
+    grid-template-columns: 1fr;
+    max-width: 575px;
+    margin: 0 auto 35px;
+  }
+}
+
+.reviews__preview {
+  @include elementSaveRatio(64.66%, cover);
+}
+
+.review__descr {
+  padding: 28px 24px 38px 24px;
+  border: 1px solid $color_grey_f2;
+  border-top: none;
+}
+
+.reviews__car {
+  margin-bottom: 23px;
+
+  span {
+    padding: 0 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    color: $color_grey_7c;
+    background-color: $color_grey_f2;
+  }
+}
+
+.reviews__name {
+  margin-bottom: 17px;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.reviews__text {
+  font-weight: 300;
+  font-size: 14px;
+  color: $color_grey_7c;
+}
+
+.reviews__all {
+  max-width: 335px;
+
+  @include xs {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,233 @@
+.autocredit {
+  margin-bottom: 238px;
+
+  @include lg {
+    margin-bottom: 160px;
+  }
+
+  @include xs {
+    margin-bottom: 120px;
+  }
+}
+
+.autocredit__title {
+  margin-bottom: 35px;
+}
+
+.autocredit__subtitle {
+  max-width: 1074px;
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 24px;
+  color: $color_dark;
+
+  @include lg {
+    max-width: 900px;
+    font-size: 20px;
+  }
+
+  @include xs {
+    font-size: 16px;
+  }
+}
+
+.autocredit__benefits {
+  border-top: 1px solid $color_grey_f2;
+}
+
+.autocredit__benefits_container {
+  max-width: 1404px;
+  display: flex;
+  justify-content: space-between;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.autocredit__benefits_item {
+  // flex: 1 1 auto;
+  padding: 53px 0 50px;
+
+  &:nth-child(1),
+  &:nth-child(3) {
+    flex: 1 1 455px;
+  }
+
+  &:nth-child(2) {
+    flex: 1 1 488px;
+  }
+
+  &:not(:last-child) {
+    padding-right: 33px;
+    border-right: 1px solid $color_grey_f2;
+  }
+
+  &:not(:first-child) {
+    padding-left: 33px;
+  }
+
+  @include sm {
+    &:nth-child(n) {
+      margin: 0 -20px;
+      padding: 53px 20px 24px;
+      border-right: none;
+    }
+
+    border-bottom: 1px solid $color_grey_f2;
+  }
+}
+
+.autocredit__benefits_icon {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.autocredit__benefits_text {
+  font-weight: 400;
+  font-size: 24px;
+  color: $color_dark;
+}
+
+.autocredit__ticker {
+  max-width: 3500px;
+  margin: 0 auto;
+  padding-top: 291px;
+  background: url("../images/autocredit/autocredit_bg.jpg") center / cover
+    no-repeat;
+
+  @include xs {
+    display: none;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.autocredit__ticker_wrapper {
+  overflow: hidden;
+  // white-space: nowrap;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 72px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $color_grey_f2;
+    opacity: 0.2;
+  }
+}
+
+.autocredit__ticker_wrapper:hover .autocredit__ticker_block {
+  animation-play-state: paused;
+}
+
+.autocredit__ticker_block {
+  display: inline-flex;
+  align-items: center;
+  animation: 40s slide infinite linear;
+
+  img {
+    padding: 0 40px;
+  }
+}
+
+.autocredit__details {
+  display: flex;
+  min-height: 126px;
+
+  @include sm {
+    display: block;
+    min-height: unset;
+  }
+}
+
+// .autocredit__approval,
+// .autocredit__more {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   gap: 0 40px;
+//   padding: 44px 80px 44px 40px;
+//   font-weight: 400;
+//   font-size: 24px;
+//   transition: background-color 0.2s ease-out;
+
+//   &::before {
+//     content: "";
+//     display: inline-block;
+//     width: 36px;
+//     height: 36px;
+//     transition: transform 0.2s ease-out;
+//   }
+
+//   @include lg {
+//     padding: 44px 50px 44px 40px;
+//   }
+
+//   @include sm {
+//     width: 100%;
+//     justify-content: flex-start;
+//     min-height: 60px;
+//     padding: 20px 20px;
+//     font-size: 16px;
+
+//     &::before {
+//       width: 20px;
+//       height: 20px;
+//     }
+//   }
+// }
+
+// .autocredit__approval {
+//   color: $color_white;
+//   background-color: $color_green;
+
+//   &::before {
+//     background: url("../images/check.svg") center / contain no-repeat;
+//   }
+
+//   @media (hover: hover) {
+//     &:hover {
+//       background-color: $color_green_hover;
+
+//       &::before {
+//         transform: scale(1.2);
+//       }
+//     }
+//   }
+// }
+
+// .autocredit__more {
+//   color: $color_dark;
+//   background-color: $color_grey_f2;
+
+//   &::before {
+//     background: url("../images/arrow-right-dark.svg") center / contain no-repeat;
+//   }
+
+//   @media (hover: hover) {
+//     &:hover {
+//       background-color: #dadada;
+
+//       &::before {
+//         transform: translateX(5px);
+//       }
+//     }
+//   }
+// }

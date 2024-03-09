@@ -251,25 +251,19 @@ var initCardLogic = () => {
     // init toggle active preview
     var toggleActivePreview = () => {
       previews.forEach((p) => {
-        var fullsize = p.previousElementSibling;
+        var fullsize = Array.from(
+          p.previousElementSibling.querySelectorAll(".card__full_item")
+        );
         var items = Array.from(p.querySelectorAll(".card__prev_item"));
 
         items.forEach((item) => {
           item.addEventListener("click", () => {
-            var url = item.dataset.full;
-            var newSourceSrcset = `${url}.webp, ${url}@2x.webp 2x`;
-            var newImgSrc = `${url}.jpg`;
-            var newImgSrcset = `${url}.jpg, ${url}@2x.jpg 2x`;
-
-            var source = fullsize.children[0].children[0];
-            var img = fullsize.children[0].children[1];
-
-            source.setAttribute("srcset", newSourceSrcset);
-            img.setAttribute("src", newImgSrc);
-            img.setAttribute("srcset", newImgSrcset);
-
             items.forEach((i) => i.classList.remove("active"));
             item.classList.add("active");
+
+            fullsize.forEach((f) => f.classList.remove("active"));
+            var idx = items.indexOf(item);
+            fullsize[idx].classList.add("active");
           });
         });
       });
@@ -287,10 +281,218 @@ var initCardLogic = () => {
   }
 };
 
+// ========== BLOCK SLIDER LOGIC
+
+var initBlockSlider = () => {
+  var blockSliders = Array.from(document.querySelectorAll(".block-slider"));
+  var aSliders = null;
+
+  var createActiveSliders = (bSlider) => {
+    var activeSliders = bSlider.map((slider) => {
+      var parent = slider.closest(".section-with-slider");
+      var prev_btn = parent.querySelector(".slider__prev_btn");
+      var next_btn = parent.querySelector(".slider__next_btn");
+
+      return new Swiper(slider, {
+        spaceBetween: 24,
+        slidesPerView: 2,
+        draggable: true,
+        navigation: {
+          prevEl: prev_btn,
+          nextEl: next_btn,
+        },
+        breakpoints: {
+          992: {
+            slidesPerView: 3,
+          },
+          1301: {
+            slidesPerView: 4,
+          },
+        },
+      });
+    });
+
+    return activeSliders;
+  };
+
+  var handleSmallWidth = () => {
+    aSliders = createActiveSliders(blockSliders);
+  };
+
+  var handleWideWidth = () => {
+    aSliders.forEach((s) => s.destroy(true, true));
+    aSliders = null;
+  };
+
+  // create matchMedia
+  var mqMin768 = window.matchMedia("(min-width: 768px)");
+
+  // create handler
+  var handleMQ = (e, cbMatches, cbNonMatches) =>
+    e.matches ? cbMatches() : cbNonMatches();
+
+  // add listeners to resize
+  mqMin768.addEventListener("change", (e) =>
+    handleMQ(e, handleSmallWidth, handleWideWidth)
+  );
+
+  // block slider logic
+  if (blockSliders.length < 1) {
+    return;
+  } else {
+    // init sliders if window width >= 992
+    if (window.innerWidth >= 768) {
+      aSliders = createActiveSliders(blockSliders);
+    }
+  }
+};
+
+// ========== CARD MOBILE SLIDER
+
+var initCardMobileSlider = () => {
+  var cardMobileSliders = Array.from(document.querySelectorAll(".card__full"));
+  var mSliders = null;
+
+  var createMobileSliders = (sliderElements) => {
+    var mobileSliders = cardMobileSliders.map((s) => {
+      return new Swiper(s, {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        draggable: true,
+        pagination: {
+          el: ".card__full_paggination",
+          type: "bullets",
+        },
+      });
+    });
+
+    return mobileSliders;
+  };
+
+  var handleSmallWidth = () => {
+    mSliders.forEach((s) => s.destroy(true, true));
+    mSliders = null;
+  };
+
+  var handleWideWidth = () => {
+    mSliders = createMobileSliders(cardMobileSliders);
+  };
+
+  // create matchMedia
+  var mqMin768 = window.matchMedia("(min-width: 768px)");
+
+  // create handler
+  var handleMQ = (e, cbMatches, cbNonMatches) =>
+    e.matches ? cbMatches() : cbNonMatches();
+
+  // add listeners to resize
+  mqMin768.addEventListener("change", (e) =>
+    handleMQ(e, handleSmallWidth, handleWideWidth)
+  );
+
+  if (cardMobileSliders < 1) {
+    return;
+  } else {
+    // init sliders if window width < 992
+    if (window.innerWidth < 768) {
+      mSliders = createMobileSliders(cardMobileSliders);
+    }
+  }
+};
+
+// ========== CLONE TICKER BLOCKS
+
+var cloneTickerBlocks = () => {
+  var ticker_blocks = Array.from(
+    document.querySelectorAll(".autocredit__ticker_block")
+  );
+
+  if (ticker_blocks.length < 1) {
+    return;
+  } else {
+    var parent = ticker_blocks[0].parentElement;
+    var fragment = document.createDocumentFragment();
+
+    fragment.append(ticker_blocks[0].cloneNode(true));
+    fragment.append(ticker_blocks[0].cloneNode(true));
+    // fragment.append(ticker_blocks[0].cloneNode(true));
+
+    // if (window.innerWidth > 2000) {
+    //   fragment.append(ticker_blocks[0].cloneNode(true));
+    //   fragment.append(ticker_blocks[0].cloneNode(true));
+    //   fragment.append(ticker_blocks[0].cloneNode(true));
+    // } else {
+    //   fragment.append(ticker_blocks[0].cloneNode(true));
+    //   fragment.append(ticker_blocks[0].cloneNode(true));
+    // }
+
+    parent.append(fragment);
+  }
+};
+
+// ========== INIT MAP
+
+var doCreateMapScript = (cb) => {
+  setTimeout(function () {
+    var script = document.createElement("script");
+    script.async = false;
+    script.src = "https://api-maps.yandex.ru/2.1/?apikey=key&lang=ru_RU";
+    document.body.appendChild(script);
+    script.onload = () => cb();
+  }, 2000);
+};
+
+var initMap = () => {
+  var map = document.getElementById("contacts-map");
+  if (map) {
+    var init = () => {
+      var coords = [45.085422, 38.990786];
+      var mark_link = "images/mark.svg";
+
+      if (ymaps) {
+        var map = new ymaps.Map("contacts-map", {
+          center: coords,
+          zoom: 17,
+        });
+
+        var placemark = new ymaps.Placemark(
+          coords,
+          {},
+          {
+            iconLayout: "default#image",
+            iconImageHref: mark_link,
+            iconImageSize: [100, 100],
+            iconImageOffset: [-60, -80],
+          }
+        );
+
+        map.controls.remove("geolocationControl");
+        map.controls.remove("searchControl");
+        map.controls.remove("trafficControl");
+        map.controls.remove("typeSelector");
+        map.controls.remove("fullscreenControl");
+        // map.controls.remove("zoomControl"); // удаляем контрол зуммирования
+        map.controls.remove("rulerControl");
+        // map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
+
+        map.geoObjects.add(placemark);
+      }
+    };
+
+    ymaps.ready(init);
+  }
+};
+
 document.addEventListener("DOMContentLoaded", (event) => {
   headerLogic();
   initMainSlider();
   initQSelection();
   initMaskedInputs();
   initCardLogic();
+  initBlockSlider();
+  initCardMobileSlider();
+  cloneTickerBlocks();
+
+  var map = document.getElementById("contacts-map");
+  map && doCreateMapScript(initMap);
 });

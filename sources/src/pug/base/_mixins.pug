@@ -86,3 +86,32 @@ mixin pagination(amount, current, ellipsis, last, arrows)
 
         if (arrows === true)
             a(href="#").pagination__next: span
+
+mixin offers(coloredClass, titleFirst, titleSecond)
+
+    section.offers.section-with-slider
+        .container 
+            .offers__top
+                h2.offers__title.block__title
+                    span.colored_bg(class= coloredClass)= titleFirst 
+                    span= titleSecond
+
+                .offers__nav.slider__nav
+                    button.offers__prev.slider__prev_btn(aria-label="Показать предыдущий слайд")
+                        include ../blocks/icon_slider_prev
+                    button.offers__next.slider__next_btn(aria-label="Показать следующий слайд")
+                        include ../blocks/icon_slider_next
+
+
+            .offers__slider.block-slider.swiper
+                .offers__wrapper.block-slider-wrapper.swiper-wrapper
+
+                    include ../blocks/card
+                    include ../blocks/card
+                    include ../blocks/card
+                    include ../blocks/card
+                    include ../blocks/card
+                    include ../blocks/card
+
+            
+            button.offers__show_more.btn__red(type="button") Показать еще

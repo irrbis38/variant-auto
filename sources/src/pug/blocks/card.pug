@@ -1,0 +1,68 @@
+-
+    var slides = [
+        {num: 1, isActive: true},
+        {num: 2, isActive: false},
+        {num: 3, isActive: false},
+        {num: 4, isActive: false},
+        {num: 5, isActive: false},
+    ]
+
+article.card.swiper-slide
+    button.card__favorites(type="button" aria-label="Добавить в избранное / Убрать из избранного")
+
+
+
+    .card__full.swiper
+        .card__full_wrapper.swiper-wrapper
+
+            each slide in slides 
+
+                - var src = 'card/card_full_' + slide.num 
+
+                    if slide.isActive
+
+                        .card__full_item.active.swiper-slide
+                            +pictureSize(src, 'jpg', 'x2', '342', '256')
+
+                    else
+
+                        .card__full_item.swiper-slide
+                            +pictureSize(src, 'jpg', 'x2', '342', '256')
+
+        .card__full_paggination
+
+    .card__previews.swiper
+        .card__prev_list.swiper-wrapper
+
+            each slide in slides 
+
+                - var src = 'card/card_preview_' + slide.num 
+
+                    if slide.isActive
+
+                        .card__prev_item.active.swiper-slide
+                            +pictureSize(src, 'jpg', 'x2', '85', '64')
+
+                    else 
+
+                        .card__prev_item.swiper-slide
+                            +pictureSize(src, 'jpg', 'x2', '85', '64')
+
+    .card__descr
+
+        h3.card__name BMW X5 2022
+
+        ul.card__features
+            li.card__feature Бензин
+            li.card__feature 1,6
+            li.card__feature Автомат
+            li.card__feature 245,345 км
+            li.card__feature Передний
+
+        .card__price 985.000₽
+
+        .card__credit 
+            .card__cost от 15.067₽/мес.
+            .card__info
+                .card__info_icon
+                .card__info_block

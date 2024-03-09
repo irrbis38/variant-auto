@@ -18,30 +18,8 @@
 }
 
 .main_intro__title {
-  font-weight: 500;
-  font-size: 144px;
-  line-height: 1;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.04em;
-  color: $color_dark_1c;
-
-  @include fluidFontSize(44px, 144px, 320px, 1920px, 80px);
-
-  @include sm {
-    font-size: 56px;
-  }
-
   @include xs {
-    max-width: 320px;
     margin-bottom: 15px;
-    font-size: 44px;
-    text-align: left;
-    letter-spacing: normal;
-  }
-
-  @include r(360px) {
-    font-size: 38px;
   }
 }
 
@@ -63,13 +41,14 @@
   }
 
   @include sm {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.2;
   }
 
   @include xs {
     max-width: 310px;
     margin-bottom: 40px;
+    font-size: 16px;
     text-transform: initial;
     text-align: left;
     letter-spacing: normal;

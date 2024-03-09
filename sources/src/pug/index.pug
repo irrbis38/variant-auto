@@ -107,8 +107,7 @@ block page
 
     section.main_intro
         .main_intro__container
-            h1.main_intro__title
-                span Авто с&nbsp;пробегом
+            h1.main_intro__title.main_fluid__title Авто с&nbsp;пробегом
 
             p.main_intro__subtitle Которые #[span прошли необходимые] диагностику и подготовку
 
@@ -180,7 +179,7 @@ block page
                     input(type="text" placeholder="Цена от" data-maska="#" data-maska-tokens="#:[0-9]:multiple")
                     input(type="text" placeholder="Цена до" data-maska="#" data-maska-tokens="#:[0-9]:multiple")
 
-                a.q_selection__link.btn.btn__red(href="#") Подобрать
+                a.q_selection__link.btn__arrow.btn__red(href="#") Подобрать
 
 
 
@@ -236,69 +235,135 @@ block page
                     a(href="#")
 
 
+    +offers('green_bg', 'Лучшие', 'предложения')
 
-    section.best_offers 
+    +offers('blue_bg', 'Последние', 'поступления')
+
+
+    section.autocredit
         .container 
-            .best_offers__top
-                h2.best_offers__title.block__title
-                    span.green_bg Лучшие  
-                    span предложения
 
-                .best_offers__nav.slider__nav
-                    button.best_offers__prev.slider__nav_btn(aria-label="Показать предыдущий слайд")
-                        include ./blocks/icon_slider_prev
-                    button.best_offers__next.slider__nav_btn(aria-label="Показать следующий слайд")
-                        include ./blocks/icon_slider_next
+            h2.autocredit__title.fluid__title Автокредит
+
+            p.autocredit__subtitle Совсем не обязательно экономить на себе, чтобы мечта стала реальностью уже сегодня. Мы предлагаем автокредиты на выгодных условиях!
+
+        .autocredit__benefits
+            .container
+                .autocredit__benefits_container
+                    .autocredit__benefits_item
+                        img.autocredit__benefits_icon(src='/images/credit_1.svg' alt="")
+                        p.autocredit__benefits_text Без первоначального взноса
+                    .autocredit__benefits_item
+                        img.autocredit__benefits_icon(src='/images/credit_2.svg' alt="")
+                        p.autocredit__benefits_text Без поручителей и справок 
+                    .autocredit__benefits_item
+                        img.autocredit__benefits_icon(src='/images/credit_3.svg' alt="")
+                        p.autocredit__benefits_text Одобрение в течении 1-го часа
 
 
-            .best_offers__slider 
-                .best_offers__wrapper 
+        .autocredit__ticker
 
-                    article.best_offers__card.card
-                        button.card__favorites(type="button" aria-label="Добавить в избранное / Убрать из избранного")
+            .autocredit__ticker_wrapper
+                .autocredit__ticker_block
+                    img.autocredit__ticker_item(src='/images/autocredit/icon_bank_1.svg' alt="")
+                    img.autocredit__ticker_item(src='/images/autocredit/icon_bank_2.svg' alt="")
+                    img.autocredit__ticker_item(src='/images/autocredit/icon_bank_3.svg' alt="")
+                    img.autocredit__ticker_item(src='/images/autocredit/icon_bank_4.svg' alt="")
+                    img.autocredit__ticker_item(src='/images/autocredit/icon_bank_5.svg' alt="")
+                    img.autocredit__ticker_item(src='/images/autocredit/icon_bank_6.svg' alt="")
 
-                        .card__full
-                            +pictureSize('card/card_full_1', 'jpg', 'x2', '342', '256')
 
-                        .card__previews.swiper
-                            .card__prev_list.swiper-wrapper
+        .container
+            .autocredit__details 
+                button.autocredit__approval.btn__high.btn__agree_green(type="button") Получить одобрение
+                a.autocredit__more.btn__high.btn__arrow_grey(href="#") Подробнее об условиях
 
-                                .card__prev_item.active.swiper-slide(data-full="/images/card/card_full_1")
-                                    +pictureSize('card/card_preview_1', 'jpg', 'x2', '85', '64')
 
-                                .card__prev_item.swiper-slide(data-full="/images/card/card_full_2")
-                                    +pictureSize('card/card_preview_2', 'jpg', 'x2', '85', '64')
 
-                                .card__prev_item.swiper-slide(data-full="/images/card/card_full_3")
-                                    +pictureSize('card/card_preview_3', 'jpg', 'x2', '85', '64')
-                                    
-                                .card__prev_item.swiper-slide(data-full="/images/card/card_full_4")
-                                    +pictureSize('card/card_preview_4', 'jpg', 'x2', '85', '64')
+    section.ratings
+        .container
 
-                                .card__prev_item.swiper-slide(data-full="/images/card/card_full_1")
-                                    +pictureSize('card/card_preview_1', 'jpg', 'x2', '85', '64')
+            h2.ratings__title Наши рейтинги в&nbsp;интернете
 
-                                .card__prev_item.swiper-slide(data-full="/images/card/card_full_2")
-                                    +pictureSize('card/card_preview_2', 'jpg', 'x2', '85', '64')
+            p.ratings__subtitle Хотите получить больше информации о наших услугах и сервисе? Изучите мнение о нас на независимых авторитетных интернет-ресурсах
 
-                        .card__descr
+        .ratings__wrapper
+            .container.ratings__list
 
-                            h3.card__name BMW X5 2022
+                .ratings__item
+                    .ratings__icon 
+                        img(src="/images/avito.svg", alt="Авито")
 
-                            ul.card__features
-                                li.card__feature Бензин
-                                li.card__feature 1,6
-                                li.card__feature Автомат
-                                li.card__feature 245,345 км
-                                li.card__feature Передний
+                    span.ratings__value 4.7
 
-                            .card__price 985.000₽
+                .ratings__item
+                    .ratings__icon 
+                        img(src="/images/yandex.svg", alt="Яндекс")
 
-                            .card__credit 
-                                .card__cost от 15.067₽/мес.
-                                .card__info
-                                    .card__info_icon
-                                    .card__info_block
+                    span.ratings__value 4.2
+
+                .ratings__item
+                    .ratings__icon 
+                        img(src="/images/2gis.svg", alt="2gis")
+
+                    span.ratings__value 4.2
+
+
+    section.reviews
+        .container 
+            h2.reviews__title.fluid__title Отзывы
+            p.reviews__subtitle Наши клиенты расскажут  #[span почему выбрали нас] и наши автомобили
+
+            .reviews__wrapper
+
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+
+            a.reviews__all.btn__high.btn__arrow_grey(href="#") Все отзывы
+
+
+
+    section.contacts
+        .container 
+            h2.contacts__title.fluid__title Контакты
+            p.contacts__subtitle Возникли вопросы? Приезжайте к нам в салон и #[span задайте их лично]
+            
+            
+            .contacts__wrapper
+
+                .contacts__item 
+                    .contacts__name Местоположение
+                    .contacts__data ул. Ростовское шоссе, 20 корпус 1
+
+                .contacts__item 
+                    .contacts__name Горячая линия
+                    a.contacts__data(href="tel:89284091449") 8 (928) 409-14-49
+
+                .contacts__item 
+                    .contacts__name График работы
+                    .contacts__data 09:00–19:00
+
+        .contacts__map#contacts-map
+
+
+
+    section.need_help
+        .container 
+            h2.need_help__title Затрудняетесь с выбором?
+            p.need_help__subtitle Оставьте свои данные в форме - мы перезвоним вам, поможем определиться с выбором и  #[span предложим отличные условия покупки!]
+
+            form.need_help__form(action="#")
+                input.need_help__name(type="text" placeholder="Ваше имя")
+                input.need_help__phone.input-required(type="text" placeholder="Ваш телефон*")
+                textarea.need_help__wishes(rows="1" placeholder="Ваши пожелания")
+                button.need_help__submit.btn__arrow.btn__red(type="submit") Получить консультацию
+
+
+
 
 
 

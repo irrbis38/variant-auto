@@ -1,6 +1,10 @@
 .available {
   margin-bottom: 219px;
 
+  @include lg {
+    margin-bottom: 160px;
+  }
+
   @include xs {
     margin-bottom: 115px;
   }

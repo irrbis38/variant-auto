@@ -1,3 +1,157 @@
-footer {
-  padding: 20px;
+.footer__wrapper {
+  position: relative;
+  padding: 100px 0 35px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    min-width: 100vw;
+    height: 1px;
+    background-color: $color_grey_f2;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-areas:
+    "logo links"
+    "policy links";
+  gap: 50px 12%;
+
+  @include sm {
+    grid-template-areas:
+      "logo"
+      "links"
+      "policy";
+  }
+
+  @include xs {
+    gap: 62px 0;
+  }
+}
+
+.footer__logo {
+  grid-area: logo;
+}
+
+.footer__links {
+  grid-area: links;
+  column-count: 2;
+  column-gap: 30px;
+
+  @include xs {
+    display: grid;
+    column-count: unset;
+  }
+}
+
+.footer__links_group {
+  break-inside: avoid;
+
+  @include xs {
+    &.group_auto {
+      order: 1;
+    }
+
+    &.group_contacts_us {
+      order: 3;
+    }
+
+    &.group_serv {
+      order: 2;
+    }
+  }
+}
+
+.footer__policy {
+  grid-area: policy;
+  align-self: flex-end;
+
+  max-width: 560px;
+  font-weight: 300;
+  font-size: 16px;
+  color: $color_grey_7c;
+}
+
+.footer__policy_link {
+  display: inline-block;
+  margin-bottom: 30px;
+  text-decoration: underline;
+  transition: color;
+
+  @include xs {
+    margin-bottom: 50px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: $color_dark;
+    }
+  }
+}
+
+.footer__policy_info {
+  line-height: 1.37;
+}
+
+.footer__name,
+.footer__item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 250%;
+}
+
+.footer__name {
+  padding-bottom: 13px;
+  line-height: 1;
+}
+
+.footer__item {
+  display: inline-block;
+  width: 100%;
+  color: $color_grey_7c;
+}
+
+.footer__links_group {
+  &:nth-child(2n - 1) {
+    padding-bottom: 50px;
+  }
+
+  a {
+    transition: color 0.2s ease-out;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color_red_deep;
+      }
+    }
+  }
+
+  @include xs {
+    &:nth-child(2n - 1) {
+      padding-bottom: 42px;
+    }
+  }
+}
+
+.footer__created_by {
+  padding: 27px 0;
+
+  img {
+    display: block;
+    width: 186px;
+    height: auto;
+  }
 }
