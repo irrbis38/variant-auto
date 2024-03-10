@@ -81,6 +81,21 @@
   }
 }
 
+.inner__h1 {
+  font-weight: 500;
+  font-size: 54px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+
+  @include sm {
+    font-size: 42px;
+  }
+
+  @include xs {
+    font-size: 28px;
+  }
+}
+
 .block__title {
   font-weight: 500;
   font-size: 48px;

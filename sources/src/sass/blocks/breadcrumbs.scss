@@ -1,0 +1,28 @@
+.breadcrumbs {
+  padding: 18px 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 257%;
+  color: $color_grey_8e;
+
+  @include xs {
+    display: none;
+  }
+
+  a {
+    transition: color 0.2s ease-out;
+
+    &::after {
+      content: "/";
+      display: inline-block;
+      margin: 0 6px;
+      color: $color_grey_8e;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color_dark;
+      }
+    }
+  }
+}

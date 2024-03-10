@@ -1,0 +1,86 @@
+extends base/_layout
+block vars
+    - var pageName = 'brands-page'
+block head
+    title Бренды
+block page
+
+    -
+        var brandsList = [
+            {brandName: 'Lada (ВАЗ)', amount: '70'},
+            {brandName: 'Daewoo', amount: '15'},
+            {brandName: 'Haval', amount: '25'},
+            {brandName: 'Lexus', amount: '72'},
+            {brandName: 'Volkswagen', amount: '12'},
+            {brandName: 'Daewoo', amount: '53'},
+            {brandName: 'Audi', amount: '54'},
+            {brandName: 'EXEED', amount: '5'},
+            {brandName: 'Honda', amount: '15'},
+            {brandName: 'Mazda', amount: '15'},
+            {brandName: 'Toyota', amount: '54'},
+            {brandName: 'EXEED', amount: '12'},
+            {brandName: 'Changan', amount: '35'},
+            {brandName: 'Ford', amount: '25'},
+            {brandName: 'Hongqi', amount: '54'},
+            {brandName: 'Mercedes-Benz', amount: '5'},
+            {brandName: 'Skoda', amount: '15'},
+            {brandName: 'Ford', amount: '23'},
+            {brandName: 'BMW', amount: '20'},
+            {brandName: 'Geely', amount: '45'},
+            {brandName: 'Land Rover', amount: '70'},
+            {brandName: 'Mitsubishi', amount: '12'},
+            {brandName: 'Москвич', amount: '5'},
+            {brandName: 'Geely', amount: '5'},
+            {brandName: 'Audi', amount: '54'},
+            {brandName: 'EXEED', amount: '5'},
+            {brandName: 'Honda', amount: '15'},
+            {brandName: 'Mazda', amount: '15'},
+            {brandName: 'Toyota', amount: '54'},
+            {brandName: 'EXEED', amount: '12'},
+            {brandName: 'Changan', amount: '35'},
+            {brandName: 'Ford', amount: '25'},
+            {brandName: 'Hongqi', amount: '54'},
+            {brandName: 'Mercedes-Benz', amount: '5'},
+            {brandName: 'Skoda', amount: '15'},
+            {brandName: 'Ford', amount: '23'},
+            {brandName: 'BMW', amount: '20'},
+            {brandName: 'Geely', amount: '45'},
+            {brandName: 'Land Rover', amount: '70'},
+            {brandName: 'Mitsubishi', amount: '12'},
+            {brandName: 'Москвич', amount: '5'},
+            {brandName: 'Geely', amount: '5'},
+            {brandName: 'Audi', amount: '54'},
+            {brandName: 'EXEED', amount: '5'},
+            {brandName: 'Honda', amount: '15'},
+            {brandName: 'Mazda', amount: '15'},
+            {brandName: 'Toyota', amount: '54'},
+            {brandName: 'EXEED', amount: '12'},
+            {brandName: 'Changan', amount: '35'},
+            {brandName: 'Ford', amount: '25'},
+            {brandName: 'Hongqi', amount: '54'},
+            {brandName: 'Mercedes-Benz', amount: '5'},
+            {brandName: 'Skoda', amount: '15'},
+            {brandName: 'Ford', amount: '23'},
+            {brandName: 'BMW', amount: '20'},
+            {brandName: 'Geely', amount: '45'},
+            {brandName: 'Land Rover', amount: '70'},
+            {brandName: 'Mitsubishi', amount: ''},
+            {brandName: 'Москвич', amount: ''},
+            {brandName: 'Geely', amount: ''},
+        ]
+
+    .container
+
+        .breadcrumbs
+                a(href="#") Главная
+                a(href="#") Продажа автомобилей
+                a(href="#") С пробегом
+                span Bentley Continental GT
+
+        h1.brands__title.inner__h1 Авто с пробегом
+
+        ul.brands__list
+
+            each item in brandsList
+
+                li: a(href="#") #{item.brandName}&nbsp;#[sup #{item.amount}]
