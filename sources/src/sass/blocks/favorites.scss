@@ -1,0 +1,30 @@
+.favorites__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(342px, 1fr));
+  gap: 35px 23px;
+  margin-bottom: 72px;
+
+  @include xs {
+    margin-bottom: 35px;
+  }
+
+  @include xxs {
+    display: block;
+  }
+}
+
+.favorites__show_more {
+  width: 100%;
+  min-height: 60px;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  color: $color_white;
+  background-color: #cb2032;
+
+  @include xs {
+    display: flex;
+  }
+}

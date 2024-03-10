@@ -1,0 +1,66 @@
+extends base/_layout
+block vars
+    - var pageName = 'favorites-page'
+block head
+    title Избранное
+block page
+
+    .container
+
+        .breadcrumbs
+                a(href="#") Главная
+                span Избранное
+
+        h1.brands__title.inner__h1 Избранное
+
+        ul.quick_filters
+
+            li.quick_filters__item
+                label
+                    input(type="checkbox")
+                    span.bg_sunset_orange Вместительный
+
+            li.quick_filters__item
+                label
+                    input(type="checkbox")
+                    span.bg_tiffany_blue Проходимый
+
+            li.quick_filters__item
+                label
+                    input(type="checkbox")
+                    span.bg_bleu_de_france Экономичный
+
+            li.quick_filters__item
+                label
+                    input(type="checkbox")
+                    span.bg_purple Быстрый
+
+        .favorites__list
+
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+            include ./blocks/card
+
+        button.favorites__show_more(type="button") Показать ещё
+
+        include ./blocks/pagination
+
+
+
