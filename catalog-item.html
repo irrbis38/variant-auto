@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Главная страница</title>
+    <title>Страница авто</title>
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="Variant Auto - Автоуслуги">
@@ -23,7 +23,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
-  <body class="index">
+  <body class="catalog-item-page">
     <header class="header">   
       <div class="header__container">
         <div class="header__logo"><img src="./images/logo.svg" alt="Логотип Вариант Авто" width="216" height="28"></div>
@@ -139,1452 +139,321 @@
     </header>
     <div class="overlay"></div>
     <main class="main">
-      <section class="main_intro">
-        <div class="main_intro__container">
-          <h1 class="main_intro__title main_fluid__title">Авто с&nbsp;пробегом</h1>
-          <p class="main_intro__subtitle">Которые <span>прошли необходимые</span> диагностику и подготовку</p>
-          <div class="main_intro__wrapper">
-            <div class="main_intro__slider">
-              <div class="main_intro__slide active">
-                <picture class="picture object-fit-cover">
-                  <source class="object-fit-cover" srcset="images/main_intro/main_intro_slide1.webp, images/main_intro/main_intro_slide1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/main_intro/main_intro_slide1.jpg" srcset="images/main_intro/main_intro_slide1.jpg, images/main_intro/main_intro_slide1@2x.jpg 2x" alt=""/>
-                </picture>
-                <div class="main_intro__progress"></div>
-              </div>
-              <div class="main_intro__slide">
-                <picture class="picture object-fit-cover">
-                  <source class="object-fit-cover" srcset="images/main_intro/main_intro_slide2.webp, images/main_intro/main_intro_slide2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/main_intro/main_intro_slide2.jpg" srcset="images/main_intro/main_intro_slide2.jpg, images/main_intro/main_intro_slide2@2x.jpg 2x" alt=""/>
-                </picture>
-                <div class="main_intro__progress"></div>
-              </div>
-              <div class="main_intro__slide">
-                <picture class="picture object-fit-cover">
-                  <source class="object-fit-cover" srcset="images/main_intro/main_intro_slide3.webp, images/main_intro/main_intro_slide3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/main_intro/main_intro_slide3.jpg" srcset="images/main_intro/main_intro_slide3.jpg, images/main_intro/main_intro_slide3@2x.jpg 2x" alt=""/>
-                </picture>
-                <div class="main_intro__progress"></div>
-              </div>
-              <div class="main_intro__slide">
-                <picture class="picture object-fit-cover">
-                  <source class="object-fit-cover" srcset="images/main_intro/main_intro_slide4.webp, images/main_intro/main_intro_slide4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/main_intro/main_intro_slide4.jpg" srcset="images/main_intro/main_intro_slide4.jpg, images/main_intro/main_intro_slide4@2x.jpg 2x" alt=""/>
-                </picture>
-                <div class="main_intro__progress"></div>
-              </div>
-              <div class="main_intro__slide">
-                <picture class="picture object-fit-cover">
-                  <source class="object-fit-cover" srcset="images/main_intro/main_intro_slide5.webp, images/main_intro/main_intro_slide5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/main_intro/main_intro_slide5.jpg" srcset="images/main_intro/main_intro_slide5.jpg, images/main_intro/main_intro_slide5@2x.jpg 2x" alt=""/>
-                </picture>
-                <div class="main_intro__progress"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="q_selection">
-        <div class="container"> 
-          <div class="q_selection__wrapper">
-            <div class="q_selection__brand q_selection__select">
-              <input class="q_selection__input" type="text" placeholder="Выберите или введите"><span></span>
-              <div class="q_selection__group">
-                <ul class="q_selection__list">
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Lada (ВАЗ)">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Audi">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Changan">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="BMW">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Daewoo">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="EXEED">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Ford">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Geely">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Haval">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Honda">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Hongqi">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Land Rover">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Lexus">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Mazda">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Mercedes-Benz">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Mitsubishi">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Volkswagen">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Toyota">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Skoda">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Москвич">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Daewoo">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="EXEED">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Ford">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Geely">
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="q_selection__model q_selection__select">
-              <input class="q_selection__input" type="text" placeholder="Модель"><span></span>
-              <div class="q_selection__group">
-                <ul class="q_selection__list">
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Lada (ВАЗ)">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Audi">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Changan">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="BMW">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Daewoo">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="EXEED">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Ford">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Geely">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Haval">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Honda">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Hongqi">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Land Rover">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Lexus">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Mazda">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Mercedes-Benz">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Mitsubishi">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Volkswagen">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Toyota">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Skoda">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Москвич">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Daewoo">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="EXEED">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Ford">
-                  </li>
-                  <li>
-                    <input class="q_selection__btn" type="button" value="Geely">
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="q_selection__price">
-              <input type="text" placeholder="Цена от" data-maska="#" data-maska-tokens="#:[0-9]:multiple">
-              <input type="text" placeholder="Цена до" data-maska="#" data-maska-tokens="#:[0-9]:multiple">
-            </div><a class="q_selection__link btn__arrow btn__red" href="#">Подобрать</a>
-          </div>
-        </div>
+      <div class="container">
+        <div class="breadcrumbs"><a href="#">Главная</a><a href="#">Продажа автомобилей</a><a href="#">С пробегом</a><span>Bentley Continental GT</span></div>
       </div>
-      <section class="available"> 
-        <div class="container"> 
-          <h2 class="available__title block__title">Автомобили в&nbsp;наличии</h2>
-          <ul class="available__list">
-            <li class="available__item"><a class="available__link" href="#"><span>Lada (ВАЗ)</span><sup>70</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Audi</span><sup>54</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Changan</span><sup>35</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>BMW</span><sup>20</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Daewoo</span><sup>15</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>EXEED</span><sup>5</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Ford</span><sup>25</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Geely</span><sup>45</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Haval</span><sup>25</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Honda</span><sup>15</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Hongqi</span><sup>54</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Land Rover</span><sup>70</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Lexus</span><sup>72</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Mazda</span><sup>15</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Mercedes-Benz</span><sup>5</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Mitsubishi</span><sup>12</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Volkswagen</span><sup>12</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Toyota</span><sup>54</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Skoda</span><sup>15</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Москвич</span><sup>5</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Daewoo</span><sup>53</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>EXEED</span><sup>12</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Ford</span><sup>23</sup></a></li>
-            <li class="available__item"><a class="available__link" href="#"><span>Geely</span><sup>5</sup></a></li>
-          </ul>
-        </div>
-      </section>
-      <div class="links"> 
-        <div class="container"> 
-          <div class="links__wrapper"> 
-            <article class="links__block l_buy">
-              <picture class="picture object-fit-cover">
-                <source class="object-fit-cover" srcset="images/links/l_buy_bg.webp, images/links/l_buy_bg@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/links/l_buy_bg.jpg" srcset="images/links/l_buy_bg.jpg, images/links/l_buy_bg@2x.jpg 2x" alt=""/>
-              </picture>
-              <h3 class="links__title"> <span>Купить </span><span>автомобиль</span></h3>
-              <p class="links__subtitle">Перейти в каталог</p><a href="#"> </a>
-            </article>
-            <article class="links__block l_buyback">
-              <picture class="picture object-fit-cover">
-                <source class="object-fit-cover" srcset="images/links/l_buyback_bg.webp, images/links/l_buyback_bg@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/links/l_buyback_bg.jpg" srcset="images/links/l_buyback_bg.jpg, images/links/l_buyback_bg@2x.jpg 2x" alt=""/>
-              </picture>
-              <h3 class="links__title">Выкуп автомобиля</h3>
-              <p class="links__subtitle">Продать по максимальной цене</p><a href="#"></a>
-            </article>
-            <article class="links__block l_exchange">
-              <picture class="picture object-fit-cover">
-                <source class="object-fit-cover" srcset="images/links/l_exchange_bg.webp, images/links/l_exchange_bg@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/links/l_exchange_bg.jpg" srcset="images/links/l_exchange_bg.jpg, images/links/l_exchange_bg@2x.jpg 2x" alt=""/>
-              </picture>
-              <h3 class="links__title">Обмен</h3>
-              <p class="links__subtitle">Сдать автомобиль</p><a href="#"></a>
-            </article>
-            <article class="links__block l_credit">
-              <picture class="picture object-fit-cover">
-                <source class="object-fit-cover" srcset="images/links/l_credit_bg.webp, images/links/l_credit_bg@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/links/l_credit_bg.jpg" srcset="images/links/l_credit_bg.jpg, images/links/l_credit_bg@2x.jpg 2x" alt=""/>
-              </picture>
-              <h3 class="links__title">Автокредит</h3>
-              <p class="links__subtitle">Подать заявку</p><a href="#"></a>
-            </article>
-            <article class="links__block l_commission">
-              <picture class="picture object-fit-cover">
-                <source class="object-fit-cover" srcset="images/links/l_commission_bg.webp, images/links/l_commission_bg@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/links/l_commission_bg.jpg" srcset="images/links/l_commission_bg.jpg, images/links/l_commission_bg@2x.jpg 2x" alt=""/>
-              </picture>
-              <h3 class="links__title">Комиссия</h3>
-              <p class="links__subtitle">Поставить на комиссию</p><a href="#"></a>
-            </article>
-          </div>
-        </div>
-      </div>
-      <section class="offers section-with-slider">
-        <div class="container"> 
-          <div class="offers__top">
-            <h2 class="offers__title block__title"><span class="colored_bg green_bg">Лучшие</span><span>предложения</span></h2>
-            <div class="offers__nav slider__nav">
-              <button class="offers__prev slider__prev_btn" aria-label="Показать предыдущий слайд"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M40.0003 22.0002V26.0002H16.0003L27.0003 37.0002L24.1603 39.8402L8.32031 24.0002L24.1603 8.16016L27.0003 11.0002L16.0003 22.0002H40.0003Z" fill="#1A1A1A" />
-</svg>
-              </button>
-              <button class="offers__next slider__next_btn" aria-label="Показать следующий слайд"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.99969 22.0002V26.0002H31.9997L20.9997 37.0002L23.8397 39.8402L39.6797 24.0002L23.8397 8.16016L20.9997 11.0002L31.9997 22.0002H7.99969Z" fill="#1A1A1A" />
-</svg>
-              </button>
+      <div class="catalog_item ci">
+        <div class="container ci__first_container">
+          <h1 class="ci__title inner__h1">Nissan Serena, 2003</h1>
+          <div class="ci__top">
+            <div class="card__price">985.000₽</div>
+            <div class="card__credit"> 
+              <div class="card__cost">от 15.067₽/мес.</div>
+              <div class="card__info">
+                <div class="card__info_icon"></div>
+                <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
+              </div>
             </div>
           </div>
-          <div class="offers__slider block-slider swiper">
-            <div class="offers__wrapper block-slider-wrapper swiper-wrapper">
-              <article class="card swiper-slide">
-                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
-                <div class="card__full swiper">
-                  <div class="card__full_wrapper swiper-wrapper">
-                    <div class="card__full_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card__full_paggination"></div>
-                </div>
-                <div class="card__previews swiper">
-                  <div class="card__prev_list swiper-wrapper">
-                    <div class="card__prev_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__descr">
-                  <h3 class="card__name">BMW X5 2022</h3>
-                  <ul class="card__features">
-                    <li class="card__feature">Бензин</li>
-                    <li class="card__feature">1,6</li>
-                    <li class="card__feature">Автомат</li>
-                    <li class="card__feature">245,345 км</li>
-                    <li class="card__feature">Передний</li>
-                  </ul>
-                  <div class="card__price">985.000₽</div>
-                  <div class="card__credit"> 
-                    <div class="card__cost">от 15.067₽/мес.</div>
-                    <div class="card__info">
-                      <div class="card__info_icon"></div>
-                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article class="card swiper-slide">
-                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
-                <div class="card__full swiper">
-                  <div class="card__full_wrapper swiper-wrapper">
-                    <div class="card__full_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card__full_paggination"></div>
-                </div>
-                <div class="card__previews swiper">
-                  <div class="card__prev_list swiper-wrapper">
-                    <div class="card__prev_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__descr">
-                  <h3 class="card__name">BMW X5 2022</h3>
-                  <ul class="card__features">
-                    <li class="card__feature">Бензин</li>
-                    <li class="card__feature">1,6</li>
-                    <li class="card__feature">Автомат</li>
-                    <li class="card__feature">245,345 км</li>
-                    <li class="card__feature">Передний</li>
-                  </ul>
-                  <div class="card__price">985.000₽</div>
-                  <div class="card__credit"> 
-                    <div class="card__cost">от 15.067₽/мес.</div>
-                    <div class="card__info">
-                      <div class="card__info_icon"></div>
-                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article class="card swiper-slide">
-                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
-                <div class="card__full swiper">
-                  <div class="card__full_wrapper swiper-wrapper">
-                    <div class="card__full_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card__full_paggination"></div>
-                </div>
-                <div class="card__previews swiper">
-                  <div class="card__prev_list swiper-wrapper">
-                    <div class="card__prev_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__descr">
-                  <h3 class="card__name">BMW X5 2022</h3>
-                  <ul class="card__features">
-                    <li class="card__feature">Бензин</li>
-                    <li class="card__feature">1,6</li>
-                    <li class="card__feature">Автомат</li>
-                    <li class="card__feature">245,345 км</li>
-                    <li class="card__feature">Передний</li>
-                  </ul>
-                  <div class="card__price">985.000₽</div>
-                  <div class="card__credit"> 
-                    <div class="card__cost">от 15.067₽/мес.</div>
-                    <div class="card__info">
-                      <div class="card__info_icon"></div>
-                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article class="card swiper-slide">
-                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
-                <div class="card__full swiper">
-                  <div class="card__full_wrapper swiper-wrapper">
-                    <div class="card__full_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card__full_paggination"></div>
-                </div>
-                <div class="card__previews swiper">
-                  <div class="card__prev_list swiper-wrapper">
-                    <div class="card__prev_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__descr">
-                  <h3 class="card__name">BMW X5 2022</h3>
-                  <ul class="card__features">
-                    <li class="card__feature">Бензин</li>
-                    <li class="card__feature">1,6</li>
-                    <li class="card__feature">Автомат</li>
-                    <li class="card__feature">245,345 км</li>
-                    <li class="card__feature">Передний</li>
-                  </ul>
-                  <div class="card__price">985.000₽</div>
-                  <div class="card__credit"> 
-                    <div class="card__cost">от 15.067₽/мес.</div>
-                    <div class="card__info">
-                      <div class="card__info_icon"></div>
-                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article class="card swiper-slide">
-                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
-                <div class="card__full swiper">
-                  <div class="card__full_wrapper swiper-wrapper">
-                    <div class="card__full_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card__full_paggination"></div>
-                </div>
-                <div class="card__previews swiper">
-                  <div class="card__prev_list swiper-wrapper">
-                    <div class="card__prev_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__descr">
-                  <h3 class="card__name">BMW X5 2022</h3>
-                  <ul class="card__features">
-                    <li class="card__feature">Бензин</li>
-                    <li class="card__feature">1,6</li>
-                    <li class="card__feature">Автомат</li>
-                    <li class="card__feature">245,345 км</li>
-                    <li class="card__feature">Передний</li>
-                  </ul>
-                  <div class="card__price">985.000₽</div>
-                  <div class="card__credit"> 
-                    <div class="card__cost">от 15.067₽/мес.</div>
-                    <div class="card__info">
-                      <div class="card__info_icon"></div>
-                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article class="card swiper-slide">
-                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
-                <div class="card__full swiper">
-                  <div class="card__full_wrapper swiper-wrapper">
-                    <div class="card__full_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card__full_paggination"></div>
-                </div>
-                <div class="card__previews swiper">
-                  <div class="card__prev_list swiper-wrapper">
-                    <div class="card__prev_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__descr">
-                  <h3 class="card__name">BMW X5 2022</h3>
-                  <ul class="card__features">
-                    <li class="card__feature">Бензин</li>
-                    <li class="card__feature">1,6</li>
-                    <li class="card__feature">Автомат</li>
-                    <li class="card__feature">245,345 км</li>
-                    <li class="card__feature">Передний</li>
-                  </ul>
-                  <div class="card__price">985.000₽</div>
-                  <div class="card__credit"> 
-                    <div class="card__cost">от 15.067₽/мес.</div>
-                    <div class="card__info">
-                      <div class="card__info_icon"></div>
-                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-          <button class="offers__show_more btn__red" type="button">Показать еще</button>
         </div>
-      </section>
-      <section class="offers section-with-slider">
-        <div class="container"> 
-          <div class="offers__top">
-            <h2 class="offers__title block__title"><span class="colored_bg blue_bg">Последние</span><span>поступления</span></h2>
-            <div class="offers__nav slider__nav">
-              <button class="offers__prev slider__prev_btn" aria-label="Показать предыдущий слайд"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M40.0003 22.0002V26.0002H16.0003L27.0003 37.0002L24.1603 39.8402L8.32031 24.0002L24.1603 8.16016L27.0003 11.0002L16.0003 22.0002H40.0003Z" fill="#1A1A1A" />
-</svg>
-              </button>
-              <button class="offers__next slider__next_btn" aria-label="Показать следующий слайд"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.99969 22.0002V26.0002H31.9997L20.9997 37.0002L23.8397 39.8402L39.6797 24.0002L23.8397 8.16016L20.9997 11.0002L31.9997 22.0002H7.99969Z" fill="#1A1A1A" />
-</svg>
-              </button>
-            </div>
-          </div>
-          <div class="offers__slider block-slider swiper">
-            <div class="offers__wrapper block-slider-wrapper swiper-wrapper">
-              <article class="card swiper-slide">
-                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
-                <div class="card__full swiper">
-                  <div class="card__full_wrapper swiper-wrapper">
-                    <div class="card__full_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card__full_paggination"></div>
-                </div>
-                <div class="card__previews swiper">
-                  <div class="card__prev_list swiper-wrapper">
-                    <div class="card__prev_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__descr">
-                  <h3 class="card__name">BMW X5 2022</h3>
-                  <ul class="card__features">
-                    <li class="card__feature">Бензин</li>
-                    <li class="card__feature">1,6</li>
-                    <li class="card__feature">Автомат</li>
-                    <li class="card__feature">245,345 км</li>
-                    <li class="card__feature">Передний</li>
-                  </ul>
-                  <div class="card__price">985.000₽</div>
-                  <div class="card__credit"> 
-                    <div class="card__cost">от 15.067₽/мес.</div>
-                    <div class="card__info">
-                      <div class="card__info_icon"></div>
-                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article class="card swiper-slide">
-                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
-                <div class="card__full swiper">
-                  <div class="card__full_wrapper swiper-wrapper">
-                    <div class="card__full_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card__full_paggination"></div>
-                </div>
-                <div class="card__previews swiper">
-                  <div class="card__prev_list swiper-wrapper">
-                    <div class="card__prev_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__descr">
-                  <h3 class="card__name">BMW X5 2022</h3>
-                  <ul class="card__features">
-                    <li class="card__feature">Бензин</li>
-                    <li class="card__feature">1,6</li>
-                    <li class="card__feature">Автомат</li>
-                    <li class="card__feature">245,345 км</li>
-                    <li class="card__feature">Передний</li>
-                  </ul>
-                  <div class="card__price">985.000₽</div>
-                  <div class="card__credit"> 
-                    <div class="card__cost">от 15.067₽/мес.</div>
-                    <div class="card__info">
-                      <div class="card__info_icon"></div>
-                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article class="card swiper-slide">
-                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
-                <div class="card__full swiper">
-                  <div class="card__full_wrapper swiper-wrapper">
-                    <div class="card__full_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card__full_paggination"></div>
-                </div>
-                <div class="card__previews swiper">
-                  <div class="card__prev_list swiper-wrapper">
-                    <div class="card__prev_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__descr">
-                  <h3 class="card__name">BMW X5 2022</h3>
-                  <ul class="card__features">
-                    <li class="card__feature">Бензин</li>
-                    <li class="card__feature">1,6</li>
-                    <li class="card__feature">Автомат</li>
-                    <li class="card__feature">245,345 км</li>
-                    <li class="card__feature">Передний</li>
-                  </ul>
-                  <div class="card__price">985.000₽</div>
-                  <div class="card__credit"> 
-                    <div class="card__cost">от 15.067₽/мес.</div>
-                    <div class="card__info">
-                      <div class="card__info_icon"></div>
-                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article class="card swiper-slide">
-                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
-                <div class="card__full swiper">
-                  <div class="card__full_wrapper swiper-wrapper">
-                    <div class="card__full_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card__full_paggination"></div>
-                </div>
-                <div class="card__previews swiper">
-                  <div class="card__prev_list swiper-wrapper">
-                    <div class="card__prev_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__descr">
-                  <h3 class="card__name">BMW X5 2022</h3>
-                  <ul class="card__features">
-                    <li class="card__feature">Бензин</li>
-                    <li class="card__feature">1,6</li>
-                    <li class="card__feature">Автомат</li>
-                    <li class="card__feature">245,345 км</li>
-                    <li class="card__feature">Передний</li>
-                  </ul>
-                  <div class="card__price">985.000₽</div>
-                  <div class="card__credit"> 
-                    <div class="card__cost">от 15.067₽/мес.</div>
-                    <div class="card__info">
-                      <div class="card__info_icon"></div>
-                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article class="card swiper-slide">
-                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
-                <div class="card__full swiper">
-                  <div class="card__full_wrapper swiper-wrapper">
-                    <div class="card__full_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card__full_paggination"></div>
-                </div>
-                <div class="card__previews swiper">
-                  <div class="card__prev_list swiper-wrapper">
-                    <div class="card__prev_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__descr">
-                  <h3 class="card__name">BMW X5 2022</h3>
-                  <ul class="card__features">
-                    <li class="card__feature">Бензин</li>
-                    <li class="card__feature">1,6</li>
-                    <li class="card__feature">Автомат</li>
-                    <li class="card__feature">245,345 км</li>
-                    <li class="card__feature">Передний</li>
-                  </ul>
-                  <div class="card__price">985.000₽</div>
-                  <div class="card__credit"> 
-                    <div class="card__cost">от 15.067₽/мес.</div>
-                    <div class="card__info">
-                      <div class="card__info_icon"></div>
-                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article class="card swiper-slide">
-                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
-                <div class="card__full swiper">
-                  <div class="card__full_wrapper swiper-wrapper">
-                    <div class="card__full_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                    <div class="card__full_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card__full_paggination"></div>
-                </div>
-                <div class="card__previews swiper">
-                  <div class="card__prev_list swiper-wrapper">
-                    <div class="card__prev_item active swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                    <div class="card__prev_item swiper-slide">
-                      <picture class="picture object-fit-cover">
-                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__descr">
-                  <h3 class="card__name">BMW X5 2022</h3>
-                  <ul class="card__features">
-                    <li class="card__feature">Бензин</li>
-                    <li class="card__feature">1,6</li>
-                    <li class="card__feature">Автомат</li>
-                    <li class="card__feature">245,345 км</li>
-                    <li class="card__feature">Передний</li>
-                  </ul>
-                  <div class="card__price">985.000₽</div>
-                  <div class="card__credit"> 
-                    <div class="card__cost">от 15.067₽/мес.</div>
-                    <div class="card__info">
-                      <div class="card__info_icon"></div>
-                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-          <button class="offers__show_more btn__red" type="button">Показать еще</button>
-        </div>
-      </section>
-      <section class="autocredit">
-        <div class="container"> 
-          <h2 class="autocredit__title fluid__title">Автокредит</h2>
-          <p class="autocredit__subtitle">Совсем не обязательно экономить на себе, чтобы мечта стала реальностью уже сегодня. Мы предлагаем автокредиты на выгодных условиях!</p>
-        </div>
-        <div class="autocredit__benefits">
+        <div class="ci__actions">
           <div class="container">
-            <div class="autocredit__benefits_container">
-              <div class="autocredit__benefits_item"><img class="autocredit__benefits_icon" src="/images/credit_1.svg" alt="">
-                <p class="autocredit__benefits_text">Без первоначального взноса</p>
-              </div>
-              <div class="autocredit__benefits_item"><img class="autocredit__benefits_icon" src="/images/credit_2.svg" alt="">
-                <p class="autocredit__benefits_text">Без поручителей и справок </p>
-              </div>
-              <div class="autocredit__benefits_item"><img class="autocredit__benefits_icon" src="/images/credit_3.svg" alt="">
-                <p class="autocredit__benefits_text">Одобрение в течении 1-го часа</p>
+            <div class="ci__actions_container">
+              <input class="ci__btn ci__book" type="button" aria-label="Забронировать авто" value="Забронировать">
+              <input class="ci__btn ci__show_online" type="button" aria-label="Показать авто онлайн" value="Показать онлайн">
+              <input class="ci__btn ci__to_favorites add-to-favorites" type="button" aria-label="Добавить в избранное">
+              <div class="ci__financial">
+                <input class="ci__btn ci__credit calculate-credit" type="button" aria-label="Рассчитать в кредит" value="Рассчитать в кредит">
+                <input class="ci__btn ci__trade" type="button" aria-label="Обменять" value="Обменять">
               </div>
             </div>
           </div>
         </div>
-        <div class="autocredit__ticker">
-          <div class="autocredit__ticker_wrapper">
-            <div class="autocredit__ticker_block"><img class="autocredit__ticker_item" src="/images/autocredit/icon_bank_1.svg" alt=""><img class="autocredit__ticker_item" src="/images/autocredit/icon_bank_2.svg" alt=""><img class="autocredit__ticker_item" src="/images/autocredit/icon_bank_3.svg" alt=""><img class="autocredit__ticker_item" src="/images/autocredit/icon_bank_4.svg" alt=""><img class="autocredit__ticker_item" src="/images/autocredit/icon_bank_5.svg" alt=""><img class="autocredit__ticker_item" src="/images/autocredit/icon_bank_6.svg" alt=""></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="autocredit__details"> 
-            <button class="autocredit__approval btn__high btn__agree_green" type="button">Получить одобрение</button><a class="autocredit__more btn__high btn__arrow_grey" href="#">Подробнее об условиях</a>
-          </div>
-        </div>
-      </section>
-      <section class="ratings">
-        <div class="container">
-          <h2 class="ratings__title">Наши рейтинги в&nbsp;интернете</h2>
-          <p class="ratings__subtitle">Хотите получить больше информации о наших услугах и сервисе? Изучите мнение о нас на независимых авторитетных интернет-ресурсах</p>
-        </div>
-        <div class="ratings__wrapper">
-          <div class="container ratings__list">
-            <div class="ratings__item">
-              <div class="ratings__icon"> <img src="/images/avito.svg" alt="Авито"></div><span class="ratings__value">4.7</span>
+        <div class="ci__sliders">
+          <div class="container">
+            <div class="ci__slider_full swiper">
+              <div class="ci__slider_full_wrapper swiper-wrapper">
+                <div class="ci__slider_full_slide swiper-slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_full_1.webp, images/card_item/ci_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_full_1.jpg" srcset="images/card_item/ci_full_1.jpg, images/card_item/ci_full_1@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="ci__slider_full_slide swiper-slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_full_2.webp, images/card_item/ci_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_full_2.jpg" srcset="images/card_item/ci_full_2.jpg, images/card_item/ci_full_2@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="ci__slider_full_slide swiper-slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_full_3.webp, images/card_item/ci_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_full_3.jpg" srcset="images/card_item/ci_full_3.jpg, images/card_item/ci_full_3@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="ci__slider_full_slide swiper-slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_full_4.webp, images/card_item/ci_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_full_4.jpg" srcset="images/card_item/ci_full_4.jpg, images/card_item/ci_full_4@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="ci__slider_full_slide swiper-slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_full_5.webp, images/card_item/ci_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_full_5.jpg" srcset="images/card_item/ci_full_5.jpg, images/card_item/ci_full_5@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="ci__slider_full_slide swiper-slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_full_6.webp, images/card_item/ci_full_6@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_full_6.jpg" srcset="images/card_item/ci_full_6.jpg, images/card_item/ci_full_6@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="ci__slider_full_slide swiper-slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_full_7.webp, images/card_item/ci_full_7@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_full_7.jpg" srcset="images/card_item/ci_full_7.jpg, images/card_item/ci_full_7@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="ci__slider_full_slide swiper-slide"></div>
+              </div>
             </div>
-            <div class="ratings__item">
-              <div class="ratings__icon"> <img src="/images/yandex.svg" alt="Яндекс"></div><span class="ratings__value">4.2</span>
-            </div>
-            <div class="ratings__item">
-              <div class="ratings__icon"> <img src="/images/2gis.svg" alt="2gis"></div><span class="ratings__value">4.2</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="reviews">
-        <div class="container"> 
-          <h2 class="reviews__title fluid__title">Отзывы</h2>
-          <p class="reviews__subtitle">Наши клиенты расскажут  <span>почему выбрали нас</span> и наши автомобили</p>
-          <div class="reviews__wrapper">
-            <article class="reviews__item"> 
-              <div class="reviews__preview">
-                <picture class="picture object-fit-cover">
-                  <source class="object-fit-cover" srcset="images/reviews/reviews_img.webp, images/reviews/reviews_img@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/reviews/reviews_img.jpg" srcset="images/reviews/reviews_img.jpg, images/reviews/reviews_img@2x.jpg 2x" alt="" width="464" height="300" loading="lazy"/>
-                </picture>
+            <div class="ci__slider_preview">
+              <div class="ci__slider_preview_list">
+                <div class="ci__slider_preview_slide active">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_preview_1.webp, images/card_item/ci_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_preview_1.jpg" srcset="images/card_item/ci_preview_1.jpg, images/card_item/ci_preview_1@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="ci__slider_preview_slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_preview_2.webp, images/card_item/ci_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_preview_2.jpg" srcset="images/card_item/ci_preview_2.jpg, images/card_item/ci_preview_2@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="ci__slider_preview_slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_preview_3.webp, images/card_item/ci_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_preview_3.jpg" srcset="images/card_item/ci_preview_3.jpg, images/card_item/ci_preview_3@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="ci__slider_preview_slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_preview_4.webp, images/card_item/ci_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_preview_4.jpg" srcset="images/card_item/ci_preview_4.jpg, images/card_item/ci_preview_4@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="ci__slider_preview_slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_preview_5.webp, images/card_item/ci_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_preview_5.jpg" srcset="images/card_item/ci_preview_5.jpg, images/card_item/ci_preview_5@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="ci__slider_preview_slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_preview_6.webp, images/card_item/ci_preview_6@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_preview_6.jpg" srcset="images/card_item/ci_preview_6.jpg, images/card_item/ci_preview_6@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="ci__slider_preview_slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_preview_7.webp, images/card_item/ci_preview_7@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_preview_7.jpg" srcset="images/card_item/ci_preview_7.jpg, images/card_item/ci_preview_7@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
               </div>
-              <div class="review__descr">
-                <h3 class="reviews__car"><span>Ford Mondeo V, 2010</span></h3>
-                <p class="reviews__name">Кирилл</p>
-                <p class="reviews__text">Покупала, потому что очень понравился внешний вид. Хотя француза не рассматривала к покупке, но ожидания превзошли, супер машина. Никаких поломок</p>
-              </div>
-            </article>
-            <article class="reviews__item"> 
-              <div class="reviews__preview">
-                <picture class="picture object-fit-cover">
-                  <source class="object-fit-cover" srcset="images/reviews/reviews_img.webp, images/reviews/reviews_img@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/reviews/reviews_img.jpg" srcset="images/reviews/reviews_img.jpg, images/reviews/reviews_img@2x.jpg 2x" alt="" width="464" height="300" loading="lazy"/>
-                </picture>
-              </div>
-              <div class="review__descr">
-                <h3 class="reviews__car"><span>Ford Mondeo V, 2010</span></h3>
-                <p class="reviews__name">Кирилл</p>
-                <p class="reviews__text">Покупала, потому что очень понравился внешний вид. Хотя француза не рассматривала к покупке, но ожидания превзошли, супер машина. Никаких поломок</p>
-              </div>
-            </article>
-            <article class="reviews__item"> 
-              <div class="reviews__preview">
-                <picture class="picture object-fit-cover">
-                  <source class="object-fit-cover" srcset="images/reviews/reviews_img.webp, images/reviews/reviews_img@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/reviews/reviews_img.jpg" srcset="images/reviews/reviews_img.jpg, images/reviews/reviews_img@2x.jpg 2x" alt="" width="464" height="300" loading="lazy"/>
-                </picture>
-              </div>
-              <div class="review__descr">
-                <h3 class="reviews__car"><span>Ford Mondeo V, 2010</span></h3>
-                <p class="reviews__name">Кирилл</p>
-                <p class="reviews__text">Покупала, потому что очень понравился внешний вид. Хотя француза не рассматривала к покупке, но ожидания превзошли, супер машина. Никаких поломок</p>
-              </div>
-            </article>
-            <article class="reviews__item"> 
-              <div class="reviews__preview">
-                <picture class="picture object-fit-cover">
-                  <source class="object-fit-cover" srcset="images/reviews/reviews_img.webp, images/reviews/reviews_img@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/reviews/reviews_img.jpg" srcset="images/reviews/reviews_img.jpg, images/reviews/reviews_img@2x.jpg 2x" alt="" width="464" height="300" loading="lazy"/>
-                </picture>
-              </div>
-              <div class="review__descr">
-                <h3 class="reviews__car"><span>Ford Mondeo V, 2010</span></h3>
-                <p class="reviews__name">Кирилл</p>
-                <p class="reviews__text">Покупала, потому что очень понравился внешний вид. Хотя француза не рассматривала к покупке, но ожидания превзошли, супер машина. Никаких поломок</p>
-              </div>
-            </article>
-            <article class="reviews__item"> 
-              <div class="reviews__preview">
-                <picture class="picture object-fit-cover">
-                  <source class="object-fit-cover" srcset="images/reviews/reviews_img.webp, images/reviews/reviews_img@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/reviews/reviews_img.jpg" srcset="images/reviews/reviews_img.jpg, images/reviews/reviews_img@2x.jpg 2x" alt="" width="464" height="300" loading="lazy"/>
-                </picture>
-              </div>
-              <div class="review__descr">
-                <h3 class="reviews__car"><span>Ford Mondeo V, 2010</span></h3>
-                <p class="reviews__name">Кирилл</p>
-                <p class="reviews__text">Покупала, потому что очень понравился внешний вид. Хотя француза не рассматривала к покупке, но ожидания превзошли, супер машина. Никаких поломок</p>
-              </div>
-            </article>
-            <article class="reviews__item"> 
-              <div class="reviews__preview">
-                <picture class="picture object-fit-cover">
-                  <source class="object-fit-cover" srcset="images/reviews/reviews_img.webp, images/reviews/reviews_img@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/reviews/reviews_img.jpg" srcset="images/reviews/reviews_img.jpg, images/reviews/reviews_img@2x.jpg 2x" alt="" width="464" height="300" loading="lazy"/>
-                </picture>
-              </div>
-              <div class="review__descr">
-                <h3 class="reviews__car"><span>Ford Mondeo V, 2010</span></h3>
-                <p class="reviews__name">Кирилл</p>
-                <p class="reviews__text">Покупала, потому что очень понравился внешний вид. Хотя француза не рассматривала к покупке, но ожидания превзошли, супер машина. Никаких поломок</p>
-              </div>
-            </article>
-          </div><a class="reviews__all btn__high btn__arrow_grey" href="#">Все отзывы</a>
-        </div>
-      </section>
-      <section class="contacts">
-        <div class="container"> 
-          <h2 class="contacts__title fluid__title">Контакты</h2>
-          <p class="contacts__subtitle">Возникли вопросы? Приезжайте к нам в салон и <span>задайте их лично</span></p>
-          <div class="contacts__wrapper">
-            <div class="contacts__item"> 
-              <div class="contacts__name">Местоположение</div>
-              <div class="contacts__data">ул. Ростовское шоссе, 20 корпус 1</div>
-            </div>
-            <div class="contacts__item"> 
-              <div class="contacts__name">Горячая линия</div><a class="contacts__data" href="tel:89284091449">8 (928) 409-14-49</a>
-            </div>
-            <div class="contacts__item"> 
-              <div class="contacts__name">График работы</div>
-              <div class="contacts__data">09:00–19:00</div>
             </div>
           </div>
         </div>
-        <div class="contacts__map" id="contacts-map"></div>
-      </section>
-      <section class="need_help">
-        <div class="container"> 
-          <h2 class="need_help__title">Затрудняетесь с выбором?</h2>
-          <p class="need_help__subtitle">Оставьте свои данные в форме - мы перезвоним вам, поможем определиться с выбором и  <span>предложим отличные условия покупки!</span></p>
-          <form class="need_help__form" action="#">
-            <input class="need_help__name" type="text" placeholder="Ваше имя">
-            <input class="need_help__phone input-required" type="text" placeholder="Ваш телефон*">
-            <textarea class="need_help__wishes" rows="1" placeholder="Ваши пожелания"></textarea>
-            <button class="need_help__submit btn__arrow btn__red" type="submit">Получить консультацию</button>
-          </form>
+        <div class="ci__info container">
+          <div class="ci__info_wrapper">
+            <div class="ci__characteristics characteristics">
+              <h2 class="ci__block_title characteristics__title">Характеристики</h2>
+              <div class="characteristics__wrapper"> 
+                <div class="characteristics__line"></div>
+                <div class="characteristics__line"></div>
+                <div class="characteristics__line"></div>
+                <div class="characteristics__item"> <span class="characteristics__name">Марка</span><a class="characteristics__value" href="#">Ford</a></div>
+                <div class="characteristics__item"> <span class="characteristics__name">Модель</span><a class="characteristics__value" href="#">Mondeo</a></div>
+                <div class="characteristics__item"> <span class="characteristics__name">Год</span><span class="characteristics__value">2008</span></div>
+                <div class="characteristics__item"> <span class="characteristics__name">Поколение</span><span class="characteristics__value">I (X164) </span></div>
+                <div class="characteristics__item"> <span class="characteristics__name">Модификация</span><span class="characteristics__value">GL 500 4MATIC</span></div>
+                <div class="characteristics__item"> <span class="characteristics__name">Объем двигателя</span><span class="characteristics__value">3,0</span></div>
+                <div class="characteristics__item"> <span class="characteristics__name">Мощность </span><span class="characteristics__value">238 л.с.</span></div>
+                <div class="characteristics__item"> <span class="characteristics__name">Тип двигателя</span><span class="characteristics__value">Бензин</span></div>
+                <div class="characteristics__item"> <span class="characteristics__name">Привод</span><span class="characteristics__value">Полный</span></div>
+                <div class="characteristics__item"> <span class="characteristics__name">КПП</span><span class="characteristics__value">Автомат</span></div>
+                <div class="characteristics__item"> <span class="characteristics__name">Пробег</span><span class="characteristics__value">180 000 км</span></div>
+                <div class="characteristics__item"> <span class="characteristics__name">Кол-во владельцев</span><span class="characteristics__value">4</span></div>
+                <div class="characteristics__item"> <span class="characteristics__name">Руль</span><span class="characteristics__value">Левый</span></div>
+                <div class="characteristics__item"> <span class="characteristics__name">Цвет</span><span class="characteristics__value">Черный</span></div>
+              </div>
+            </div>
+            <div class="ci__configuration configuration ci__rolled_container">
+              <h2 class="ci__block_title configuration__title">Комплектация</h2>
+              <div class="configuration__wrapper ci__rolled_up">
+                <div class="configuration__group">
+                  <h3 class="configuration__name">Мультимедиа</h3>
+                  <ul class="configuration__list">
+                    <li>Навигационная система</li>
+                    <li>Bluetooth-интерфейс для подключения    мобильных устройств</li>
+                    <li>Разъемы USB </li>
+                    <li>8 динамиков</li>
+                  </ul>
+                </div>
+                <div class="configuration__group">
+                  <h3 class="configuration__name">Безопасность</h3>
+                  <ul class="configuration__list">
+                    <li>Система мониторинга слепых зон</li>
+                    <li>Камера заднего вида</li>
+                    <li>Антиблокировочная система тормозов (ABS)</li>
+                    <li>Антипробуксовочная cистема</li>
+                    <li>Крепления для детских кресел стандарта ISOFIX на заднем сиденье</li>
+                    <li>Система курсовой устойчивости (ESC)</li>
+                    <li>Система помощи при экстренном торможении</li>
+                    <li>Система электронного предотвращения опрокидывания автомобиля (RMI)</li>
+                    <li>Функция электронного распределения тормозных усилий (EBD)</li>
+                    <li>Cистема распознавания дорожных знаков (SLIF)</li>
+                    <li>Передние и задние датчики парковки</li>
+                    <li>Проекционный дисплей (HUD)</li>
+                    <li>Система камер кругового обзора 360°</li>
+                    <li>Системы помощи при движении на спуске и на подъем</li>
+                    <li>Фронтальные и боковые подушки безопасности водителя и переднего пассажира</li>
+                    <li>Электронный ассистент парковки</li>
+                  </ul>
+                </div>
+                <div class="configuration__group">
+                  <h3 class="configuration__name">Комфорт</h3>
+                  <ul class="configuration__list">
+                    <li>Подогрев передних сидений</li>
+                    <li>Круиз-контроль</li>
+                    <li>Регулировка рулевой колонки по углу наклона и вылету</li>
+                    <li>Центральный замок</li>
+                    <li>Электромеханический стояночный тормоз (EPB)</li>
+                    <li>Сенсорная приборная панель 10"</li>
+                    <li>Бесключевой доступ, кнопка запуска двигателя</li>
+                    <li>Вентиляция передних сидений</li>
+                    <li>Климат-контроль 3- зонный</li>
+                    <li>Наружные зеркала заднего вида с электрорегулировкой, подогревом и ручным складыванием</li>
+                    <li>Сигнализация</li>
+                    <li>Система запуска/остановки двигателя Start-Stop</li>
+                    <li>Тонированные задние стёкла</li>
+                    <li>Электрообогрев лобового стекла и форсунок омывателя</li>
+                    <li>Электропривод двери багажника</li>
+                  </ul>
+                </div>
+                <div class="configuration__group">
+                  <h3 class="configuration__name">Обзор и фары</h3>
+                  <ul class="configuration__list">
+                    <li>Датчик дождя</li>
+                    <li>Светодиодные дневные ходовые огни</li>
+                    <li>Автоматическая система управления дальним светом</li>
+                    <li>Светодиодные фары ближнего и дальнего света</li>
+                  </ul>
+                </div>
+              </div>
+              <button class="ci__toggle_rolled_up" type="button" data-full="Все опции">Все опции</button>
+            </div>
+            <div class="ci__description description ci__rolled_container">
+              <h2 class="ci__block_title description__title">Описание</h2>
+              <div class="description__wrapper ci__rolled_up">
+                <p class="description__inner">Авто на белорусской регистрации, в данный момент с хозяином в Польше, возвращаться в РБ не планирую. Если не готовы забирать машину на территории Польши, просьба зря не беспокоить. Польский номер телефона напишу в чат по запросу, тут система не дает указать иностранный номер, белорусский номер уже недействителен. Автомобиль был пригнан новым из США в РБ под последнюю льготную растаможку в 2010-м. Эксплуатировался в основном в РБ, в 2014 году был продан в РФ где ездил около 10 месяцев, потом был продан обратно в РБ. Мой режим эксплуатации 80% трасса, 20% город. Этот автомобиль был впервые привезен новым из США в Беларусь под последнюю льготную растаможку в 2010 году. В основном автомобиль эксплуатировался в Беларуси. Затем, в 2014 году, он был продан в Россию, где использовался около 10 месяцев, после чего был снова продан обратно в Беларусь.</p>
+              </div>
+              <button class="ci__toggle_rolled_up" type="button" data-full="Всё описание">Всё описание</button>
+            </div>
+          </div>
+          <div class="ci__miniature miniature">
+            <button class="miniature__favorites add-to-favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
+            <div class="miniature__slider swiper">
+              <div class="miniature_wrapper swiper-wrapper">
+                <div class="miniature_slide swiper-slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_full_1.webp, images/card_item/ci_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_full_1.jpg" srcset="images/card_item/ci_full_1.jpg, images/card_item/ci_full_1@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="miniature_slide swiper-slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_full_2.webp, images/card_item/ci_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_full_2.jpg" srcset="images/card_item/ci_full_2.jpg, images/card_item/ci_full_2@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="miniature_slide swiper-slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_full_3.webp, images/card_item/ci_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_full_3.jpg" srcset="images/card_item/ci_full_3.jpg, images/card_item/ci_full_3@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="miniature_slide swiper-slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_full_4.webp, images/card_item/ci_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_full_4.jpg" srcset="images/card_item/ci_full_4.jpg, images/card_item/ci_full_4@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="miniature_slide swiper-slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_full_5.webp, images/card_item/ci_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_full_5.jpg" srcset="images/card_item/ci_full_5.jpg, images/card_item/ci_full_5@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="miniature_slide swiper-slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_full_6.webp, images/card_item/ci_full_6@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_full_6.jpg" srcset="images/card_item/ci_full_6.jpg, images/card_item/ci_full_6@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="miniature_slide swiper-slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_full_7.webp, images/card_item/ci_full_7@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_full_7.jpg" srcset="images/card_item/ci_full_7.jpg, images/card_item/ci_full_7@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="miniature_slide swiper-slide"></div>
+              </div>
+            </div>
+            <div class="miniature__preview">
+              <div class="miniature__preview_list">
+                <div class="miniature__preview_slide active">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_preview_1.webp, images/card_item/ci_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_preview_1.jpg" srcset="images/card_item/ci_preview_1.jpg, images/card_item/ci_preview_1@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="miniature__preview_slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_preview_2.webp, images/card_item/ci_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_preview_2.jpg" srcset="images/card_item/ci_preview_2.jpg, images/card_item/ci_preview_2@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="miniature__preview_slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_preview_3.webp, images/card_item/ci_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_preview_3.jpg" srcset="images/card_item/ci_preview_3.jpg, images/card_item/ci_preview_3@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="miniature__preview_slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_preview_4.webp, images/card_item/ci_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_preview_4.jpg" srcset="images/card_item/ci_preview_4.jpg, images/card_item/ci_preview_4@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="miniature__preview_slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_preview_5.webp, images/card_item/ci_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_preview_5.jpg" srcset="images/card_item/ci_preview_5.jpg, images/card_item/ci_preview_5@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="miniature__preview_slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_preview_6.webp, images/card_item/ci_preview_6@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_preview_6.jpg" srcset="images/card_item/ci_preview_6.jpg, images/card_item/ci_preview_6@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+                <div class="miniature__preview_slide">
+                  <picture class="picture object-fit-cover">
+                    <source class="object-fit-cover" srcset="images/card_item/ci_preview_7.webp, images/card_item/ci_preview_7@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card_item/ci_preview_7.jpg" srcset="images/card_item/ci_preview_7.jpg, images/card_item/ci_preview_7@2x.jpg 2x" alt=""/>
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="miniature__descr">
+              <h3 class="ci__title">Nissan Serena, 2003</h3>
+              <div class="ci__top">
+                <div class="card__price">985.000₽</div>
+                <div class="card__credit"> 
+                  <div class="card__cost">от 15.067₽/мес.</div>
+                  <div class="card__info">
+                    <div class="card__info_icon"></div>
+                    <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="miniature__actions">
+                <input class="ci__btn ci__book" type="button" aria-label="Забронировать авто" value="Забронировать">
+                <input class="ci__btn ci__show_online" type="button" aria-label="Показать авто онлайн" value="Показать онлайн">
+                <div class="ci__financial">
+                  <input class="ci__btn ci__credit calculate-credit" type="button" aria-label="Рассчитать в кредит" value="Рассчитать в кредит">
+                  <input class="ci__btn ci__trade" type="button" aria-label="Обменять" value="Обменять">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
       <div class="modal msg__modal"> 
         <div class="modal__inner msg__inner">
           <div class="modal__top msg__top">
@@ -1594,6 +463,521 @@
           <p class="modal__text msg__text">В ближайшее время с вами свяжется менеджер автосалона и ответит на интересующие вопросы</p>
         </div>
       </div>
+      <form class="modal calculate__modal">
+        <div class="modal__inner calculate__inner" action="#">
+          <div class="modal__top calculate__top">
+            <p class="modal__heading calculate__heading">Рассчитать кредит</p>
+            <button class="modal__close calculate__close" type="button" aria-label="Закрыть модальное окно"></button>
+          </div>
+          <p class="modal__text calculate__text">Введите ваше имя и номер телефона</p>
+          <input class="modal__input calculate__name" type="text" placeholder="Имя" name="client_name" autocomplete="off">
+          <input class="modal__input calculate__phone" type="text" placeholder="Телефон" name="client_phone" autocomplete="off">
+          <button class="modal__submit calculate__submit" type="submit">Подать заявку</button>
+          <p class="modal__policy">Нажав, вы даете согласие на обработку <a>персональных данных</a></p>
+        </div>
+      </form><a class="fly__btn" href="tel:89284091449">Позвонить</a>
+      <section class="offers section-with-slider">
+        <div class="container"> 
+          <div class="offers__top">
+            <h2 class="offers__title block__title"><span class="colored_bg blue_bg">Похожие</span><span>предложения</span></h2>
+            <div class="offers__nav slider__nav">
+              <button class="offers__prev slider__prev_btn" aria-label="Показать предыдущий слайд"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M40.0003 22.0002V26.0002H16.0003L27.0003 37.0002L24.1603 39.8402L8.32031 24.0002L24.1603 8.16016L27.0003 11.0002L16.0003 22.0002H40.0003Z" fill="#1A1A1A" />
+</svg>
+              </button>
+              <button class="offers__next slider__next_btn" aria-label="Показать следующий слайд"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.99969 22.0002V26.0002H31.9997L20.9997 37.0002L23.8397 39.8402L39.6797 24.0002L23.8397 8.16016L20.9997 11.0002L31.9997 22.0002H7.99969Z" fill="#1A1A1A" />
+</svg>
+              </button>
+            </div>
+          </div>
+          <div class="offers__slider block-slider swiper">
+            <div class="offers__wrapper block-slider-wrapper swiper-wrapper">
+              <article class="card swiper-slide">
+                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
+                <div class="card__full swiper">
+                  <div class="card__full_wrapper swiper-wrapper">
+                    <div class="card__full_item active swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="card__full_paggination"></div>
+                </div>
+                <div class="card__previews swiper">
+                  <div class="card__prev_list swiper-wrapper">
+                    <div class="card__prev_item active swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__descr">
+                  <h3 class="card__name">BMW X5 2022</h3>
+                  <ul class="card__features">
+                    <li class="card__feature">Бензин</li>
+                    <li class="card__feature">1,6</li>
+                    <li class="card__feature">Автомат</li>
+                    <li class="card__feature">245,345 км</li>
+                    <li class="card__feature">Передний</li>
+                  </ul>
+                  <div class="card__price">985.000₽</div>
+                  <div class="card__credit"> 
+                    <div class="card__cost">от 15.067₽/мес.</div>
+                    <div class="card__info">
+                      <div class="card__info_icon"></div>
+                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card swiper-slide">
+                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
+                <div class="card__full swiper">
+                  <div class="card__full_wrapper swiper-wrapper">
+                    <div class="card__full_item active swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="card__full_paggination"></div>
+                </div>
+                <div class="card__previews swiper">
+                  <div class="card__prev_list swiper-wrapper">
+                    <div class="card__prev_item active swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__descr">
+                  <h3 class="card__name">BMW X5 2022</h3>
+                  <ul class="card__features">
+                    <li class="card__feature">Бензин</li>
+                    <li class="card__feature">1,6</li>
+                    <li class="card__feature">Автомат</li>
+                    <li class="card__feature">245,345 км</li>
+                    <li class="card__feature">Передний</li>
+                  </ul>
+                  <div class="card__price">985.000₽</div>
+                  <div class="card__credit"> 
+                    <div class="card__cost">от 15.067₽/мес.</div>
+                    <div class="card__info">
+                      <div class="card__info_icon"></div>
+                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card swiper-slide">
+                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
+                <div class="card__full swiper">
+                  <div class="card__full_wrapper swiper-wrapper">
+                    <div class="card__full_item active swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="card__full_paggination"></div>
+                </div>
+                <div class="card__previews swiper">
+                  <div class="card__prev_list swiper-wrapper">
+                    <div class="card__prev_item active swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__descr">
+                  <h3 class="card__name">BMW X5 2022</h3>
+                  <ul class="card__features">
+                    <li class="card__feature">Бензин</li>
+                    <li class="card__feature">1,6</li>
+                    <li class="card__feature">Автомат</li>
+                    <li class="card__feature">245,345 км</li>
+                    <li class="card__feature">Передний</li>
+                  </ul>
+                  <div class="card__price">985.000₽</div>
+                  <div class="card__credit"> 
+                    <div class="card__cost">от 15.067₽/мес.</div>
+                    <div class="card__info">
+                      <div class="card__info_icon"></div>
+                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card swiper-slide">
+                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
+                <div class="card__full swiper">
+                  <div class="card__full_wrapper swiper-wrapper">
+                    <div class="card__full_item active swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="card__full_paggination"></div>
+                </div>
+                <div class="card__previews swiper">
+                  <div class="card__prev_list swiper-wrapper">
+                    <div class="card__prev_item active swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__descr">
+                  <h3 class="card__name">BMW X5 2022</h3>
+                  <ul class="card__features">
+                    <li class="card__feature">Бензин</li>
+                    <li class="card__feature">1,6</li>
+                    <li class="card__feature">Автомат</li>
+                    <li class="card__feature">245,345 км</li>
+                    <li class="card__feature">Передний</li>
+                  </ul>
+                  <div class="card__price">985.000₽</div>
+                  <div class="card__credit"> 
+                    <div class="card__cost">от 15.067₽/мес.</div>
+                    <div class="card__info">
+                      <div class="card__info_icon"></div>
+                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card swiper-slide">
+                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
+                <div class="card__full swiper">
+                  <div class="card__full_wrapper swiper-wrapper">
+                    <div class="card__full_item active swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="card__full_paggination"></div>
+                </div>
+                <div class="card__previews swiper">
+                  <div class="card__prev_list swiper-wrapper">
+                    <div class="card__prev_item active swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__descr">
+                  <h3 class="card__name">BMW X5 2022</h3>
+                  <ul class="card__features">
+                    <li class="card__feature">Бензин</li>
+                    <li class="card__feature">1,6</li>
+                    <li class="card__feature">Автомат</li>
+                    <li class="card__feature">245,345 км</li>
+                    <li class="card__feature">Передний</li>
+                  </ul>
+                  <div class="card__price">985.000₽</div>
+                  <div class="card__credit"> 
+                    <div class="card__cost">от 15.067₽/мес.</div>
+                    <div class="card__info">
+                      <div class="card__info_icon"></div>
+                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card swiper-slide">
+                <button class="card__favorites" type="button" aria-label="Добавить в избранное / Убрать из избранного"></button>
+                <div class="card__full swiper">
+                  <div class="card__full_wrapper swiper-wrapper">
+                    <div class="card__full_item active swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_1.webp, images/card/card_full_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_1.jpg" srcset="images/card/card_full_1.jpg, images/card/card_full_1@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_2.webp, images/card/card_full_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_2.jpg" srcset="images/card/card_full_2.jpg, images/card/card_full_2@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_3.webp, images/card/card_full_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_3.jpg" srcset="images/card/card_full_3.jpg, images/card/card_full_3@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_4.webp, images/card/card_full_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_4.jpg" srcset="images/card/card_full_4.jpg, images/card/card_full_4@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                    <div class="card__full_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_full_5.webp, images/card/card_full_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_full_5.jpg" srcset="images/card/card_full_5.jpg, images/card/card_full_5@2x.jpg 2x" alt="" width="342" height="256"/>
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="card__full_paggination"></div>
+                </div>
+                <div class="card__previews swiper">
+                  <div class="card__prev_list swiper-wrapper">
+                    <div class="card__prev_item active swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_1.webp, images/card/card_preview_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_1.jpg" srcset="images/card/card_preview_1.jpg, images/card/card_preview_1@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_2.webp, images/card/card_preview_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_2.jpg" srcset="images/card/card_preview_2.jpg, images/card/card_preview_2@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_3.webp, images/card/card_preview_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_3.jpg" srcset="images/card/card_preview_3.jpg, images/card/card_preview_3@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_4.webp, images/card/card_preview_4@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_4.jpg" srcset="images/card/card_preview_4.jpg, images/card/card_preview_4@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                    <div class="card__prev_item swiper-slide">
+                      <picture class="picture object-fit-cover">
+                        <source class="object-fit-cover" srcset="images/card/card_preview_5.webp, images/card/card_preview_5@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/card/card_preview_5.jpg" srcset="images/card/card_preview_5.jpg, images/card/card_preview_5@2x.jpg 2x" alt="" width="85" height="64"/>
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__descr">
+                  <h3 class="card__name">BMW X5 2022</h3>
+                  <ul class="card__features">
+                    <li class="card__feature">Бензин</li>
+                    <li class="card__feature">1,6</li>
+                    <li class="card__feature">Автомат</li>
+                    <li class="card__feature">245,345 км</li>
+                    <li class="card__feature">Передний</li>
+                  </ul>
+                  <div class="card__price">985.000₽</div>
+                  <div class="card__credit"> 
+                    <div class="card__cost">от 15.067₽/мес.</div>
+                    <div class="card__info">
+                      <div class="card__info_icon"></div>
+                      <div class="card__info_block"><span>Сроки и условия кредитования подбираются индивидуально.</span><a href="#">Подробнее</a></div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <button class="offers__show_more btn__red" type="button">Показать еще</button>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">
