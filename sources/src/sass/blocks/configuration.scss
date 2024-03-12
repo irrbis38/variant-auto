@@ -1,0 +1,56 @@
+.configuration {
+  margin-bottom: 51px;
+
+  @include xs {
+    margin-bottom: 24px;
+  }
+}
+
+.configuration__wrapper {
+  position: relative;
+  padding: 0 24px 31px 24px;
+  background-color: $color_grey_f2;
+  column-count: 2;
+  column-gap: 25px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 48%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #e8e8e8;
+  }
+
+  @include xs {
+    column-count: unset;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.configuration__group {
+  padding-top: 31px;
+  break-inside: avoid;
+}
+
+.configuration__name {
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.configuration__list {
+  padding-left: 20px;
+  list-style-type: disc;
+
+  li {
+    max-width: 70%;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 171%;
+  }
+}

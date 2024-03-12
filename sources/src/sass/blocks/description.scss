@@ -1,0 +1,18 @@
+.description {
+  // margin-bottom: 51px;
+
+  @include xs {
+    margin-bottom: 24px;
+  }
+}
+
+.description__wrapper {
+  padding: 31px 24px;
+  background-color: $color_grey_f2;
+}
+
+.description__inner {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 143%;
+}

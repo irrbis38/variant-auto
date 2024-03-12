@@ -1,0 +1,320 @@
+extends base/_layout
+block vars
+    - var pageName = 'catalog-item-page'
+block head
+    title Страница авто
+block page
+
+    .container
+
+        .breadcrumbs
+                a(href="#") Главная
+                a(href="#") Продажа автомобилей
+                a(href="#") С пробегом
+                span Bentley Continental GT
+                
+
+    .catalog_item.ci
+
+        .container.ci__first_container
+
+            h1.ci__title.inner__h1 Nissan Serena, 2003
+
+            .ci__top
+                .card__price 985.000₽
+
+                .card__credit 
+                    .card__cost от 15.067₽/мес.
+                    .card__info
+                        .card__info_icon
+                        .card__info_block
+                            span Сроки и условия кредитования подбираются индивидуально.
+                            a(href="#") Подробнее
+
+
+        .ci__actions
+            .container
+                .ci__actions_container
+                    input.ci__btn.ci__book(type="button" aria-label="Забронировать авто" value="Забронировать") 
+                    input.ci__btn.ci__show_online(type="button" aria-label="Показать авто онлайн" value="Показать онлайн")
+                    input.ci__btn.ci__to_favorites.add-to-favorites(type="button" aria-label="Добавить в избранное")
+
+                    .ci__financial
+                        input.ci__btn.ci__credit.calculate-credit(type="button" aria-label="Рассчитать в кредит" value="Рассчитать в кредит")
+                        input.ci__btn.ci__trade(type="button" aria-label="Обменять" value="Обменять")
+
+
+        .ci__sliders
+            .container
+
+                .ci__slider_full.swiper
+                    .ci__slider_full_wrapper.swiper-wrapper
+                        
+                        .ci__slider_full_slide.swiper-slide
+                            +picture('card_item/ci_full_1', 'jpg', 'x2')
+                        .ci__slider_full_slide.swiper-slide
+                            +picture('card_item/ci_full_2', 'jpg', 'x2')
+                        .ci__slider_full_slide.swiper-slide
+                            +picture('card_item/ci_full_3', 'jpg', 'x2')
+                        .ci__slider_full_slide.swiper-slide
+                            +picture('card_item/ci_full_4', 'jpg', 'x2')
+                        .ci__slider_full_slide.swiper-slide
+                            +picture('card_item/ci_full_5', 'jpg', 'x2')
+                        .ci__slider_full_slide.swiper-slide
+                            +picture('card_item/ci_full_6', 'jpg', 'x2')
+                        .ci__slider_full_slide.swiper-slide
+                            +picture('card_item/ci_full_7', 'jpg', 'x2')
+                        .ci__slider_full_slide.swiper-slide
+
+
+                .ci__slider_preview
+
+                    .ci__slider_preview_list
+
+                        .ci__slider_preview_slide.active
+                            +picture('card_item/ci_preview_1', 'jpg', 'x2')
+                        .ci__slider_preview_slide
+                            +picture('card_item/ci_preview_2', 'jpg', 'x2')
+                        .ci__slider_preview_slide
+                            +picture('card_item/ci_preview_3', 'jpg', 'x2')
+                        .ci__slider_preview_slide
+                            +picture('card_item/ci_preview_4', 'jpg', 'x2')
+                        .ci__slider_preview_slide
+                            +picture('card_item/ci_preview_5', 'jpg', 'x2')
+                        .ci__slider_preview_slide
+                            +picture('card_item/ci_preview_6', 'jpg', 'x2')
+                        .ci__slider_preview_slide
+                            +picture('card_item/ci_preview_7', 'jpg', 'x2')
+
+
+        .ci__info.container
+
+            .ci__info_wrapper
+
+                .ci__characteristics.characteristics
+
+                    h2.ci__block_title.characteristics__title Характеристики
+
+                    .characteristics__wrapper 
+                        .characteristics__line
+                        .characteristics__line
+                        .characteristics__line
+                    
+
+                        .characteristics__item 
+                            span.characteristics__name Марка
+                            a.characteristics__value(href="#") Ford
+                        .characteristics__item 
+                            span.characteristics__name Модель
+                            a.characteristics__value(href="#") Mondeo
+                        .characteristics__item 
+                            span.characteristics__name Год
+                            span.characteristics__value 2008
+                        .characteristics__item 
+                            span.characteristics__name Поколение
+                            span.characteristics__value I (X164) 
+                        .characteristics__item 
+                            span.characteristics__name Модификация
+                            span.characteristics__value GL 500 4MATIC
+                        .characteristics__item 
+                            span.characteristics__name Объем двигателя
+                            span.characteristics__value 3,0
+                        .characteristics__item 
+                            span.characteristics__name Мощность 
+                            span.characteristics__value 238 л.с.
+                        .characteristics__item 
+                            span.characteristics__name Тип двигателя
+                            span.characteristics__value Бензин
+                        .characteristics__item 
+                            span.characteristics__name Привод
+                            span.characteristics__value Полный
+                        .characteristics__item 
+                            span.characteristics__name КПП
+                            span.characteristics__value Автомат
+                        .characteristics__item 
+                            span.characteristics__name Пробег
+                            span.characteristics__value 180 000 км
+                        .characteristics__item 
+                            span.characteristics__name Кол-во владельцев
+                            span.characteristics__value 4
+                        .characteristics__item 
+                            span.characteristics__name Руль
+                            span.characteristics__value Левый
+                        .characteristics__item 
+                            span.characteristics__name Цвет
+                            span.characteristics__value Черный
+
+
+                
+                .ci__configuration.configuration.ci__rolled_container
+
+                    h2.ci__block_title.configuration__title Комплектация
+
+                    .configuration__wrapper.ci__rolled_up
+
+                        .configuration__group
+
+                            h3.configuration__name Мультимедиа
+
+                            ul.configuration__list
+
+                                li Навигационная система
+                                li Bluetooth-интерфейс для подключения    мобильных устройств
+                                li Разъемы USB 
+                                li 8 динамиков
+
+
+                        .configuration__group
+
+                            h3.configuration__name Безопасность
+
+                            ul.configuration__list
+
+                                li Система мониторинга слепых зон
+                                li Камера заднего вида
+                                li Антиблокировочная система тормозов (ABS)
+                                li Антипробуксовочная cистема
+                                li Крепления для детских кресел стандарта ISOFIX на заднем сиденье
+                                li Система курсовой устойчивости (ESC)
+                                li Система помощи при экстренном торможении
+                                li Система электронного предотвращения опрокидывания автомобиля (RMI)
+                                li Функция электронного распределения тормозных усилий (EBD)
+                                li Cистема распознавания дорожных знаков (SLIF)
+                                li Передние и задние датчики парковки
+                                li Проекционный дисплей (HUD)
+                                li Система камер кругового обзора 360°
+                                li Системы помощи при движении на спуске и на подъем
+                                li Фронтальные и боковые подушки безопасности водителя и переднего пассажира
+                                li Электронный ассистент парковки
+
+
+
+                        .configuration__group
+
+                            h3.configuration__name Комфорт
+
+                            ul.configuration__list
+
+                                li Подогрев передних сидений
+                                li Круиз-контроль
+                                li Регулировка рулевой колонки по углу наклона и вылету
+                                li Центральный замок
+                                li Электромеханический стояночный тормоз (EPB)
+                                li Сенсорная приборная панель 10"
+                                li Бесключевой доступ, кнопка запуска двигателя
+                                li Вентиляция передних сидений
+                                li Климат-контроль 3- зонный
+                                li Наружные зеркала заднего вида с электрорегулировкой, подогревом и ручным складыванием
+                                li Сигнализация
+                                li Система запуска/остановки двигателя Start-Stop
+                                li Тонированные задние стёкла
+                                li Электрообогрев лобового стекла и форсунок омывателя
+                                li Электропривод двери багажника
+
+
+
+                        .configuration__group
+
+                            h3.configuration__name Обзор и фары
+
+                            ul.configuration__list
+
+                                li Датчик дождя
+                                li Светодиодные дневные ходовые огни
+                                li Автоматическая система управления дальним светом
+                                li Светодиодные фары ближнего и дальнего света
+
+
+                    button.ci__toggle_rolled_up(type="button" data-full="Все опции") Все опции
+
+                                        
+
+                .ci__description.description.ci__rolled_container
+
+                    h2.ci__block_title.description__title Описание
+
+                    .description__wrapper.ci__rolled_up
+
+                        p.description__inner Авто на белорусской регистрации, в данный момент с хозяином в Польше, возвращаться в РБ не планирую. Если не готовы забирать машину на территории Польши, просьба зря не беспокоить. Польский номер телефона напишу в чат по запросу, тут система не дает указать иностранный номер, белорусский номер уже недействителен. Автомобиль был пригнан новым из США в РБ под последнюю льготную растаможку в 2010-м. Эксплуатировался в основном в РБ, в 2014 году был продан в РФ где ездил около 10 месяцев, потом был продан обратно в РБ. Мой режим эксплуатации 80% трасса, 20% город. Этот автомобиль был впервые привезен новым из США в Беларусь под последнюю льготную растаможку в 2010 году. В основном автомобиль эксплуатировался в Беларуси. Затем, в 2014 году, он был продан в Россию, где использовался около 10 месяцев, после чего был снова продан обратно в Беларусь.
+
+                    button.ci__toggle_rolled_up(type="button" data-full="Всё описание") Всё описание
+
+
+            .ci__miniature.miniature
+
+                button.miniature__favorites.add-to-favorites(type="button" aria-label="Добавить в избранное / Убрать из избранного")
+
+
+                .miniature__slider.swiper
+                    .miniature_wrapper.swiper-wrapper
+                        
+                        .miniature_slide.swiper-slide
+                            +picture('card_item/ci_full_1', 'jpg', 'x2')
+                        .miniature_slide.swiper-slide
+                            +picture('card_item/ci_full_2', 'jpg', 'x2')
+                        .miniature_slide.swiper-slide
+                            +picture('card_item/ci_full_3', 'jpg', 'x2')
+                        .miniature_slide.swiper-slide
+                            +picture('card_item/ci_full_4', 'jpg', 'x2')
+                        .miniature_slide.swiper-slide
+                            +picture('card_item/ci_full_5', 'jpg', 'x2')
+                        .miniature_slide.swiper-slide
+                            +picture('card_item/ci_full_6', 'jpg', 'x2')
+                        .miniature_slide.swiper-slide
+                            +picture('card_item/ci_full_7', 'jpg', 'x2')
+                        .miniature_slide.swiper-slide
+
+
+                .miniature__preview
+
+                    .miniature__preview_list
+
+                        .miniature__preview_slide.active
+                            +picture('card_item/ci_preview_1', 'jpg', 'x2')
+                        .miniature__preview_slide
+                            +picture('card_item/ci_preview_2', 'jpg', 'x2')
+                        .miniature__preview_slide
+                            +picture('card_item/ci_preview_3', 'jpg', 'x2')
+                        .miniature__preview_slide
+                            +picture('card_item/ci_preview_4', 'jpg', 'x2')
+                        .miniature__preview_slide
+                            +picture('card_item/ci_preview_5', 'jpg', 'x2')
+                        .miniature__preview_slide
+                            +picture('card_item/ci_preview_6', 'jpg', 'x2')
+                        .miniature__preview_slide
+                            +picture('card_item/ci_preview_7', 'jpg', 'x2')
+
+
+                .miniature__descr
+
+                    h3.ci__title Nissan Serena, 2003
+
+                    .ci__top
+                        .card__price 985.000₽
+
+                        .card__credit 
+                            .card__cost от 15.067₽/мес.
+                            .card__info
+                                .card__info_icon
+                                .card__info_block
+                                    span Сроки и условия кредитования подбираются индивидуально.
+                                    a(href="#") Подробнее
+
+
+                    .miniature__actions
+
+                        input.ci__btn.ci__book(type="button" aria-label="Забронировать авто" value="Забронировать") 
+                        input.ci__btn.ci__show_online(type="button" aria-label="Показать авто онлайн" value="Показать онлайн")
+
+                        .ci__financial
+                            input.ci__btn.ci__credit.calculate-credit(type="button" aria-label="Рассчитать в кредит" value="Рассчитать в кредит")
+                            input.ci__btn.ci__trade(type="button" aria-label="Обменять" value="Обменять")
+
+
+    include ./blocks/modal_msg
+    include ./blocks/modal_calculate
+
+
+    a.fly__btn(href="tel:89284091449") Позвонить
+
+    +offers('blue_bg', 'Похожие', 'предложения')

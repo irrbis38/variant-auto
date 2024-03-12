@@ -1,0 +1,72 @@
+.catalog-page.sort-list-open {
+  // .catalog {
+  //   position: relative;
+  //   // z-index: 5;
+  // }
+
+  .options__overlay {
+    // z-index: 5;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .options__sortList {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.catalog__title {
+  margin-top: 17px;
+  margin-bottom: 40px;
+
+  @include lg {
+    margin-bottom: 21px;
+  }
+}
+
+.catalog__container {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 250px;
+
+  @include lg {
+    display: block;
+    margin-bottom: 160px;
+  }
+
+  @include xs {
+    margin-bottom: 100px;
+  }
+}
+
+.catalog__options {
+  flex: 0 0 342px;
+  max-width: 342px;
+
+  @include lg {
+    max-width: unset;
+  }
+}
+
+.catalog__wrapper {
+  flex: 1 1 auto;
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(342px, 1fr));
+  gap: 35px 23px;
+  margin-bottom: 72px;
+
+  @include xs {
+    margin-bottom: 35px;
+  }
+
+  @include xxs {
+    display: block;
+  }
+}

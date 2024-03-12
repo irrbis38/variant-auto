@@ -33,11 +33,33 @@
 
 @font-face {
   font-family: "Geologica";
-  src: local("../fonts/Geologica Roman Regular"),
+  src: local("../fonts/Geologica Roman Light"),
+    local("../fonts/Geologica-Roman-Light"),
+    url("../fonts/GeologicaRoman-Light.woff2") format("woff2"),
+    url("../fonts/GeologicaRoman-Light.woff") format("woff"),
+    url("../fonts/GeologicaRoman-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geologica";
+  src: local("../fonts/Geologica-Roman-Regular"),
     local("../fonts/Geologica-Roman-Regular"),
     url("../fonts/GeologicaRoman-Regular.woff2") format("woff2"),
     url("../fonts/GeologicaRoman-Regular.woff") format("woff"),
     url("../fonts/GeologicaRoman-Regular.ttf") format("truetype");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geologica";
+  src: local("../fonts/Geologica Roman Medium"),
+    local("../fonts/Geologica-Roman-Medium"),
+    url("../fonts/GeologicaRoman-Medium.woff2") format("woff2"),
+    url("../fonts/GeologicaRoman-Medium.woff") format("woff"),
+    url("../fonts/GeologicaRoman-Medium.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
 }

@@ -115,3 +115,37 @@ mixin offers(coloredClass, titleFirst, titleSecond)
 
             
             button.offers__show_more.btn__red(type="button") Показать еще
+            
+
+mixin filtersItem(value)
+    li.filters__item 
+        label.filters__label
+            input.filters__checkbox(type="checkbox")
+            span
+            span= value
+            
+
+mixin filtersColorItem(item)
+    li.filters__item
+        if item.secondColor
+            label.filters__label.filters__label_color.filters__label_double
+                input.filters__checkbox(type="checkbox")
+                span
+                span= item.value
+
+        else 
+            label.filters__label.filters__label_color(class="filters__label_" + item.firstColor)
+                input.filters__checkbox(type="checkbox")
+                span
+                span= item.value
+
+
+
+//- mixin filtersCarBodyItem(item)
+//-     li.filters__item 
+//-         label.filters__label
+//-             input.filters__checkbox(type="checkbox")
+//-             span
+//-             img(src= item.imgUrl alt= item.name)
+//-             span= item.name
+

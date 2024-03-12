@@ -46,7 +46,7 @@
     }
   }
 
-  &.added-to-favoriter {
+  &.added-to-favorites {
     .card__favorites {
       background: url("../images/heart-red.svg") center / contain no-repeat;
     }
@@ -278,7 +278,11 @@
 }
 
 /////////////
-///
+
+.card__info {
+  position: relative;
+}
+
 .card__info_icon {
   position: relative;
   width: 24px;
@@ -308,5 +312,59 @@
     opacity: 0;
 
     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.16602 14.9993H10.8327V13.3327H9.16602V14.9993ZM9.99935 1.66602C8.905 1.66602 7.82137 1.88156 6.81032 2.30035C5.79927 2.71914 4.88061 3.33297 4.10679 4.10679C2.54399 5.6696 1.66602 7.78921 1.66602 9.99935C1.66602 12.2095 2.54399 14.3291 4.10679 15.8919C4.88061 16.6657 5.79927 17.2796 6.81032 17.6983C7.82137 18.1171 8.905 18.3327 9.99935 18.3327C12.2095 18.3327 14.3291 17.4547 15.8919 15.8919C17.4547 14.3291 18.3327 12.2095 18.3327 9.99935C18.3327 8.905 18.1171 7.82137 17.6983 6.81032C17.2796 5.79927 16.6657 4.88061 15.8919 4.10679C15.1181 3.33297 14.1994 2.71914 13.1884 2.30035C12.1773 1.88156 11.0937 1.66602 9.99935 1.66602ZM9.99935 16.666C6.32435 16.666 3.33268 13.6743 3.33268 9.99935C3.33268 6.32435 6.32435 3.33268 9.99935 3.33268C13.6743 3.33268 16.666 6.32435 16.666 9.99935C16.666 13.6743 13.6743 16.666 9.99935 16.666ZM9.99935 4.99935C9.11529 4.99935 8.26745 5.35054 7.64233 5.97566C7.0172 6.60078 6.66602 7.44863 6.66602 8.33268H8.33268C8.33268 7.89065 8.50828 7.46673 8.82084 7.15417C9.1334 6.84161 9.55732 6.66602 9.99935 6.66602C10.4414 6.66602 10.8653 6.84161 11.1779 7.15417C11.4904 7.46673 11.666 7.89065 11.666 8.33268C11.666 9.99935 9.16602 9.79102 9.16602 12.4993H10.8327C10.8327 10.6243 13.3327 10.416 13.3327 8.33268C13.3327 7.44863 12.9815 6.60078 12.3564 5.97566C11.7312 5.35054 10.8834 4.99935 9.99935 4.99935Z' fill='%23b6b6b6' /%3E%3C/svg%3E");
+  }
+}
+
+.card__info_block {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 9px);
+  z-index: 3;
+  transform: translateX(-50%);
+  padding: 19px 24px 17px;
+  width: 280px;
+  background-color: $color_white;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease-out, visibiliy 0.2s ease-out;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: calc(100% - 1px);
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    display: block;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom: 7px solid $color_white;
+    pointer-events: none;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 143%;
+    color: #9e9e9e;
+  }
+
+  a {
+    display: block;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 147%;
+    color: $color_dark;
   }
 }

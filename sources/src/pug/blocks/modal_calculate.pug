@@ -1,0 +1,20 @@
+form.modal.calculate__modal
+    .modal__inner.calculate__inner(action="#")
+
+        .modal__top.calculate__top
+
+            p.modal__heading.calculate__heading Рассчитать кредит
+
+            button.modal__close.calculate__close(type="button" aria-label="Закрыть модальное окно")
+
+        p.modal__text.calculate__text Введите ваше имя и номер телефона
+
+        input.modal__input.calculate__name(type="text" placeholder="Имя" name="client_name" autocomplete="off")
+
+        input.modal__input.calculate__phone(type="text" placeholder="Телефон" name="client_phone" autocomplete="off")
+
+        button.modal__submit.calculate__submit(type="submit") Подать заявку
+
+        p.modal__policy Нажав, вы даете согласие на обработку #[a персональных данных]
+
+
