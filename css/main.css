@@ -996,7 +996,7 @@ template {
   bottom: 20px;
   left: 20px;
   right: 20px;
-  z-index: 3;
+  z-index: 1;
   height: 60px;
   background-color: #36b555;
   transition: background-color .2s ease-out
@@ -1217,6 +1217,71 @@ template {
 .bg_purple {
   background-color: #5c62fe
 }
+@media (hover:hover) {
+  .video_preview__full:hover .video_preview__blur::before {
+    opacity: 0
+  }
+}
+.video_preview__blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer
+}
+.video_preview__blur::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+  transition: opacity .2s ease-out
+}
+.video_preview__blur::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26.666 17.1328V63.7995L63.3327 40.4661L26.666 17.1328Z' fill='white' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
+}
+.video_preview__full .video_preview__blur::after {
+  width: 80px;
+  height: 80px
+}
+.video_preview__small .video_preview__blur::after {
+  width: 32px;
+  height: 32px
+}
+.reviews__preview.video_preview__full .video_preview__blur::after {
+  width: 53px;
+  height: 53px
+}
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border: none
+}
 *,
 ::after,
 ::before {
@@ -1314,7 +1379,7 @@ textarea {
 }
 .header {
   position: relative;
-  z-index: 4;
+  z-index: 6;
   background-color: #fff
 }
 .header::after {
@@ -2937,9 +3002,9 @@ ul.cmenu__list_body span {
 .q_selection__group {
   position: absolute;
   top: calc(100% + 16px);
-  left: -24px;
+  left: 0;
   z-index: 2;
-  width: calc(100% + 24px);
+  width: 100%;
   height: 321px;
   opacity: 0;
   visibility: hidden;
@@ -3659,7 +3724,7 @@ ul.cmenu__list_body span {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   display: block;
   width: 100%;
   height: 100%;
@@ -3682,10 +3747,18 @@ ul.cmenu__list_body span {
   object-fit: cover
 }
 .card__descr {
+  position: relative;
   padding: 0 18px 31px 24px;
   border: 1px solid #f2f2f2;
   border-top: none;
   transition: border-color .2s ease-out
+}
+.card__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
 }
 .card__name {
   padding: 20px 0 20px;
@@ -3737,8 +3810,10 @@ ul.cmenu__list_body span {
   color: #7c7c7c;
   transition: color .2s ease-out
 }
-.card__info {
-  position: relative
+.card__info.active .card__info_block {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all
 }
 .card__info_icon {
   position: relative;
@@ -3770,7 +3845,7 @@ ul.cmenu__list_body span {
 .card__info_block {
   position: absolute;
   left: 50%;
-  top: calc(100% + 9px);
+  top: 92%;
   z-index: 3;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -3782,26 +3857,6 @@ ul.cmenu__list_body span {
   visibility: hidden;
   pointer-events: none;
   transition: opacity .2s ease-out,visibiliy .2s ease-out
-}
-.card__info_block.active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all
-}
-.card__info_block::before {
-  content: "";
-  position: absolute;
-  bottom: calc(100% - 1px);
-  left: 50%;
-  z-index: 2;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  display: block;
-  width: 0;
-  height: 0;
-  border: 7px solid transparent;
-  border-bottom: 7px solid #fff;
-  pointer-events: none
 }
 .card__info_block span {
   display: block;
@@ -3817,6 +3872,39 @@ ul.cmenu__list_body span {
   font-size: 15px;
   line-height: 147%;
   color: #1a1a1a
+}
+.card__info_close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.8327 5.34199L14.6577 4.16699L9.99935 8.82533L5.34102 4.16699L4.16602 5.34199L8.82435 10.0003L4.16602 14.6587L5.34102 15.8337L9.99935 11.1753L14.6577 15.8337L15.8327 14.6587L11.1743 10.0003L15.8327 5.34199Z' fill='%231a1a1a' /%3E%3C/svg%3E");
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: opacity .2s ease-out
+}
+@media (hover:hover) {
+  .card__info_close:hover {
+    opacity: .5
+  }
+}
+.catalog-item-page .card__info {
+  position: relative
+}
+@media (max-width:767px) {
+  .catalog-item-page .card__info {
+    position: static
+  }
+}
+.catalog-item-page .card__info_block {
+  top: calc(100% + 9px)
+}
+@media (max-width:767px) {
+  .catalog-item-page .ci__top {
+    position: relative
+  }
 }
 .autocredit {
   margin-bottom: 238px
@@ -4649,7 +4737,7 @@ ul.cmenu__list_body span {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 5px;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
@@ -4661,9 +4749,9 @@ ul.cmenu__list_body span {
 .quick_filters__item span::after {
   content: "";
   display: none;
-  width: 20px;
-  height: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.8327 5.34199L14.6577 4.16699L9.99935 8.82533L5.34102 4.16699L4.16602 5.34199L8.82435 10.0003L4.16602 14.6587L5.34102 15.8337L9.99935 11.1753L14.6577 15.8337L15.8327 14.6587L11.1743 10.0003L15.8327 5.34199Z' fill='white' /%3E%3C/svg%3E");
+  width: 12px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.8327 1.34199L10.6577 0.166992L5.99935 4.82533L1.34102 0.166992L0.166016 1.34199L4.82435 6.00033L0.166016 10.6587L1.34102 11.8337L5.99935 7.17533L10.6577 11.8337L11.8327 10.6587L7.17435 6.00033L11.8327 1.34199Z' fill='white' /%3E%3C/svg%3E");
   background-repeat: no-repeat no-repeat;
   background-position: center center;
   background-size: cover
@@ -4841,6 +4929,9 @@ ul.cmenu__list_body span {
   position: relative;
   z-index: 5;
   background-color: #f2f2f2
+}
+.sort-list-open .options {
+  z-index: 7
 }
 .options__nav {
   display: -webkit-flex;
@@ -5334,7 +5425,7 @@ ul.cmenu__list_body span {
 .filters__listName {
   margin-bottom: 24px;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 22px
 }
 .filters__listName.hidden {
@@ -5421,7 +5512,7 @@ ul.cmenu__list_body span {
   padding: 18px 30px;
   text-align: center;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   transition: all .2s ease-out
 }
@@ -5610,20 +5701,10 @@ input[type=number]:hover {
     -ms-flex-order: 2;
     order: 2
   }
-  .ci .characteristics {
+  .ci .ci__info {
     -webkit-order: 4;
     -ms-flex-order: 4;
     order: 4
-  }
-  .ci .configuration {
-    -webkit-order: 5;
-    -ms-flex-order: 5;
-    order: 5
-  }
-  .ci .description {
-    -webkit-order: 6;
-    -ms-flex-order: 6;
-    order: 6
   }
 }
 .ci .card__price {
@@ -5919,7 +6000,7 @@ input[type=number]:hover {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   display: block;
   width: 100%;
   height: 100%;
@@ -5976,7 +6057,7 @@ input[type=number]:hover {
 .ci__miniature {
   position: -webkit-sticky;
   position: sticky;
-  top: 200px;
+  top: 100px;
   -webkit-flex: 1 1 464px;
   -ms-flex: 1 1 464px;
   flex: 1 1 464px;
@@ -5984,7 +6065,7 @@ input[type=number]:hover {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity .2s ease-out,visibility .2s ease-out
+  transition: opacity .3s linear,visibility .3s linear
 }
 .ci__miniature.show {
   opacity: 1;
@@ -6334,7 +6415,7 @@ a.characteristics__value {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   display: block;
   width: 100%;
   height: 100%;
