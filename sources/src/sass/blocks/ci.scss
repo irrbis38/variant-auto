@@ -27,17 +27,21 @@
       order: 2;
     }
 
-    .characteristics {
+    .ci__info {
       order: 4;
     }
 
-    .configuration {
-      order: 5;
-    }
+    // .characteristics {
+    //   order: 4;
+    // }
 
-    .description {
-      order: 6;
-    }
+    // .configuration {
+    //   order: 5;
+    // }
+
+    // .description {
+    //   order: 6;
+    // }
   }
 
   .card__price {
@@ -271,7 +275,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 2;
+      z-index: 3;
       display: block;
       width: 100%;
       height: 100%;
@@ -315,13 +319,13 @@
 
 .ci__miniature {
   position: sticky;
-  top: 200px;
+  top: 100px;
   flex: 1 1 464px;
   max-width: 464px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+  transition: opacity 0.3s linear, visibility 0.3s linear;
 
   &.show {
     opacity: 1;

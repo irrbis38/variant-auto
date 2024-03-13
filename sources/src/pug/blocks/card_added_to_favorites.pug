@@ -7,7 +7,7 @@
         {num: 5, isActive: false},
     ]
 
-article.card.swiper-slide
+article.card.swiper-slide.added-to-favorites
     button.card__favorites(type="button" aria-label="Добавить в избранное / Убрать из избранного")
 
 
@@ -50,6 +50,8 @@ article.card.swiper-slide
 
     .card__descr
 
+        a.card__link(href="./catalog-item.html")
+
         h3.card__name BMW X5 2022
 
         ul.card__features
@@ -63,5 +65,13 @@ article.card.swiper-slide
 
         .card__credit 
             .card__cost от 15.067₽/мес.
+            .card__info
+                .card__info_icon
+                .card__info_block
+                    button.card__info_close(type="button" aria-label="Закрыть окно")
+                    span Сроки и условия кредитования подбираются индивидуально.
+                    a(href="#") Подробнее
+
+
 
 

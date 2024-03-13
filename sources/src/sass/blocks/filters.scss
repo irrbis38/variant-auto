@@ -354,7 +354,7 @@
 .filters__listName {
   margin-bottom: 24px;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 22px;
 
   &.hidden {
@@ -428,19 +428,16 @@
   display: block;
   width: calc(100% - 40px);
   max-width: 575px;
-  // width: 100%;
-  // max-width: 466px;
   margin: 10px auto 0;
   padding: 18px 30px;
   text-align: center;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 400;
 
   cursor: pointer;
   transition: all 0.2s ease-out;
 
   @include xxs {
-    // max-width: 506px;
     width: 100%;
   }
 }

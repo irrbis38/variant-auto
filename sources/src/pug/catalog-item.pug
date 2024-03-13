@@ -28,6 +28,7 @@ block page
                     .card__info
                         .card__info_icon
                         .card__info_block
+                            button.card__info_close(type="button" aria-label="Закрыть окно")
                             span Сроки и условия кредитования подбираются индивидуально.
                             a(href="#") Подробнее
 
@@ -54,7 +55,8 @@ block page
                             +picture('card_item/ci_full_1', 'jpg', 'x2')
                         .ci__slider_full_slide.swiper-slide
                             +picture('card_item/ci_full_2', 'jpg', 'x2')
-                        .ci__slider_full_slide.swiper-slide
+                        .ci__slider_full_slide.video_preview__full.swiper-slide(data-video="https://youtu.be/xWTWEGyZM2g")
+                            .video_preview__blur
                             +picture('card_item/ci_full_3', 'jpg', 'x2')
                         .ci__slider_full_slide.swiper-slide
                             +picture('card_item/ci_full_4', 'jpg', 'x2')
@@ -75,7 +77,8 @@ block page
                             +picture('card_item/ci_preview_1', 'jpg', 'x2')
                         .ci__slider_preview_slide
                             +picture('card_item/ci_preview_2', 'jpg', 'x2')
-                        .ci__slider_preview_slide
+                        .ci__slider_preview_slide.video_preview__small
+                            .video_preview__blur
                             +picture('card_item/ci_preview_3', 'jpg', 'x2')
                         .ci__slider_preview_slide
                             +picture('card_item/ci_preview_4', 'jpg', 'x2')
@@ -252,7 +255,8 @@ block page
                             +picture('card_item/ci_full_1', 'jpg', 'x2')
                         .miniature_slide.swiper-slide
                             +picture('card_item/ci_full_2', 'jpg', 'x2')
-                        .miniature_slide.swiper-slide
+                        .miniature_slide.video_preview__full.swiper-slide(data-video="https://youtu.be/xWTWEGyZM2g")
+                            .video_preview__blur
                             +picture('card_item/ci_full_3', 'jpg', 'x2')
                         .miniature_slide.swiper-slide
                             +picture('card_item/ci_full_4', 'jpg', 'x2')
@@ -273,7 +277,8 @@ block page
                             +picture('card_item/ci_preview_1', 'jpg', 'x2')
                         .miniature__preview_slide
                             +picture('card_item/ci_preview_2', 'jpg', 'x2')
-                        .miniature__preview_slide
+                        .miniature__preview_slide.video_preview__small
+                            .video_preview__blur
                             +picture('card_item/ci_preview_3', 'jpg', 'x2')
                         .miniature__preview_slide
                             +picture('card_item/ci_preview_4', 'jpg', 'x2')

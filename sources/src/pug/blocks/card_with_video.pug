@@ -1,15 +1,14 @@
 -
     var slides = [
-        {num: 1, isActive: true},
-        {num: 2, isActive: false},
-        {num: 3, isActive: false},
-        {num: 4, isActive: false},
-        {num: 5, isActive: false},
+        {num: 1, isActive: true, isVideo: false},
+        {num: 2, isActive: false, isVideo: true},
+        {num: 3, isActive: false, isVideo: false},
+        {num: 4, isActive: false, isVideo: false},
+        {num: 5, isActive: false, isVideo: false},
     ]
 
 article.card.swiper-slide
     button.card__favorites(type="button" aria-label="Добавить в избранное / Убрать из избранного")
-
 
 
     .card__full.swiper
@@ -22,6 +21,12 @@ article.card.swiper-slide
                     if slide.isActive
 
                         .card__full_item.active.swiper-slide
+                            +pictureSize(src, 'jpg', 'x2', '342', '256')
+
+                    else if slide.isVideo
+
+                        .card__full_item.video_preview__full.swiper-slide(data-video="https://youtu.be/xWTWEGyZM2g")
+                            .video_preview__blur
                             +pictureSize(src, 'jpg', 'x2', '342', '256')
 
                     else
@@ -41,6 +46,12 @@ article.card.swiper-slide
                     if slide.isActive
 
                         .card__prev_item.active.swiper-slide
+                            +pictureSize(src, 'jpg', 'x2', '85', '64')
+
+                    else if slide.isVideo
+
+                        .card__prev_item.video_preview__small.swiper-slide
+                            .video_preview__blur
                             +pictureSize(src, 'jpg', 'x2', '85', '64')
 
                     else 

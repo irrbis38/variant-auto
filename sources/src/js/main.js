@@ -181,6 +181,16 @@ var initQSelection = () => {
     };
 
     var inputsHandle = (e) => {
+      var current = e.target.parentElement;
+      if (current.classList.contains("active")) {
+        current.classList.remove("active");
+
+        // clear winwow listeners
+        window.removeEventListener("click", windowClickHandle);
+        currentSelectBlock = null;
+
+        return;
+      }
       // remove class 'active' from all '.q_selection__select'
       select_blocks.forEach((sb) => sb.classList.remove("active"));
 
@@ -193,7 +203,7 @@ var initQSelection = () => {
       currentSelectBlock = select_block;
     };
 
-    inputs.forEach((i) => i.addEventListener("focus", inputsHandle));
+    inputs.forEach((i) => i.addEventListener("click", inputsHandle));
 
     // add listener to all '.q_selection__btn'
     var i_btns = Array.from(document.querySelectorAll(".q_selection__btn"));
@@ -485,36 +495,49 @@ var initMap = () => {
 
 var initInfoBlock = () => {
   var cardInfoIcons = Array.from(document.querySelectorAll(".card__info_icon"));
-  var cardInfoBlocks = Array.from(
-    document.querySelectorAll(".card__info_block")
+
+  if (cardInfoIcons.length < 1) return;
+
+  var windowHandle = (e) => {
+    var target = e.target;
+
+    if (!target.closest(".card__info.active")) {
+      var activeInfo = document.querySelector(".card__info.active");
+      activeInfo.classList.remove("active");
+      window.removeEventListener("click", windowHandle);
+    }
+  };
+
+  var iconHandler = (e) => {
+    var icon = e.target;
+    var parent = icon.parentElement;
+
+    if (parent.classList.contains("active")) {
+      parent.classList.remove("active");
+      window.removeEventListener("click", windowHandle);
+    } else {
+      parent.classList.add("active");
+      window.addEventListener("click", windowHandle);
+    }
+  };
+
+  cardInfoIcons.forEach((icon) =>
+    icon.addEventListener("click", (e) =>
+      requestAnimationFrame(() => iconHandler(e))
+    )
   );
 
-  if (cardInfoIcons.length < 1) {
-    return;
-  } else {
-    var windowHandle = (e) => {
-      var activeBlock = cardInfoBlocks.filter((item) =>
-        item.classList.contains("active")
-      )[0];
-      if (e.target.closest(".card__info_block") !== activeBlock) {
-        activeBlock.classList.remove("active");
-      }
+  var info_close_buttons = Array.from(
+    document.querySelectorAll(".card__info_close")
+  );
+
+  info_close_buttons.forEach((btn) =>
+    btn.addEventListener("click", () => {
+      var parent = btn.parentElement.parentElement;
+      parent.classList.remove("active");
       window.removeEventListener("click", windowHandle);
-    };
-
-    var iconHandler = (e) => {
-      var icon = e.target;
-      var block = icon.nextElementSibling;
-      block.classList.add("active");
-      window.addEventListener("click", windowHandle);
-    };
-
-    cardInfoIcons.forEach((icon) =>
-      icon.addEventListener("click", (e) =>
-        requestAnimationFrame(() => iconHandler(e))
-      )
-    );
-  }
+    })
+  );
 };
 
 // init sort menu logic
@@ -971,6 +994,9 @@ var formSubmit = () => {
   var forms = Array.from(document.forms);
   var msg_modal = document.querySelector(".msg__modal");
   var calculate_modal = document.querySelector(".calculate__modal");
+
+  if (!calculate_modal || !msg_modal) return;
+
   var overlay = document.querySelector(".overlay");
   var body = document.body;
   var modal_close = msg_modal.querySelector(".modal__close");
@@ -980,8 +1006,6 @@ var formSubmit = () => {
   forms.forEach((f) =>
     f.addEventListener("submit", (e) => {
       e.preventDefault();
-      console.log(e.target);
-      console.log(calculate_modal);
       if (e.target === calculate_modal) {
         calculate_modal.classList.remove("active");
         msg_modal.classList.add("active");
@@ -1007,6 +1031,9 @@ var formSubmit = () => {
 var calculateCredit = () => {
   var forms = Array.from(document.forms);
   var calculate_modal = document.querySelector(".calculate__modal");
+
+  if (!calculate_modal) return;
+
   var overlay = document.querySelector(".overlay");
   var body = document.body;
   var modal_close = calculate_modal.querySelector(".modal__close");
@@ -1033,6 +1060,55 @@ var calculateCredit = () => {
       }
     })
   );
+};
+
+// init video
+
+var initYoutubeVideo = (videos) => {
+  // generate video url
+  var generateUrl = (id) => {
+    var query = "?rel=0&showinfo=0&autoplay=1";
+    // var query = "?ps=docs&controls=1";
+    return "https://www.youtube.com/embed/" + id + query;
+  };
+
+  // create iframe element
+  var createIframe = (id) => {
+    var iframe = document.createElement("iframe");
+    iframe.classList.add("video-iframe");
+    iframe.setAttribute("src", generateUrl(id));
+    iframe.setAttribute("title", "YouTube video player");
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute(
+      "allow",
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+    );
+
+    return iframe;
+  };
+
+  // handling each video element
+  videos.forEach((el) => {
+    var videoHref = el.dataset.video;
+    var deletedLength = "https://youtu.be/".length;
+
+    var videoId = videoHref.substring(deletedLength, videoHref.length);
+
+    // var parent = el.parentElement;
+
+    // var videoPlayBtn = parent.querySelector(".video-play-btn");
+
+    el.addEventListener("click", () => {
+      if (el.classList.contains("preview-removed")) return;
+
+      var iframe = createIframe(videoId);
+      el.querySelector(".video_preview__blur").remove();
+      el.querySelector("picture").remove();
+      el.append(iframe);
+      el.classList.add("preview-removed");
+    });
+  });
 };
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -1069,4 +1145,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   var map = document.getElementById("contacts-map");
   map && doCreateMapScript(initMap);
+
+  // get all video elements on the page
+  var videos = Array.from(document.querySelectorAll(".video_preview__full"));
+  videos.length > 0 && initYoutubeVideo(videos);
 });

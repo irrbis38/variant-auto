@@ -25,7 +25,7 @@
 
   span {
     display: flex;
-    gap: 2px;
+    gap: 5px;
     align-items: center;
     padding: 6px 4px 6px 3px;
     color: $color_white;
@@ -35,9 +35,9 @@
     &::after {
       content: "";
       display: none;
-      width: 20px;
-      height: 20px;
-      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.8327 5.34199L14.6577 4.16699L9.99935 8.82533L5.34102 4.16699L4.16602 5.34199L8.82435 10.0003L4.16602 14.6587L5.34102 15.8337L9.99935 11.1753L14.6577 15.8337L15.8327 14.6587L11.1743 10.0003L15.8327 5.34199Z' fill='white' /%3E%3C/svg%3E");
+      width: 12px;
+      height: 12px;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.8327 1.34199L10.6577 0.166992L5.99935 4.82533L1.34102 0.166992L0.166016 1.34199L4.82435 6.00033L0.166016 10.6587L1.34102 11.8337L5.99935 7.17533L10.6577 11.8337L11.8327 10.6587L7.17435 6.00033L11.8327 1.34199Z' fill='white' /%3E%3C/svg%3E");
       background-repeat: no-repeat no-repeat;
       background-position: center center;
       background-size: cover;

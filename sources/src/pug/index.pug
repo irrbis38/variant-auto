@@ -290,20 +290,20 @@ block page
         .ratings__wrapper
             .container.ratings__list
 
-                .ratings__item
-                    .ratings__icon 
+                a.ratings__item(href="https://www.avito.ru/" target="_blank")
+                    span.ratings__icon 
                         img(src="./images/avito.svg", alt="Авито")
 
                     span.ratings__value 4.7
 
-                .ratings__item
-                    .ratings__icon 
+                a.ratings__item(href="https://yandex.ru/" target="_blank")
+                    span.ratings__icon 
                         img(src="./images/yandex.svg", alt="Яндекс")
 
                     span.ratings__value 4.2
 
-                .ratings__item
-                    .ratings__icon 
+                a.ratings__item(href="https://2gis.ru/" target="_blank")
+                    span.ratings__icon 
                         img(src="./images/2gis.svg", alt="2gis")
 
                     span.ratings__value 4.2
@@ -317,7 +317,7 @@ block page
             .reviews__wrapper
 
                 include ./blocks/reviews_item
-                include ./blocks/reviews_item
+                include ./blocks/reviews_item_video
                 include ./blocks/reviews_item
                 include ./blocks/reviews_item
                 include ./blocks/reviews_item
