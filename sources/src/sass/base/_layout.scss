@@ -110,3 +110,56 @@ textarea {
   outline: 0;
   outline-offset: 0;
 }
+
+.text-page {
+  h1 {
+    font-weight: 500;
+    font-size: 125px;
+    letter-spacing: 0.02em;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 48px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  li {
+    position: relative;
+    padding-left: 25px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+
+    &:not(:last-child) {
+      margin-bottom: 21px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      background-color: $color_red_deep;
+    }
+  }
+}

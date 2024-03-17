@@ -327,6 +327,26 @@
   }
 }
 
+.btn__arrow_green {
+  color: $color_white;
+  background-color: $color_green;
+
+  &::before {
+    background: url("../images/arrow-right-white.svg") center / contain
+      no-repeat;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color_green_hover;
+
+      &::before {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
 // slider
 .slider__nav {
   min-width: 171px;
@@ -469,4 +489,57 @@
   display: block;
   object-fit: cover;
   border: none;
+}
+
+//====================== TICKER
+
+.ticker {
+  max-width: 3500px;
+  margin: 0 auto;
+
+  @include xs {
+    display: none;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.ticker__wrapper {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 72px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $color_grey_f2;
+    opacity: 0.2;
+  }
+}
+
+.ticker__wrapper:hover .ticker__block {
+  animation-play-state: paused;
+}
+
+.ticker__block {
+  display: inline-flex;
+  align-items: center;
+  animation: 40s slide infinite linear;
+
+  img {
+    padding: 0 40px;
+  }
 }

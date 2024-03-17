@@ -1,0 +1,161 @@
+extends base/_layout
+block vars
+    - var pageName = 'autocredit-page'
+block head
+    title Вариант Авто - автокредит
+block page
+
+    section.serv_intro
+        .serv_intro__banner
+            +picture('serv/autocredit_banner', 'jpg', 'x2')
+        .container
+            h1.serv_intro__title Авто мечты, ближе чем кажется
+            p.serv_intro__subtitle Подберем для вас кредит с самыми выгодными условиями 
+
+            button.serv_intro__btn.btn__high.btn__arrow_green(type="button") Рассчитать кредит
+
+    include ./blocks/advantages
+
+
+    section.credit 
+        .container
+            h2.credit__title.block__title Подберем кредит с&nbsp;выгодными условиями
+
+            ul.credit__benefits
+
+                li.credit__benefit
+                    span.credit__value 16#[span.credit__units %]
+                    span.credit__name Минимальная ставка
+
+                li.credit__benefit
+                    span.credit__value 0#[span.credit__units %]
+                    span.credit__name Первоначальный взнос
+
+                li.credit__benefit
+                    span.credit__value 1#[span.credit__units час]
+                    span.credit__name Сроки рассмотрения заявки
+
+
+            //- .credit__terms
+            //-     ul.credit__terms_list
+            //-         li Оформление по двум документам: паспорт РФ и водительское удостоверение (или СНИЛС, загранпаспорт)
+            //-         li Без поручителей и справок о доходах
+            //-         li Возможно без КАСКО
+            //-     ul.credit__terms_list
+            //-         li Досрочное погашение кредита на любом сроке без комиссии, штрафов и переплат
+            //-         li Кредит для граждан всех регионов
+            //-     ul.credit__terms_list
+            //-         li Срок кредитования: от 6-ти месяцев до 7 лет
+            //-         li Дистанционное заведение кредитной заявки
+            ul.credit__terms_list
+                li Оформление по двум документам: паспорт РФ и водительское удостоверение (или СНИЛС, загранпаспорт)
+                li Без поручителей и справок о доходах
+                li Возможно без КАСКО
+                li Досрочное погашение кредита на любом сроке без комиссии, штрафов и переплат
+                li Кредит для граждан всех регионов
+                li Срок кредитования: от 6-ти месяцев до 7 лет
+                li Дистанционное заведение кредитной заявки
+
+
+        .credit__ticker.ticker
+
+            .credit__ticker_wrapper.ticker__wrapper
+                .credit__ticker_block.ticker__block
+                    img.credit__ticker_item.ticker__item(src='/images/credit/credit_bank_1.svg' alt="")
+                    img.credit__ticker_item.ticker__item(src='/images/credit/credit_bank_2.svg' alt="")
+                    img.credit__ticker_item.ticker__item(src='/images/credit/credit_bank_3.svg' alt="")
+                    img.credit__ticker_item.ticker__item(src='/images/credit/credit_bank_4.svg' alt="")
+                    img.credit__ticker_item.ticker__item(src='/images/credit/credit_bank_5.svg' alt="")
+                    img.credit__ticker_item.ticker__item(src='/images/credit/credit_bank_6.svg' alt="")
+
+
+    section.how_it_works 
+        .container
+            h2.how_it_works__title.block__title Как это работает
+
+            ul.how_it_works__list 
+
+
+                li.how_it_works__item
+
+                    .how_it_works__decr 
+                        .how_it_works__icon
+                        p.how_it_works__name Заявка
+                        p.how_it_works__text Вы оставляете заявку на понравившейся авто из нашего каталога
+
+                    button.how_it_works__button.btn__high.btn__arrow_green(type="button") Подать заявку
+
+                li.how_it_works__item
+
+                    .how_it_works__decr 
+                        .how_it_works__icon
+                        p.how_it_works__name Получение предложений
+                        p.how_it_works__text Мы находим самые выгодные предложения от банков
+
+                    button.how_it_works__button.btn__high.btn__arrow_green(type="button") Подать заявку
+
+
+                li.how_it_works__item
+
+                    .how_it_works__decr 
+                        .how_it_works__icon
+                        p.how_it_works__name Выбор
+                        p.how_it_works__text Вы выбираете для себя лучшие условия и забираете свой авто!
+
+                    button.how_it_works__button.btn__high.btn__arrow_green(type="button") Подать заявку
+
+
+        -
+            var cars = [
+                {
+                    name: 'Lada (ВАЗ)',
+                    sup: '70'
+                },
+                {
+                    name: 'Audi',
+                    sup: '54'
+                },
+                {
+                    name: 'Changan',
+                    sup: '35'
+                },
+                {
+                    name: 'BMW',
+                    sup: '20'
+                },
+                {
+                    name: 'Daewoo',
+                    sup: '15'
+                }
+            ]
+
+
+    section.request 
+        .container
+            h2.request__title.block__title Авто мечты, ближе чем кажется
+            p.request__subtitle Заполните форму - мы свяжемся с вами и подберем для вас кредит с самыми выгодными условиями
+
+            form.request__form(action="#")
+
+                fieldset.request__fieldset
+
+                    .q_selection__brand.q_selection__select.request__select
+                        input.q_selection__input(type="text" placeholder="Какой  вам понравился")
+                        span
+                        .q_selection__group
+                            ul.q_selection__list
+                                each item in cars
+                                    li: input.q_selection__btn(type="button" value= item.name)
+
+                    input.request__name.input-required(type="text" placeholder="Ваше имя*")
+
+                    input.request__phone.input-required(type="text" placeholder="Номер телефона*")
+
+                .request__bottom
+
+                    .request__submit_wrapper
+
+                        button.request__submit.btn__high.btn__arrow_green(type="submit") Получить условия
+
+                    span.request__rules Нажимая на кнопку "Получить условия", вы даете согласие на обработку своих #[a персональных&nbsp;данных].
+

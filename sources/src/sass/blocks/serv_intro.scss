@@ -1,0 +1,66 @@
+.serv_intro {
+  margin-bottom: 240px;
+
+  @include lg {
+    margin-bottom: 160px;
+  }
+
+  @include xs {
+    margin-bottom: 115px;
+    padding-top: 42px;
+  }
+}
+
+.serv_intro__banner {
+  position: relative;
+  max-width: 3000px;
+  margin: 0 auto;
+
+  &::after {
+    content: "";
+    display: block;
+    max-height: 664px;
+    width: 100%;
+    padding-top: 34.58%;
+  }
+
+  @include pictureSaveRatio(cover);
+
+  @include xs {
+    display: none;
+  }
+}
+
+.serv_intro__title {
+  display: none;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: $color_dark_1c;
+
+  @include xs {
+    display: block;
+  }
+}
+
+.serv_intro__subtitle {
+  display: none;
+  margin-bottom: 42px;
+  font-weight: 400;
+  font-size: 16px;
+  color: $color_dark;
+
+  @include xs {
+    display: block;
+  }
+}
+
+.serv_intro__btn {
+  width: auto;
+
+  @include xxs {
+    width: 100%;
+  }
+}

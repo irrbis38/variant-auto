@@ -341,11 +341,6 @@ var initBlockSlider = () => {
   var handleMQ = (e, cbMatches, cbNonMatches) =>
     e.matches ? cbMatches() : cbNonMatches();
 
-  // add listeners to resize
-  mqMin768.addEventListener("change", (e) =>
-    handleMQ(e, handleSmallWidth, handleWideWidth)
-  );
-
   // block slider logic
   if (blockSliders.length < 1) {
     return;
@@ -354,6 +349,11 @@ var initBlockSlider = () => {
     if (window.innerWidth >= 768) {
       aSliders = createActiveSliders(blockSliders);
     }
+
+    // add listeners to resize
+    mqMin768.addEventListener("change", (e) =>
+      handleMQ(e, handleSmallWidth, handleWideWidth)
+    );
   }
 };
 
@@ -395,11 +395,6 @@ var initCardMobileSlider = () => {
   var handleMQ = (e, cbMatches, cbNonMatches) =>
     e.matches ? cbMatches() : cbNonMatches();
 
-  // add listeners to resize
-  mqMin768.addEventListener("change", (e) =>
-    handleMQ(e, handleSmallWidth, handleWideWidth)
-  );
-
   if (cardMobileSliders < 1) {
     return;
   } else {
@@ -407,15 +402,18 @@ var initCardMobileSlider = () => {
     if (window.innerWidth < 768) {
       mSliders = createMobileSliders(cardMobileSliders);
     }
+
+    // add listeners to resize
+    mqMin768.addEventListener("change", (e) =>
+      handleMQ(e, handleSmallWidth, handleWideWidth)
+    );
   }
 };
 
 // ========== CLONE TICKER BLOCKS
 
 var cloneTickerBlocks = () => {
-  var ticker_blocks = Array.from(
-    document.querySelectorAll(".autocredit__ticker_block")
-  );
+  var ticker_blocks = Array.from(document.querySelectorAll(".ticker__block"));
 
   if (ticker_blocks.length < 1) {
     return;

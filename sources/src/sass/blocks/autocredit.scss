@@ -93,58 +93,9 @@
 }
 
 .autocredit__ticker {
-  max-width: 3500px;
-  margin: 0 auto;
   padding-top: 291px;
   background: url("../images/autocredit/autocredit_bg.jpg") center / cover
     no-repeat;
-
-  @include xs {
-    display: none;
-  }
-}
-
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.autocredit__ticker_wrapper {
-  overflow: hidden;
-  // white-space: nowrap;
-  display: flex;
-  align-items: center;
-  position: relative;
-  padding: 72px 0;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: $color_grey_f2;
-    opacity: 0.2;
-  }
-}
-
-.autocredit__ticker_wrapper:hover .autocredit__ticker_block {
-  animation-play-state: paused;
-}
-
-.autocredit__ticker_block {
-  display: inline-flex;
-  align-items: center;
-  animation: 40s slide infinite linear;
-
-  img {
-    padding: 0 40px;
-  }
 }
 
 .autocredit__details {

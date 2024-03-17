@@ -42,7 +42,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding-right: 34px;
+  // padding-right: 34px;
   border-bottom: 2px solid $color_grey_d8;
 
   span {
@@ -54,6 +54,7 @@
     height: 24px;
     background: url("../images/arrow-down.svg") center / contain no-repeat;
     transition: transform 0.2s ease-out;
+    pointer-events: none;
   }
 
   &.active {
@@ -80,6 +81,7 @@
 .q_selection__input {
   height: 100%;
   flex-grow: 1;
+  padding-right: 34px;
 }
 
 .q_selection__group {
@@ -150,7 +152,7 @@
 }
 
 .q_selection__brand {
-  padding-left: 38px;
+  // padding-left: 38px;
 
   &::before {
     content: "";
@@ -161,6 +163,11 @@
     width: 24px;
     height: 24px;
     background: url("../images/search.svg") center / contain no-repeat;
+    pointer-events: none;
+  }
+
+  .q_selection__input {
+    padding-left: 38px;
   }
 }
 
