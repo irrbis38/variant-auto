@@ -1,0 +1,199 @@
+extends base/_layout
+block vars
+    - var pageName = 'trade-in-page'
+block head
+    title Вариант Авто - Trade In
+block page
+
+    section.serv_intro
+        .serv_intro__banner
+            +picture('serv/trade_in_banner', 'jpg', 'x2')
+        .container
+            h1.serv_intro__title Trade in с вариант авто
+            p.serv_intro__subtitle Trade-In позволяет Вам легко и быстро обменять Ваш подержанный автомобиль на новый с доплатой
+
+            button.serv_intro__btn.btn__high.btn__arrow_red(type="button") Обменять свой авто
+
+
+
+
+    section.comfort 
+        .container
+
+            h2.comfort__title.block__title Почему это удобно
+
+            ul.comfort__list 
+
+                li.comfort__item 
+                    .comfort__icon 
+                    p.comfort__text Быстрая оценка и подсчет разницы к оплате
+
+                li.comfort__item 
+                    .comfort__icon 
+                    p.comfort__text Возможность стать владельцем более новой модели без больших затрат
+
+                li.comfort__item 
+                    .comfort__icon 
+                    p.comfort__text Полное отсутствие рисков
+
+                li.comfort__item 
+                    .comfort__icon 
+                    p.comfort__text Все автомобили прошли юридическую и техническую проверку
+
+
+
+    include ./blocks/advantages
+
+
+
+    section.how 
+        .container
+            h2.how__title.block__title Как это работает
+
+            ul.how__list 
+
+
+                li.how__item
+
+                    .how__decr 
+                        .how__icon
+                        p.how__name Заявка
+                        p.how__text Отправьте заявку и получите предварительную оценку своего автомобиля
+
+                    button.how__button.btn__high.btn__arrow_red(type="button") Подать заявку
+
+                li.how__item
+
+                    .how__decr 
+                        .how__icon
+                        p.how__name Подбор
+                        p.how__text Вы выбираете авто на сайте или наши специалисты подберут его по вашим параметрам
+
+                    button.how__button.btn__high.btn__arrow_red(type="button") Подать заявку
+
+
+                li.how__item
+
+                    .how__decr 
+                        .how__icon
+                        p.how__name Предложение
+                        p.how__text Предоставляем вам коммерческое предложение с доплатой, учитывая оценку старого авто и скидку на выбранный авто
+
+                    button.how__button.btn__high.btn__arrow_red(type="button") Подать заявку
+
+
+                li.how__item
+
+                    .how__decr 
+                        .how__icon
+                        p.how__name Оформление
+                        p.how__text Мы оформляем все документы, и вы уезжаете на новом автомобиле. Это займет всего несколько часов
+
+                    button.how__button.btn__high.btn__arrow_red(type="button") Подать заявку
+
+
+
+
+
+        -
+            var cars = [
+                {
+                    name: 'Lada (ВАЗ)',
+                    sup: '70'
+                },
+                {
+                    name: 'Audi',
+                    sup: '54'
+                },
+                {
+                    name: 'Changan',
+                    sup: '35'
+                },
+                {
+                    name: 'BMW',
+                    sup: '20'
+                },
+                {
+                    name: 'Daewoo',
+                    sup: '15'
+                }
+            ]
+
+
+    section.request 
+        .container
+            h2.request__title.block__title Обменяйте авто по программе Trade-In
+            p.request__subtitle Подберите автомобиль в нашем каталоге и заполните данные о вашем авто, мы свяжемся с вами и предложим лучшие условия обмена
+
+            form.request__form(action="#" id="request-form")
+
+                h3.request__fieldset_name Ключевые данные 
+
+                fieldset.request__fieldset
+
+                    .q_selection__brand.q_selection__select.request__brand.request__select
+                        input.q_selection__input(type="text" placeholder="Марка")
+                        span
+                        .q_selection__group
+                            ul.q_selection__list
+                                each item in cars
+                                    li: input.q_selection__btn(type="button" value= item.name)
+
+                    .q_selection__select.request__model.request__select
+                        input.q_selection__input(type="text" placeholder="Модель")
+                        span
+                        .q_selection__group
+                            ul.q_selection__list
+                                each item in cars
+                                    li: input.q_selection__btn(type="button" value= item.name)
+
+                    input.request__input.request__year(type="text" placeholder="Год выпуска")
+
+                    .q_selection__select.request__transmission.request__select
+                        input.q_selection__input(type="text" placeholder="Коробка передач")
+                        span
+                        .q_selection__group
+                            ul.q_selection__list
+                                each item in cars
+                                    li: input.q_selection__btn(type="button" value= item.name)
+                    
+
+                    input.request__input.request__mileage(type="text" placeholder="Пробег")
+
+
+                .request__fieldset_row
+                
+                    .request__fieldset_col
+                        h3.request__fieldset_name Интересующее вас авто
+
+                        fieldset.request__fieldset
+
+                            .q_selection__brand.q_selection__select.request__brand.request__select
+                                input.q_selection__input(type="text" placeholder="Марка")
+                                span
+                                .q_selection__group
+                                    ul.q_selection__list
+                                        each item in cars
+                                            li: input.q_selection__btn(type="button" value= item.name)
+
+
+
+                    .request__fieldset_col
+                        h3.request__fieldset_name Персональные данные
+
+                        fieldset.request__fieldset
+
+                            input.request__input.request__name(type="text" placeholder="Ваше имя")
+
+                            input.request__input.request__phone.input-required(type="text" placeholder="Номер телефона *")
+
+
+
+            .request__bottom
+
+                .request__submit_wrapper
+
+                    button.request__submit.btn__high.btn__arrow_green(type="submit" form="request-form") Получить условия
+
+                span.request__rules Нажимая на кнопку "Получить условия", вы даете согласие на обработку своих #[a персональных&nbsp;данных].
+

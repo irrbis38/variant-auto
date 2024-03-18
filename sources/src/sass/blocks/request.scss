@@ -91,6 +91,10 @@
     margin-bottom: 14px;
     font-size: 22px;
   }
+
+  @include r(360px) {
+    font-size: 20px;
+  }
 }
 
 .request__fieldset_info {
@@ -215,7 +219,8 @@
 
 // car-buyout-page
 
-.car-buyout-page {
+.car-buyout-page,
+.trade-in-page {
   .request__form {
     padding: 44px 24px 42px 27px;
     background-color: $color_grey_f2;
@@ -539,4 +544,87 @@
       font-size: 14px;
     }
   }
+}
+
+// trade-in-page
+
+.trade-in-page {
+  .request__fieldset {
+    padding: 0;
+
+    &:not(:first-child) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .request__fieldset_col {
+    &:first-child {
+      max-width: 413px;
+
+      @include sm {
+        max-width: 48%;
+      }
+
+      @include xs {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .request__name,
+  .request__phone {
+    max-width: 100%;
+    // max-width: 416px;
+
+    // @include xs {
+    // }
+  }
+}
+
+.request__fieldset_row {
+  display: flex;
+  gap: 0 75px;
+
+  @include xl {
+    gap: 0 35px;
+  }
+
+  @include sm {
+    display: block;
+  }
+
+  @include xs {
+    margin-top: 34px;
+  }
+
+  .request__brand.request__select {
+    max-width: 100%;
+
+    // @include sm {
+    //   max-width: 48%;
+    // }
+  }
+}
+
+.request__fieldset_col {
+  flex: 1 1 auto;
+
+  @include sm {
+    &:not(:last-child) {
+      margin-bottom: 43px;
+    }
+  }
+
+  @include xs {
+    &:not(:last-child) {
+      margin-bottom: 34px;
+    }
+  }
+}
+
+.request__input,
+.request__select {
+  min-height: 53px;
 }
