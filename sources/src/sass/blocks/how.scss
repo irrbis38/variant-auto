@@ -1,4 +1,4 @@
-.how_it_works {
+.how {
   margin-bottom: 240px;
 
   @include lg {
@@ -10,7 +10,7 @@
   }
 }
 
-.how_it_works__title {
+.how__title {
   margin-bottom: 42px;
 
   @include xs {
@@ -18,15 +18,13 @@
   }
 }
 
-.how_it_works__list {
+.how__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 
   @include lg {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @include xs {
@@ -34,13 +32,13 @@
   }
 }
 
-.how_it_works__item {
+.how__item {
   display: flex;
   flex-direction: column;
 
-  @include lg {
-    width: 48%;
-  }
+  // @include lg {
+  //   width: 48%;
+  // }
 
   @include xs {
     width: 100%;
@@ -52,56 +50,45 @@
   }
 
   &:nth-child(1) {
-    .how_it_works__icon {
+    .how__icon {
       background-image: url("../images/icon_serv_letter.svg");
     }
   }
 
   &:nth-child(2) {
-    .how_it_works__icon {
-      background-image: url("../images/icon_serv_percentage.svg");
+    .how__icon {
+      background-image: url("../images/icon_serv_eye.svg");
     }
   }
 
   &:nth-child(3) {
-    .how_it_works__icon {
+    .how__icon {
       background-image: url("../images/icon_serv_check.svg");
     }
   }
 
+  &:nth-child(4) {
+    .how__icon {
+      background-image: url("../images/icon_serv_dollar.svg");
+    }
+  }
+
   &:hover {
-    .how_it_works__decr {
-      border-color: $color_green;
+    .how__decr {
+      border-color: $color_red_deep;
       border-bottom-color: transparent;
     }
 
-    .how_it_works__icon {
-      background-color: $color_green;
-    }
-
-    .how_it_works__name {
-      color: $color_green;
-    }
-
-    .how_it_works__button {
+    .how__button {
       opacity: 1;
       visibility: visible;
       pointer-events: all;
     }
   }
 
-  // @include lg {
-  //   &:hover {
-  //     .how_it_works__button {
-  //       min-height: 126px;
-  //       max-height: 126px;
-  //     }
-  //   }
-  // }
-
-  @include xs {
+  @include lg {
     &:hover {
-      .how_it_works__button {
+      .how__button {
         min-height: 80px;
         max-height: 80px;
       }
@@ -109,14 +96,14 @@
   }
 }
 
-.how_it_works__decr {
+.how__decr {
   flex: 1 1 auto;
   padding: 62px 32px 40px 24px;
   border: 1px solid $color_grey_f2;
   transition: border-color 0.2s ease-out;
 }
 
-.how_it_works__icon {
+.how__icon {
   width: 44px;
   height: 44px;
   margin-bottom: 34px;
@@ -124,25 +111,26 @@
   transition: background-color 0.2s ease-out;
 }
 
-.how_it_works__name {
+.how__name {
   font-weight: 400;
   font-size: 24px;
   color: $color_red_deep;
   transition: color 0.2s ease-out;
 }
 
-.how_it_works__text {
+.how__text {
   font-weight: 300;
   font-size: 18px;
   line-height: 140%;
 }
 
-.how_it_works__button {
+.how__button {
   flex: 0 0 126px;
   width: 100%;
   justify-content: flex-start;
+  padding-right: 20px;
   color: $color_white;
-  background-color: $color_green;
+  background-color: $color_red_deep;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -154,9 +142,10 @@
   }
 
   @include xs {
-    padding: 0 20px;
+    flex: 0 0 80px;
     max-height: 0;
     min-height: 0;
+    padding: 0 20px;
     overflow: hidden;
     opacity: 1;
     visibility: visible;

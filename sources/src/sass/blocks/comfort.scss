@@ -1,0 +1,157 @@
+.comfort {
+  margin-bottom: 250px;
+
+  @include lg {
+    margin-bottom: 160px;
+  }
+
+  @include xs {
+    margin-bottom: 91px;
+  }
+}
+
+.comfort__title {
+  margin-bottom: 42px;
+
+  @include xs {
+    margin-bottom: 36px;
+  }
+}
+
+.comfort__list {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
+    width: 100vw;
+    height: 1px;
+    background-color: $color_grey_f2;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @include lg {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include xs {
+    display: block;
+  }
+}
+
+.comfort__item {
+  display: flex;
+  flex-direction: column;
+  gap: 32px 0;
+  padding: 62px 23px 55px 23px;
+
+  &:not(:last-child) {
+    border-right: 1px solid $color_grey_f2;
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:nth-child(1) {
+    .comfort__icon {
+      background-image: url("../images/icon_serv_rounded_arrow.svg");
+    }
+  }
+
+  &:nth-child(2) {
+    .comfort__icon {
+      background-image: url("../images/icon_serv_dollar.svg");
+    }
+  }
+
+  &:nth-child(3) {
+    .comfort__icon {
+      background-image: url("../images/icon_serv_double_arrow.svg");
+    }
+  }
+
+  &:nth-child(4) {
+    .comfort__icon {
+      background-image: url("../images/icon_serv_person.svg");
+    }
+  }
+
+  @include lg {
+    &:nth-child(2n + 1) {
+      padding-left: 0;
+    }
+
+    border-bottom: 1px solid $color_grey_f2;
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+      border-bottom: none;
+    }
+
+    &:nth-child(2n) {
+      border-right: none;
+    }
+  }
+
+  @include xs {
+    display: block;
+    padding: 40px 23px 26px 0;
+    border-right: none;
+    border-bottom: none;
+
+    &:nth-child(n) {
+      border-right: 0;
+    }
+
+    &:not(:last-child) {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 1px;
+        background-color: $color_grey_f2;
+      }
+    }
+  }
+}
+
+.comfort__icon {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  background: $color_red_deep center / 40px 40px no-repeat;
+  transition: background-color 0.2s ease-out;
+
+  @include xs {
+    &:not(:last-child) {
+      margin-bottom: 23px;
+    }
+  }
+}
+
+.comfort__text {
+  flex: 1 1 auto;
+  font-weight: 400;
+  font-size: 24px;
+}

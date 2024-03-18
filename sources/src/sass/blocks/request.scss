@@ -81,6 +81,29 @@
   }
 }
 
+.request__fieldset_name {
+  margin-bottom: 33px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 92%;
+
+  @include xs {
+    margin-bottom: 14px;
+    font-size: 22px;
+  }
+}
+
+.request__fieldset_info {
+  margin-top: -13px;
+  margin-bottom: 20px;
+  font-weight: 300;
+
+  @include xs {
+    margin-top: 0;
+    font-size: 13px;
+  }
+}
+
 .request__name,
 .request__phone,
 .request__select {
@@ -97,7 +120,8 @@
 
 .request__name,
 .request__phone,
-.request__select {
+.request__select,
+.request__input {
   padding: 16px 0;
   font-weight: 400;
   font-size: 15px;
@@ -126,10 +150,10 @@
 
 .request__submit {
   min-height: 126px;
-  padding: 24px 130px 44px 40px;
+  padding: 24px 130px 24px 40px;
 
   @include lg {
-    padding: 44px 80px 44px 40px;
+    padding: 24px 80px 24px 40px;
   }
 
   @include sm {
@@ -185,6 +209,334 @@
       z-index: -1;
       height: 100%;
       background-color: $color_white;
+    }
+  }
+}
+
+// car-buyout-page
+
+.car-buyout-page {
+  .request__form {
+    padding: 44px 24px 42px 27px;
+    background-color: $color_grey_f2;
+
+    @include xs {
+      padding: 29px 24px 24px 27px;
+    }
+
+    @include r(360px) {
+      padding: 29px 14px 24px 14px;
+    }
+  }
+
+  .request__fieldset {
+    padding: 0;
+
+    &:not(:last-child) {
+      position: relative;
+      padding-bottom: 43px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -27px;
+        right: -24px;
+        height: 1px;
+        background-color: $color_grey_d8;
+      }
+
+      @include xs {
+        padding-bottom: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .request__fieldset_name {
+    &:not(:first-child) {
+      margin-top: 44px;
+
+      @include xs {
+        margin-top: 34px;
+      }
+    }
+  }
+
+  .request__brand,
+  .request__model {
+    flex: 1 1 294px;
+  }
+
+  .request__year,
+  .request__transmission,
+  .request__mileage {
+    flex: 0 1 172px;
+    max-width: 172px;
+  }
+
+  .request__name,
+  .request__phone {
+    max-width: 416px;
+
+    @include xs {
+      max-width: 100%;
+    }
+  }
+
+  @include lg {
+    .request__brand,
+    .request__model {
+      flex: 1 1 100%;
+      max-width: 48%;
+    }
+  }
+
+  .request__year,
+  .request__transmission,
+  .request__mileage {
+    flex: 1 1 172px;
+    max-width: 32%;
+  }
+
+  @include xs {
+    .request__brand,
+    .request__model,
+    .request__year,
+    .request__transmission,
+    .request__mileage {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+
+  .request__submit_wrapper {
+    @include xs {
+      background-color: $color_grey_f2;
+    }
+  }
+}
+
+.request__fieldset_images {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px 12px;
+
+  .request__border_el {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #252525;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+    pointer-events: none;
+  }
+
+  &.active {
+    .request__border_el {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.request__added_img {
+  position: relative;
+  width: 138px;
+  height: 95px;
+  border: 2px solid #252525;
+
+  &:hover {
+    .request__remove {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include xxs {
+    width: 31%;
+    height: 60px;
+  }
+
+  @include r(440px) {
+    width: 47%;
+  }
+}
+
+.request__remove {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#252525, 0.5);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z' fill='white' /%3E%3C/svg%3E");
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+  @include sm {
+    background-color: transparent;
+    opacity: 1;
+    visibility: visible;
+
+    &:after {
+      top: 1px;
+      right: 1px;
+      left: unset;
+      transform: unset;
+      width: 20px;
+      height: 20px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: 24px;
+      height: 24px;
+      background-color: #252525;
+    }
+  }
+}
+
+.request__add_img {
+  min-width: 95px;
+  height: 95px;
+  overflow: hidden;
+  flex-grow: 1;
+  // flex-shrink: 0;
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0 36px;
+  padding: 36px;
+  background-color: #e5e5e5;
+  border: 2px dashed transparent;
+  transition: border-color 0.2s ease-out;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      border: 2px dashed #252525;
+
+      span {
+        color: #252525;
+      }
+
+      path {
+        fill: #252525;
+      }
+    }
+  }
+
+  span {
+    flex: 1 1 auto;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 147%;
+    color: #838383;
+    transition: color 0.2s ease-out;
+  }
+
+  path {
+    transition: all 0.2s ease-out;
+  }
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  &.small-version {
+    span {
+      display: none;
+    }
+  }
+
+  .request__mob_text {
+    display: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 112%;
+  }
+
+  @include xxs {
+    min-width: 60px;
+    height: 60px;
+    gap: 0 20px;
+    padding: 20px 20px 20px 20px;
+
+    svg {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .request__wide_text {
+      display: none;
+    }
+
+    .request__mob_text {
+      display: block;
+    }
+  }
+
+  @include xxs {
+    padding: 20px 14px;
+    gap: 0 10px;
+  }
+
+  @include r(360px) {
+    .request__mob_text {
+      font-size: 14px;
     }
   }
 }

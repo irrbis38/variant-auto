@@ -241,7 +241,7 @@ var initMaskedInputs = () => {
 // ========== CARD LOGIC
 
 var initCardLogic = () => {
-  var cards = Array.from(document.querySelectorAll(".card"));
+  var cards = Array.from(document.querySelectorAll(".card-elem"));
 
   if (cards.length < 1) {
     return;
@@ -303,15 +303,29 @@ var initBlockSlider = () => {
       var prev_btn = parent.querySelector(".slider__prev_btn");
       var next_btn = parent.querySelector(".slider__next_btn");
 
+      // toggle slider draggable
+      var isDraggable = true;
+      var isAllowTouchMove = true;
+
+      if (slider.classList.contains("bought-out-block-slider")) {
+        isDraggable = false;
+        isAllowTouchMove = false;
+      }
+      // end toggle slider draggable
+
       return new Swiper(slider, {
         spaceBetween: 24,
-        slidesPerView: 2,
-        draggable: true,
+        slidesPerView: 1,
+        draggable: isDraggable,
+        allowTouchMove: isAllowTouchMove,
         navigation: {
           prevEl: prev_btn,
           nextEl: next_btn,
         },
         breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
           992: {
             slidesPerView: 3,
           },
@@ -368,7 +382,8 @@ var initCardMobileSlider = () => {
       return new Swiper(s, {
         spaceBetween: 0,
         slidesPerView: 1,
-        draggable: true,
+        draggable: false,
+        clickable: "true",
         pagination: {
           el: ".card__full_paggination",
           type: "bullets",
@@ -407,6 +422,38 @@ var initCardMobileSlider = () => {
     mqMin768.addEventListener("change", (e) =>
       handleMQ(e, handleSmallWidth, handleWideWidth)
     );
+  }
+};
+
+// ========== CARD MOBILE SLIDER
+
+var initCardBoughtOutSlider = () => {
+  var cardBoughtOutElements = Array.from(
+    document.querySelectorAll(".card_bought_out__full")
+  );
+
+  var createMobileSliders = (sliderElements) => {
+    var sliders = cardBoughtOutElements.map((s) => {
+      return new Swiper(s, {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        draggable: true,
+
+        pagination: {
+          el: ".card_bought_out__full_paggination",
+          clickable: "true",
+          type: "bullets",
+        },
+      });
+    });
+
+    return sliders;
+  };
+
+  if (cardBoughtOutElements < 1) {
+    return;
+  } else {
+    sliders = createMobileSliders(cardBoughtOutElements);
   }
 };
 
@@ -1109,6 +1156,113 @@ var initYoutubeVideo = (videos) => {
   });
 };
 
+// ========== INIT FILES READ
+
+// check request label width
+
+var label = document.querySelector(".request__add_img");
+var filedsetImages = document.querySelector(".request__fieldset_images");
+
+var checkLabelWidth = () => {
+  if (!label) return;
+  if (filedsetImages.children.length > 1) {
+    label.classList.add("small-version");
+  } else {
+    label.classList.remove("small-version");
+  }
+};
+
+// init files read
+
+var handleFiles = (files, add_label) => {
+  if (!files.length) return;
+
+  var queuedImagesArray = Array.from(files).filter((f) =>
+    f.type.startsWith("image/")
+  );
+
+  queuedImagesArray.forEach((image) => {
+    // create image item and add className
+    var img_item = document.createElement("DIV");
+    img_item.classList.add("request__added_img");
+
+    // add innerHTML to image item
+    img_item.innerHTML = `<img src="${URL.createObjectURL(
+      image
+    )}" alt="фото отзыва"><button class="request__remove" type="button" aria-label="Удалить фото отзыва"></button>`;
+
+    // add image item to the DOM
+    add_label.before(img_item);
+
+    // add listener to remove_btn
+    img_item
+      .querySelector(".request__remove")
+      .addEventListener("click", handleRemoveImage);
+
+    checkLabelWidth();
+  });
+};
+
+// add images by click
+
+var initFileRead = () => {
+  var add_label = document.querySelector(".request__add_img");
+  var file_input = document.querySelector("#images_input");
+
+  if (!add_label || !file_input) return;
+
+  file_input.addEventListener("change", () =>
+    handleFiles(file_input.files, add_label)
+  );
+};
+
+// add images by drag and drop
+var initFileReadByDrop = () => {
+  var drop_container = document.querySelector(".request__fieldset_images");
+
+  if (!drop_container) return;
+
+  var file_input = document.querySelector("#images_input");
+  var add_label = document.querySelector(".request__add_img");
+
+  drop_container.addEventListener("dragover", (e) => {
+    e.preventDefault();
+  });
+
+  drop_container.addEventListener("dragenter", (e) => {
+    e.preventDefault();
+  });
+
+  // when file is inside drag area
+  drop_container.addEventListener("dragover", (event) => {
+    event.preventDefault();
+    drop_container.classList.add("active");
+  });
+  // when file leave the drag area
+  drop_container.addEventListener("dragleave", () => {
+    drop_container.classList.remove("active");
+  });
+
+  var handleDrop = (e) => {
+    e.preventDefault();
+
+    file_input.files = e.dataTransfer.files;
+
+    drop_container.classList.remove("active");
+
+    handleFiles(file_input.files, add_label);
+  };
+
+  drop_container.addEventListener("drop", handleDrop);
+};
+
+function handleRemoveImage(e) {
+  // delete "request__added_img" item
+  var deleted_item = e.target.closest(".request__added_img");
+  deleted_item.remove();
+  checkLabelWidth();
+}
+
 document.addEventListener("DOMContentLoaded", (event) => {
   headerLogic();
   initMainSlider();
@@ -1124,6 +1278,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
   initFlyButton();
   formSubmit();
   calculateCredit();
+  initCardBoughtOutSlider();
+  initFileRead();
+  initFileReadByDrop();
 
   var catalog_page = document.querySelector(".catalog-page");
 

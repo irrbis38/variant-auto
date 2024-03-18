@@ -347,6 +347,26 @@
   }
 }
 
+.btn__arrow_red {
+  color: $color_white;
+  background-color: $color_red_deep;
+
+  &::before {
+    background: url("../images/arrow-right-white.svg") center / contain
+      no-repeat;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color_red_hover;
+
+      &::before {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
 // slider
 .slider__nav {
   min-width: 171px;

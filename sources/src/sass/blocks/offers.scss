@@ -59,3 +59,15 @@
   overflow-x: clip;
   overflow-y: visible;
 }
+
+// card-bought-out
+
+.car-buyout-page {
+  .offers__top {
+    margin-bottom: 50px;
+
+    @include xs {
+      margin-bottom: 33px;
+    }
+  }
+}

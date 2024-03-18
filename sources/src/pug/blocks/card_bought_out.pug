@@ -1,0 +1,40 @@
+-
+    var slides = [
+        {num: 1},
+        {num: 2},
+        {num: 3}
+    ]
+
+article.card.swiper-slide.card-bought-out
+
+    .card_bought_out__full.swiper
+        .card__full_wrapper.swiper-wrapper
+
+            each slide in slides 
+
+                - var src = 'card/bought_out_car_' + slide.num
+
+                    .card_bought_out__item.swiper-slide
+                        +pictureSize(src, 'jpg', 'x2', '342', '256')
+
+        .card_bought_out__full_paggination
+
+    .card__descr
+
+        a.card__link(href="./catalog-item.html")
+
+        h3.card__name Porsche Taycan 4
+
+        ul.card__features
+            li.card__feature Автомат
+            li.card__feature 2018
+
+        .card__price_name Рыночная стоимость
+        .card__price 3 910.000₽
+
+
+    .card__offer 
+        span.card__offer_name Наше предложение
+        p.card__offer_price 3 985.000₽
+
+

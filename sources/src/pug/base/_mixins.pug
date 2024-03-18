@@ -115,6 +115,32 @@ mixin offers(coloredClass, titleFirst, titleSecond)
 
             
             button.offers__show_more.btn__red(type="button") Показать еще
+
+mixin boughout_cars(title)
+
+    section.offers.section-with-slider
+        .container 
+            .offers__top
+                h2.offers__title.block__title= title
+
+                .offers__nav.slider__nav
+                    button.offers__prev.slider__prev_btn(aria-label="Показать предыдущий слайд")
+                        include ../blocks/icon_slider_prev
+                    button.offers__next.slider__next_btn(aria-label="Показать следующий слайд")
+                        include ../blocks/icon_slider_next
+
+
+            .offers__slider.block-slider.bought-out-block-slider.swiper
+                .offers__wrapper.block-slider-wrapper.swiper-wrapper
+
+                    include ../blocks/card_bought_out
+                    include ../blocks/card_bought_out
+                    include ../blocks/card_bought_out
+                    include ../blocks/card_bought_out
+                    include ../blocks/card_bought_out
+
+            
+            button.offers__show_more.btn__red(type="button") Показать еще
             
 
 mixin filtersItem(value)

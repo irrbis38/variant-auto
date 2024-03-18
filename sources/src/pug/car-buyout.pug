@@ -1,0 +1,225 @@
+extends base/_layout
+block vars
+    - var pageName = 'car-buyout-page'
+block head
+    title Вариант Авто - выкуп авто
+block page
+
+    section.serv_intro
+        .serv_intro__banner
+            +picture('serv/car_buyout_banner', 'jpg', 'x2')
+        .container
+            h1.serv_intro__title выгодный выкуп вашего автомобиля
+            p.serv_intro__subtitle Мы осуществляем срочный выкуп автомобилей любых марок и моделей в любых комплектациях в Краснодаре
+
+            button.serv_intro__btn.btn__high.btn__arrow_red(type="button") Получить оценку
+
+
+    section.comfort 
+        .container
+
+            h2.comfort__title.block__title Почему это удобно
+
+            ul.comfort__list 
+
+                li.comfort__item 
+                    .comfort__icon 
+                    p.comfort__text Предложим максимально выгодную цену
+
+                li.comfort__item 
+                    .comfort__icon 
+                    p.comfort__text Выплатим все сумму сразу наличными
+
+                li.comfort__item 
+                    .comfort__icon 
+                    p.comfort__text Быстро и прозрачно оформим сделку
+
+                li.comfort__item 
+                    .comfort__icon 
+                    p.comfort__text Наш эксперт бесплатно проведет оценку
+
+
+    include ./blocks/advantages
+
+
+
+    section.condition 
+        .container
+
+            h2.condition__title.block__title Авто в любом состоянии
+
+            ul.condition__list 
+
+                li.condition__item 
+                    .condition__icon 
+                    p.condition__text С пробегом
+
+                li.condition__item 
+                    .condition__icon 
+                    p.condition__text Неисправные 
+
+                li.condition__item 
+                    .condition__icon 
+                    p.condition__text После ДТП
+
+                li.condition__item 
+                    .condition__icon 
+                    p.condition__text Кредитные и залоговые
+
+
+
+    section.boughout_cars 
+        +boughout_cars('Примеры выкупленных авто')
+
+
+
+    section.how 
+        .container
+            h2.how__title.block__title Как продать свой авто
+
+            ul.how__list 
+
+
+                li.how__item
+
+                    .how__decr 
+                        .how__icon
+                        p.how__name Заявка
+                        p.how__text Позвоните нам или оставьте заявку на сайте
+
+                    button.how__button.btn__high.btn__arrow_red(type="button") Подать заявку
+
+                li.how__item
+
+                    .how__decr 
+                        .how__icon
+                        p.how__name Оценка и осмотр
+                        p.how__text Наш специалист выезжает к вам для проведения осмотра и оценки авто
+
+                    button.how__button.btn__high.btn__arrow_red(type="button") Подать заявку
+
+
+                li.how__item
+
+                    .how__decr 
+                        .how__icon
+                        p.how__name Оформление сделки
+                        p.how__text Согласовываем с вами сумму выплаты и заключаем договор купли-продажи
+
+                    button.how__button.btn__high.btn__arrow_red(type="button") Подать заявку
+
+
+                li.how__item
+
+                    .how__decr 
+                        .how__icon
+                        p.how__name Выплата
+                        p.how__text Отдаем вам всю сумму в этот же день наличными
+
+                    button.how__button.btn__high.btn__arrow_red(type="button") Подать заявку
+
+
+        -
+            var cars = [
+                {
+                    name: 'Lada (ВАЗ)',
+                    sup: '70'
+                },
+                {
+                    name: 'Audi',
+                    sup: '54'
+                },
+                {
+                    name: 'Changan',
+                    sup: '35'
+                },
+                {
+                    name: 'BMW',
+                    sup: '20'
+                },
+                {
+                    name: 'Daewoo',
+                    sup: '15'
+                }
+            ]
+
+
+    section.request 
+        .container
+            h2.request__title.block__title Узнайте стоимость вашего авто
+            p.request__subtitle Заполните данные о вашем авто, мы вам перезвоним и сообщим предварительную стоимость вашего автомобиля
+
+            form.request__form(action="#" id="request-form")
+
+                h3.request__fieldset_name Ключевые данные 
+
+                fieldset.request__fieldset
+
+                    .q_selection__brand.q_selection__select.request__brand.request__select
+                        input.q_selection__input(type="text" placeholder="Марка")
+                        span
+                        .q_selection__group
+                            ul.q_selection__list
+                                each item in cars
+                                    li: input.q_selection__btn(type="button" value= item.name)
+
+                    .q_selection__select.request__model.request__select
+                        input.q_selection__input(type="text" placeholder="Модель")
+                        span
+                        .q_selection__group
+                            ul.q_selection__list
+                                each item in cars
+                                    li: input.q_selection__btn(type="button" value= item.name)
+
+                    input.request__input.request__year(type="text" placeholder="Год выпуска")
+
+                    .q_selection__select.request__transmission.request__select
+                        input.q_selection__input(type="text" placeholder="Коробка передач")
+                        span
+                        .q_selection__group
+                            ul.q_selection__list
+                                each item in cars
+                                    li: input.q_selection__btn(type="button" value= item.name)
+                    
+
+                    input.request__input.request__mileage(type="text" placeholder="Пробег")
+
+
+                h3.request__fieldset_name Фотографии
+                p.request__fieldset_info Чем больше фотографий вы прикрепите, тем точнее мы сможем оценить ваш авто и сделать предварительное предложение!
+
+                fieldset.request__fieldset.request__fieldset_images
+
+                        span.request__border_el
+
+                        //- .request__added_img
+                        //-     img(src="./images/cer1.jpg" alt="фото отзыва")
+                        //-     button.request__remove(type="button" aria-label="Удалить фото отзыва")
+
+
+                        label.request__add_img
+                            input#images_input(type="file" multiple accept="image/png, image/jpeg, image/jpg" aria-label="Добавить фото")
+                            span.request__mob_text Прикрепить фотографии
+                            svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="#838383")
+                            span.request__wide_text Нажмите или перетащите сюда фотографии, чтобы прикрепить
+                    
+
+
+                h3.request__fieldset_name Персональные данные
+
+                fieldset.request__fieldset
+
+                    input.request__input.request__name(type="text" placeholder="Ваше имя")
+
+                    input.request__input.request__phone.input-required(type="text" placeholder="Номер телефона *")
+
+
+
+            .request__bottom
+
+                .request__submit_wrapper
+
+                    button.request__submit.btn__high.btn__arrow_green(type="submit" form="request-form") Получить условия
+
+                span.request__rules Нажимая на кнопку "Получить условия", вы даете согласие на обработку своих #[a персональных&nbsp;данных].
