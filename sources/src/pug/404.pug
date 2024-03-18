@@ -1,0 +1,22 @@
+extends base/_layout
+block vars
+    - var pageName = '404-page'
+block head
+    title Вариант Авто - 404
+block page
+
+    .container
+
+        .not_found 
+
+            .not_found__code 
+                span 4
+                +picture('wheel', 'png', 'x2')
+                span 4
+
+
+            h1.not_found__title Извините,  мы не можем найти эту страницу!
+
+            p.not_found__msg Что-то пошло не так или страница больше не существует
+
+            a.not_found__link.btn__arrow_red.btn__arrow(href="#") На главную
