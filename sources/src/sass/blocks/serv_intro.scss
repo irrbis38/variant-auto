@@ -42,6 +42,11 @@
 
   @include xs {
     display: block;
+    font-size: 35px;
+  }
+
+  @include r(360px) {
+    font-size: 30px;
   }
 }
 

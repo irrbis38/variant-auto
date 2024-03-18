@@ -1,0 +1,131 @@
+extends base/_layout
+block vars
+    - var pageName = 'commission-page'
+block head
+    title Вариант Авто - Комиссионная продажа
+block page
+
+    section.serv_intro
+        .serv_intro__banner
+            +picture('serv/commission_banner', 'jpg', 'x2')
+        .container
+            h1.serv_intro__title Комиссионная продажа
+            p.serv_intro__subtitle Комиссионная продажа позволяет Вам легко и быстро продать Ваш подержанный автомобиль 
+
+            button.serv_intro__btn.btn__high.btn__arrow_red(type="button") Продать авто
+
+
+    section.comfort 
+        .container
+
+            h2.comfort__title.block__title Почему это удобно
+
+            ul.comfort__list 
+
+                li.comfort__item 
+                    .comfort__icon 
+                    p.comfort__text Вы сэкономите много времени, салон продаст ваш авто намного быстрее
+
+                li.comfort__item 
+                    .comfort__icon 
+                    p.comfort__text Не нужно заниматься общением с покупателями. Все это берет на себя салон
+
+                li.comfort__item 
+                    .comfort__icon 
+                    p.comfort__text В назначенный срок вы получите сумму, прописанную в соглашении
+
+                li.comfort__item 
+                    .comfort__icon 
+                    p.comfort__text Автосалон самостоятельно занимается предпродажной подготовкой машины: чистка, уборка, техобслуживание
+
+
+
+    include ./blocks/advantages_with_title
+
+
+
+    -
+        var cars = [
+            {
+                name: 'Lada (ВАЗ)',
+                sup: '70'
+            },
+            {
+                name: 'Audi',
+                sup: '54'
+            },
+            {
+                name: 'Changan',
+                sup: '35'
+            },
+            {
+                name: 'BMW',
+                sup: '20'
+            },
+            {
+                name: 'Daewoo',
+                sup: '15'
+            }
+        ]
+
+    section.request 
+        .container
+            h2.request__title.block__title Узнайте стоимость вашего авто
+            p.request__subtitle Заполните данные о вашем авто, мы вам перезвоним и сообщим предварительную стоимость вашего автомобиля
+
+            form.request__form(action="#" id="request-form")
+
+                h3.request__fieldset_name Ключевые данные 
+
+                fieldset.request__fieldset
+
+                    .q_selection__brand.q_selection__select.request__brand.request__select
+                        input.q_selection__input(type="text" placeholder="Марка")
+                        span
+                        .q_selection__group
+                            ul.q_selection__list
+                                each item in cars
+                                    li: input.q_selection__btn(type="button" value= item.name)
+
+                    .q_selection__select.request__model.request__select
+                        input.q_selection__input(type="text" placeholder="Модель")
+                        span
+                        .q_selection__group
+                            ul.q_selection__list
+                                each item in cars
+                                    li: input.q_selection__btn(type="button" value= item.name)
+
+                    input.request__input.request__year(type="text" placeholder="Год выпуска")
+
+                    .q_selection__select.request__transmission.request__select
+                        input.q_selection__input(type="text" placeholder="Коробка передач")
+                        span
+                        .q_selection__group
+                            ul.q_selection__list
+                                each item in cars
+                                    li: input.q_selection__btn(type="button" value= item.name)
+                    
+
+                    input.request__input.request__mileage(type="text" placeholder="Пробег")
+
+
+
+
+                h3.request__fieldset_name Персональные данные
+
+                fieldset.request__fieldset
+
+                    input.request__input.request__name(type="text" placeholder="Ваше имя")
+
+                    input.request__input.request__phone.input-required(type="text" placeholder="Номер телефона *")
+
+
+
+            .request__bottom
+
+                .request__submit_wrapper
+
+                    button.request__submit.btn__high.btn__arrow_green(type="submit" form="request-form") Получить условия
+
+                span.request__rules Нажимая на кнопку "Получить условия", вы даете согласие на обработку своих #[a персональных&nbsp;данных].
+
