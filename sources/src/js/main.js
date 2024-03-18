@@ -303,21 +303,21 @@ var initBlockSlider = () => {
       var prev_btn = parent.querySelector(".slider__prev_btn");
       var next_btn = parent.querySelector(".slider__next_btn");
 
-      // toggle slider draggable
-      var isDraggable = true;
-      var isAllowTouchMove = true;
+      // // toggle slider draggable
+      // var isDraggable = true;
+      // var isAllowTouchMove = true;
 
-      if (slider.classList.contains("bought-out-block-slider")) {
-        isDraggable = false;
-        isAllowTouchMove = false;
-      }
+      // if (slider.classList.contains("bought-out-block-slider")) {
+      //   isDraggable = false;
+      //   isAllowTouchMove = false;
+      // }
       // end toggle slider draggable
 
       return new Swiper(slider, {
         spaceBetween: 24,
         slidesPerView: 1,
-        draggable: isDraggable,
-        allowTouchMove: isAllowTouchMove,
+        draggable: false,
+        allowTouchMove: false,
         navigation: {
           prevEl: prev_btn,
           nextEl: next_btn,
@@ -1040,7 +1040,7 @@ var formSubmit = () => {
   var msg_modal = document.querySelector(".msg__modal");
   var calculate_modal = document.querySelector(".calculate__modal");
 
-  if (!calculate_modal || !msg_modal) return;
+  if (!msg_modal) return;
 
   var overlay = document.querySelector(".overlay");
   var body = document.body;

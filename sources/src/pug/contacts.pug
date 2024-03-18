@@ -1,0 +1,74 @@
+extends base/_layout
+block vars
+    - var pageName = 'contacts-page'
+block head
+    title Вариант Авто - Контакты
+block page
+
+    .container
+
+        .cp_top
+
+
+                h1.page__title Контакты
+
+                p.reviews__subtitle Возникли вопросы? Приезжайте к нам в салон и #[span задайте их лично]
+
+        ul.cp_list
+
+            li.cp__item
+                p.cp__heading Местоположение
+                p.cp__text ул. Ростовское шоссе, 20 корпус 1
+
+            li.cp__item
+                p.cp__heading Горячая линия
+                a.cp__link(href="tel:89284091449") 8 (928) 409-14-49
+
+            li.cp__item
+                p.cp__heading График работы
+                p.cp__text 09:00–19:00
+
+            li.cp__item
+                p.cp__heading Социальные сети
+                ul.cp__social 
+                    li.cp__social_item: a(href="#" target="_blank" aria-label="Телеграм")
+                        img(src="./images/icon_social_telegram.svg", alt="")
+
+                    li.cp__social_item: a(href="#" target="_blank" aria-label="Вайбер")
+                        img(src="./images/icon_social_viber.svg", alt="")
+
+                    li.cp__social_item: a(href="#" target="_blank" aria-label="Ютуб")
+                        img(src="./images/icon_social_youtube.svg", alt="")
+
+                    li.cp__social_item: a(href="#" target="_blank" aria-label="Инстаграм")
+                        img(src="./images/icon_social_instagram.svg", alt="")
+
+                    li.cp__social_item: a(href="#" target="_blank" aria-label="Вконтакте")
+                        img(src="./images/icon_social_vk.svg", alt="")
+
+
+
+    .map_section
+
+        .container
+
+            a.map_section__btn.btn__high.btn__arrow_green(href="#") Написать в «WhatsApp»
+
+        .contacts__map#contacts-map
+
+
+
+    section.need_help
+        .container 
+            h2.need_help__title Связаться с руководством
+
+            form.need_help__form(action="#")
+                input.need_help__name(type="text" placeholder="Ваше имя")
+                input.need_help__phone.input-required(type="text" placeholder="Ваш телефон*")
+                textarea.need_help__wishes(rows="1" placeholder="Ваши пожелания")
+                button.need_help__submit.btn__arrow.btn__red(type="submit") Оставить заявку
+
+
+
+    include ./blocks/modal_msg
+
