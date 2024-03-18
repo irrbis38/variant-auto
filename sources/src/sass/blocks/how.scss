@@ -153,3 +153,27 @@
     transition: max-height 0.2s ease-out, min-height 0.2s ease-out;
   }
 }
+
+// ==== TRADE IN PAGE ====
+
+.trade-in-page {
+  .how__item {
+    &:nth-child(2) {
+      .how__icon {
+        background-image: url("../images/icon_serv_search.svg");
+      }
+    }
+
+    &:nth-child(3) {
+      .how__icon {
+        background-image: url("../images/icon_serv_percentage.svg");
+      }
+    }
+
+    &:nth-child(4) {
+      .how__icon {
+        background-image: url("../images/icon_serv_check.svg");
+      }
+    }
+  }
+}

@@ -95,3 +95,19 @@
     max-width: 100%;
   }
 }
+
+//==== REVIEWS PAGE
+
+.reviews-page {
+  .reviews-block {
+    margin-bottom: 250px;
+
+    @include lg {
+      margin-bottom: 160px;
+    }
+
+    @include xs {
+      margin-bottom: 120px;
+    }
+  }
+}

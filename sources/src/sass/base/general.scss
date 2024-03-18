@@ -92,6 +92,40 @@
   }
 }
 
+.page__title {
+  margin-top: 72px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 125px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  @include xl {
+    margin-top: 50px;
+    font-size: 100px;
+  }
+
+  @include lg {
+    margin-top: 30px;
+    font-size: 80px;
+  }
+
+  @include sm {
+    font-size: 58px;
+  }
+
+  @include xs {
+    max-width: 320px;
+    font-size: 44px;
+    text-align: left;
+    letter-spacing: normal;
+  }
+
+  @include r(360px) {
+    font-size: 38px;
+  }
+}
+
 .inner__h1 {
   font-weight: 500;
   font-size: 54px;

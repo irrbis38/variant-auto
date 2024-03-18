@@ -221,7 +221,8 @@
 
 .car-buyout-page,
 .trade-in-page,
-.commission-page {
+.commission-page,
+.reviews-page {
   .request__form {
     padding: 44px 24px 42px 27px;
     background-color: $color_grey_f2;
@@ -577,10 +578,6 @@
   .request__name,
   .request__phone {
     max-width: 100%;
-    // max-width: 416px;
-
-    // @include xs {
-    // }
   }
 }
 
@@ -602,10 +599,6 @@
 
   .request__brand.request__select {
     max-width: 100%;
-
-    // @include sm {
-    //   max-width: 48%;
-    // }
   }
 }
 
@@ -628,4 +621,104 @@
 .request__input,
 .request__select {
   min-height: 53px;
+}
+
+// textarea
+
+.request__textarea {
+  display: inline-block;
+  width: 100%;
+  height: 95px;
+  resize: none;
+  padding: 12px 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 113%;
+  border-bottom: 2px solid $color_grey_d8;
+  transition: border-color 0.2s ease-out;
+
+  &::placeholder {
+    color: $color_dark;
+  }
+
+  &:focus {
+    border-bottom-color: $color_dark;
+  }
+}
+
+//==== REVIEWS PAGE =====
+
+.reviews-page {
+  .request__fieldset_personal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 72px;
+
+    @include xl {
+      gap: 0 35px;
+    }
+
+    @include lg {
+      flex-wrap: wrap;
+      gap: 40px 4%;
+    }
+
+    @include sm {
+      flex-wrap: wrap;
+    }
+
+    @include xs {
+      gap: 25px 0;
+    }
+  }
+
+  .request__personal {
+    flex: 1 1 auto;
+
+    @include sm {
+      flex: 1 1 50%;
+      max-width: 48%;
+    }
+
+    @include xs {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+
+  .request__fieldset_row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 72px;
+    margin-top: 44px;
+
+    @include sm {
+      display: block;
+    }
+
+    @include xs {
+      margin-top: 34px;
+    }
+  }
+
+  .request__fieldset_col {
+    flex: 1 1 auto;
+    width: 48%;
+
+    @include sm {
+      width: 100%;
+    }
+  }
+
+  .request__fieldset_col--reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+
+    @include sm {
+      margin-bottom: 34px;
+    }
+  }
 }

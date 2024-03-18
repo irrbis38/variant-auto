@@ -157,33 +157,10 @@
   font-size: 24px;
 }
 
-// ==== TRADE IN PAGE ====
+// ==== COMMISSION PAGE and TRADE IN PAGE ====
 
-// .trade-in-page {
-//   .comfort__item {
-//     &:nth-child(1) {
-//       .comfort__icon {
-//         background-image: url("../images/icon_serv_double_arrow.svg");
-//       }
-//     }
-//   }
-// }
-
-// ==== CAR BUYOUT PAGE ====
-
-.car-buyout-page {
-  .comfort__item {
-    &:nth-child(1) {
-      .comfort__icon {
-        background-image: url("../images/icon_serv_rounded_arrow.svg");
-      }
-    }
-  }
-}
-
-// ==== COMMISSION PAGE ====
-
-.commission-page {
+.commission-page,
+.trade-in-page {
   .comfort__item {
     &:nth-child(1) {
       .comfort__icon {

@@ -1,0 +1,120 @@
+extends base/_layout
+block vars
+    - var pageName = 'reviews-page'
+block head
+    title Вариант Авто - Отзывы
+block page
+
+    .container
+
+        .reviews-block
+
+            h1.page__title Отзывы
+
+            p.reviews__subtitle Наши клиенты расскажут  #[span почему выбрали нас]  и наши автомобили
+
+            .reviews__wrapper
+
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item_video
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+
+
+            include ./blocks/pagination
+
+
+            button.offers__show_more.btn__red(type="button") Показать еще
+
+
+
+
+
+        -
+            var cars = [
+                {
+                    name: 'Lada (ВАЗ)',
+                    sup: '70'
+                },
+                {
+                    name: 'Audi',
+                    sup: '54'
+                },
+                {
+                    name: 'Changan',
+                    sup: '35'
+                },
+                {
+                    name: 'BMW',
+                    sup: '20'
+                },
+                {
+                    name: 'Daewoo',
+                    sup: '15'
+                }
+            ]
+
+
+    section.request 
+        .container
+            h2.request__title.block__title Оставьте свой отзыв
+            p.request__subtitle Заполните данные о вашем авто, мы вам перезвоним и сообщим предварительную стоимость вашего автомобиля
+
+            form.request__form(action="#" id="request-form")
+
+                h3.request__fieldset_name Персональные данные 
+
+                fieldset.request__fieldset.request__fieldset_personal
+
+                    input.request__input.request__personal(type="text" placeholder="Ваше имя")
+
+                    input.request__input.request__personal(type="text" placeholder="Ваш автомобиль")
+
+                    input.request__input.request__personal(type="text" placeholder="Номер телефона")
+
+                    input.request__input.request__personal(type="email" placeholder="Почта")
+
+
+
+                .request__fieldset_row
+
+                    .request__fieldset_col.request__fieldset_col--reviews
+
+                        h3.request__fieldset_name Отзыв
+
+                        textarea.request__textarea(rows="3" placeholder="Ваши пожелания")
+
+                    .request__fieldset_col
+
+                        h3.request__fieldset_name Фотографии
+                        p.request__fieldset_info Чем больше фотографий вы прикрепите, тем точнее мы сможем оценить ваш авто и сделать предварительное предложение!
+
+                        fieldset.request__fieldset.request__fieldset_images
+
+                                span.request__border_el
+
+                                label.request__add_img
+                                    input#images_input(type="file" multiple accept="image/png, image/jpeg, image/jpg" aria-label="Добавить фото")
+                                    span.request__mob_text Прикрепить фотографии
+                                    svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                        path(d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="#838383")
+                                    span.request__wide_text Нажмите или перетащите сюда фотографии, чтобы прикрепить
+
+
+
+            .request__bottom
+
+                .request__submit_wrapper
+
+                    button.request__submit.btn__high.btn__arrow_green(type="submit" form="request-form") Оставить отзыв
+
+                span.request__rules Нажимая на кнопку "Оставить отзыв", вы даете согласие на обработку своих #[a персональных&nbsp;данных].
+
