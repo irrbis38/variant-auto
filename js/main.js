@@ -637,12 +637,21 @@ var initSortCatalogLogic = () => {
       const clickedSortButton = e.target.closest(".options__sortList button");
       let newSortType = clickedSortButton.dataset.sortType;
 
+      // img
+      let currImgUrl = options_sort_toggle_btn.children[2].src;
+
       if (currentSortType !== newSortType) {
         // place to send a request when changing sort type
+
+        let newImgUrl = clickedSortButton.children[1].src;
 
         options_current.textContent = clickedSortButton.children[0].textContent;
         options_sort_toggle_btn.dataset.sortType = newSortType;
         options_sort_toggle_btn.querySelector("input").value = newSortType;
+
+        if (newImgUrl && currImgUrl) {
+          options_sort_toggle_btn.children[2].src = newImgUrl;
+        }
       }
     }
   }
@@ -1263,6 +1272,49 @@ function handleRemoveImage(e) {
   checkLabelWidth();
 }
 
+// ========== GALLERY SLIDER LOGIC
+
+var initGallerySlider = () => {
+  var gallerySlider = document.querySelectorAll(".team__slider");
+  var slider = null;
+
+  if (!gallerySlider) return;
+
+  var createSlider = () => {
+    return new Swiper(".gallery__slider", {
+      spaceBetween: 24,
+      slidesPerView: "auto",
+      // loop: true,
+    });
+  };
+
+  var handleWideWidth = () => {
+    slider = createSlider();
+  };
+
+  var handleSmallWidth = () => {
+    slider.destroy(true, true);
+    slider = null;
+  };
+
+  // create matchMedia
+  var mqMin768 = window.matchMedia("(min-width: 768px)");
+
+  // create handler
+  var handleMQ = (e, cbMatches, cbNonMatches) =>
+    e.matches ? cbMatches() : cbNonMatches();
+
+  // init sliders if window width >= 992
+  if (window.innerWidth >= 768) {
+    slider = createSlider(gallerySlider);
+  }
+
+  // add listeners to resize
+  mqMin768.addEventListener("change", (e) =>
+    handleMQ(e, handleWideWidth, handleSmallWidth)
+  );
+};
+
 // ========== TEAM SLIDER LOGIC
 
 var initTeamSlider = () => {
@@ -1366,4 +1418,5 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   var company_page = document.querySelector(".company-page");
   company_page && initTeamSlider();
+  company_page && initGallerySlider();
 });
