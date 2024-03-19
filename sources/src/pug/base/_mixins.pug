@@ -92,9 +92,7 @@ mixin offers(coloredClass, titleFirst, titleSecond)
     section.offers.section-with-slider
         .container 
             .offers__top
-                h2.offers__title.block__title
-                    span.colored_bg(class= coloredClass)= titleFirst 
-                    span= titleSecond
+                h2.offers__title.block__title #[span.colored_bg(class= coloredClass)= titleFirst] #[span= titleSecond]
 
                 .offers__nav.slider__nav
                     button.offers__prev.slider__prev_btn(aria-label="Показать предыдущий слайд")

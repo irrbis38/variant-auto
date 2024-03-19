@@ -53,14 +53,45 @@
   }
 }
 
+.reviews__item {
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    .review__descr {
+      background-color: $color_dark;
+    }
+
+    .reviews__car {
+      span {
+        color: $color_grey_b6;
+        background-color: $color_grey_45;
+      }
+    }
+
+    .reviews__name {
+      color: $color_white;
+    }
+
+    .reviews__text {
+      color: $color_grey_b6;
+    }
+  }
+
+  @media (hover: hover) {
+  }
+}
+
 .reviews__preview {
   @include elementSaveRatio(64.66%, cover);
 }
 
 .review__descr {
+  flex: 1 1 auto;
   padding: 28px 24px 38px 24px;
   border: 1px solid $color_grey_f2;
   border-top: none;
+  transition: background-color 0.2s ease-out;
 }
 
 .reviews__car {
@@ -73,6 +104,7 @@
     line-height: 137%;
     color: $color_grey_7c;
     background-color: $color_grey_f2;
+    transition: color 0.2s ease-out, background-color 0.2s ease-out;
   }
 }
 
@@ -80,12 +112,14 @@
   margin-bottom: 17px;
   font-weight: 400;
   font-size: 24px;
+  transition: color 0.2s ease-out;
 }
 
 .reviews__text {
   font-weight: 300;
   font-size: 14px;
   color: $color_grey_7c;
+  transition: color 0.2s ease-out;
 }
 
 .reviews__all {

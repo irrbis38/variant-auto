@@ -59,25 +59,24 @@ block page
 
 
     .gallery 
-        .gallery__slider 
+        .gallery__slider.swiper
 
-            .gallery__wrapper
+            .gallery__wrapper.swiper-wrapper
 
-                .gallery__slide
+                .gallery__slide.swiper-slide
                     +picture('gallery/gallery_1', 'jpg', 'x2')
 
-                .gallery__slide
+                .gallery__slide.swiper-slide
                     +picture('gallery/gallery_2', 'jpg', 'x2')
 
-                .gallery__slide
+                .gallery__slide.swiper-slide
                     +picture('gallery/gallery_3', 'jpg', 'x2')
 
-                .gallery__slide
+                .gallery__slide.swiper-slide
                     +picture('gallery/gallery_2', 'jpg', 'x2')
 
-        .container
 
-            button.offers__show_more.btn__red(type="button") Показать еще
+        button.offers__show_more.btn__red(type="button") Показать еще
 
 
 

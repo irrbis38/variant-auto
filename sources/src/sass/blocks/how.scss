@@ -36,10 +36,6 @@
   display: flex;
   flex-direction: column;
 
-  // @include lg {
-  //   width: 48%;
-  // }
-
   @include xs {
     width: 100%;
     margin: 0 auto;
@@ -50,8 +46,19 @@
   }
 
   &:nth-child(1) {
+    position: relative;
+    margin-bottom: 126px;
+
     .how__icon {
       background-image: url("../images/icon_serv_letter.svg");
+    }
+
+    @include lg {
+      margin-bottom: 80px;
+    }
+
+    @include xs {
+      margin-bottom: 35px;
     }
   }
 
@@ -73,24 +80,23 @@
     }
   }
 
-  &:hover {
-    .how__decr {
-      border-color: $color_red_deep;
-      border-bottom-color: transparent;
+  &:nth-child(n + 2) {
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 126px;
     }
 
-    .how__button {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: all;
+    @include lg {
+      &::after {
+        height: 80px;
+      }
     }
-  }
 
-  @include lg {
-    &:hover {
-      .how__button {
-        min-height: 80px;
-        max-height: 80px;
+    @include xs {
+      &::after {
+        display: none;
       }
     }
   }
@@ -125,32 +131,30 @@
 }
 
 .how__button {
-  flex: 0 0 126px;
+  position: absolute;
+  left: 0;
+  top: 100%;
   width: 100%;
+  height: 126px;
   justify-content: flex-start;
   padding-right: 20px;
   color: $color_white;
   background-color: $color_red_deep;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+
+  @include xl {
+    gap: 0 20px;
+    padding: 44px 20px 44px 30px;
+  }
 
   @include lg {
-    flex: 0 0 80px;
+    height: 80px;
     padding: 0 50px 0 40px;
   }
 
   @include xs {
-    flex: 0 0 80px;
-    max-height: 0;
-    min-height: 0;
+    position: static;
+    height: 80px;
     padding: 0 20px;
-    overflow: hidden;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-    transition: max-height 0.2s ease-out, min-height 0.2s ease-out;
   }
 }
 

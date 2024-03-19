@@ -68,13 +68,10 @@
       background-image: url("../images/icon_serv_check.svg");
     }
   }
+}
 
-  &:hover {
-    .how_it_works__decr {
-      border-color: $color_green;
-      border-bottom-color: transparent;
-    }
-
+.how_it_works__item {
+  &:first-child {
     .how_it_works__icon {
       background-color: $color_green;
     }
@@ -82,28 +79,32 @@
     .how_it_works__name {
       color: $color_green;
     }
+  }
 
-    .how_it_works__button {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: all;
+  &:not(:first-child) {
+    .how_it_works__decr {
+      max-height: calc(100% - 126px);
     }
   }
 
-  // @include lg {
-  //   &:hover {
-  //     .how_it_works__button {
-  //       min-height: 126px;
-  //       max-height: 126px;
-  //     }
-  //   }
-  // }
+  @include lg {
+    &:nth-child(2) {
+      .how_it_works__decr {
+        max-height: calc(100% - 80px);
+      }
+    }
+
+    &:nth-child(n + 3) {
+      .how_it_works__decr {
+        max-height: unset;
+      }
+    }
+  }
 
   @include xs {
-    &:hover {
-      .how_it_works__button {
-        min-height: 80px;
-        max-height: 80px;
+    &:nth-child(2) {
+      .how_it_works__decr {
+        max-height: unset;
       }
     }
   }
@@ -125,6 +126,7 @@
 }
 
 .how_it_works__name {
+  margin-bottom: 20px;
   font-weight: 400;
   font-size: 24px;
   color: $color_red_deep;
@@ -143,10 +145,6 @@
   justify-content: flex-start;
   color: $color_white;
   background-color: $color_green;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
 
   @include lg {
     flex: 0 0 80px;
@@ -155,12 +153,5 @@
 
   @include xs {
     padding: 0 20px;
-    max-height: 0;
-    min-height: 0;
-    overflow: hidden;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-    transition: max-height 0.2s ease-out, min-height 0.2s ease-out;
   }
 }

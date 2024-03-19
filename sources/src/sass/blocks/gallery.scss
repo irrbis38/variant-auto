@@ -7,18 +7,19 @@
 
   @include xs {
     margin-bottom: 120px;
+    padding: 0 20px;
   }
 }
 
 .gallery__wrapper {
   height: 600px;
-  display: flex;
-  gap: 0 22px;
-  overflow-y: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  // display: flex;
+  // gap: 0 22px;
+  // overflow-y: auto;
+  // scroll-snap-type: x mandatory;
+  // -webkit-overflow-scrolling: touch;
 
-  @include hidescrollbar();
+  // @include hidescrollbar();
 
   @include lg {
     height: 500px;
@@ -32,9 +33,9 @@
     height: auto;
     display: block;
     width: 100%;
-    padding: 0 20px;
-    overflow-y: unset;
-    scroll-snap-type: unset;
+    padding: 0;
+    // overflow-y: unset;
+    // scroll-snap-type: unset;
   }
 }
 
@@ -42,7 +43,7 @@
   display: block;
   height: 100%;
   width: auto;
-  scroll-snap-align: start;
+  // scroll-snap-align: start;
 
   picture {
     display: block;
