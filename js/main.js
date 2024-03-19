@@ -241,7 +241,7 @@ var initMaskedInputs = () => {
 // ========== CARD LOGIC
 
 var initCardLogic = () => {
-  var cards = Array.from(document.querySelectorAll(".card"));
+  var cards = Array.from(document.querySelectorAll(".card-elem"));
 
   if (cards.length < 1) {
     return;
@@ -303,15 +303,29 @@ var initBlockSlider = () => {
       var prev_btn = parent.querySelector(".slider__prev_btn");
       var next_btn = parent.querySelector(".slider__next_btn");
 
+      // // toggle slider draggable
+      // var isDraggable = true;
+      // var isAllowTouchMove = true;
+
+      // if (slider.classList.contains("bought-out-block-slider")) {
+      //   isDraggable = false;
+      //   isAllowTouchMove = false;
+      // }
+      // end toggle slider draggable
+
       return new Swiper(slider, {
         spaceBetween: 24,
-        slidesPerView: 2,
-        draggable: true,
+        slidesPerView: 1,
+        draggable: false,
+        allowTouchMove: false,
         navigation: {
           prevEl: prev_btn,
           nextEl: next_btn,
         },
         breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
           992: {
             slidesPerView: 3,
           },
@@ -341,11 +355,6 @@ var initBlockSlider = () => {
   var handleMQ = (e, cbMatches, cbNonMatches) =>
     e.matches ? cbMatches() : cbNonMatches();
 
-  // add listeners to resize
-  mqMin768.addEventListener("change", (e) =>
-    handleMQ(e, handleSmallWidth, handleWideWidth)
-  );
-
   // block slider logic
   if (blockSliders.length < 1) {
     return;
@@ -354,6 +363,11 @@ var initBlockSlider = () => {
     if (window.innerWidth >= 768) {
       aSliders = createActiveSliders(blockSliders);
     }
+
+    // add listeners to resize
+    mqMin768.addEventListener("change", (e) =>
+      handleMQ(e, handleSmallWidth, handleWideWidth)
+    );
   }
 };
 
@@ -368,7 +382,8 @@ var initCardMobileSlider = () => {
       return new Swiper(s, {
         spaceBetween: 0,
         slidesPerView: 1,
-        draggable: true,
+        draggable: false,
+        clickable: "true",
         pagination: {
           el: ".card__full_paggination",
           type: "bullets",
@@ -395,11 +410,6 @@ var initCardMobileSlider = () => {
   var handleMQ = (e, cbMatches, cbNonMatches) =>
     e.matches ? cbMatches() : cbNonMatches();
 
-  // add listeners to resize
-  mqMin768.addEventListener("change", (e) =>
-    handleMQ(e, handleSmallWidth, handleWideWidth)
-  );
-
   if (cardMobileSliders < 1) {
     return;
   } else {
@@ -407,15 +417,50 @@ var initCardMobileSlider = () => {
     if (window.innerWidth < 768) {
       mSliders = createMobileSliders(cardMobileSliders);
     }
+
+    // add listeners to resize
+    mqMin768.addEventListener("change", (e) =>
+      handleMQ(e, handleSmallWidth, handleWideWidth)
+    );
+  }
+};
+
+// ========== CARD MOBILE SLIDER
+
+var initCardBoughtOutSlider = () => {
+  var cardBoughtOutElements = Array.from(
+    document.querySelectorAll(".card_bought_out__full")
+  );
+
+  var createMobileSliders = (sliderElements) => {
+    var sliders = cardBoughtOutElements.map((s) => {
+      return new Swiper(s, {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        draggable: true,
+
+        pagination: {
+          el: ".card_bought_out__full_paggination",
+          clickable: "true",
+          type: "bullets",
+        },
+      });
+    });
+
+    return sliders;
+  };
+
+  if (cardBoughtOutElements < 1) {
+    return;
+  } else {
+    sliders = createMobileSliders(cardBoughtOutElements);
   }
 };
 
 // ========== CLONE TICKER BLOCKS
 
 var cloneTickerBlocks = () => {
-  var ticker_blocks = Array.from(
-    document.querySelectorAll(".autocredit__ticker_block")
-  );
+  var ticker_blocks = Array.from(document.querySelectorAll(".ticker__block"));
 
   if (ticker_blocks.length < 1) {
     return;
@@ -995,7 +1040,7 @@ var formSubmit = () => {
   var msg_modal = document.querySelector(".msg__modal");
   var calculate_modal = document.querySelector(".calculate__modal");
 
-  if (!calculate_modal || !msg_modal) return;
+  if (!msg_modal) return;
 
   var overlay = document.querySelector(".overlay");
   var body = document.body;
@@ -1111,6 +1156,172 @@ var initYoutubeVideo = (videos) => {
   });
 };
 
+// ========== INIT FILES READ
+
+// check request label width
+
+var label = document.querySelector(".request__add_img");
+var filedsetImages = document.querySelector(".request__fieldset_images");
+
+var checkLabelWidth = () => {
+  if (!label) return;
+  if (filedsetImages.children.length > 1) {
+    label.classList.add("small-version");
+  } else {
+    label.classList.remove("small-version");
+  }
+};
+
+// init files read
+
+var handleFiles = (files, add_label) => {
+  if (!files.length) return;
+
+  var queuedImagesArray = Array.from(files).filter((f) =>
+    f.type.startsWith("image/")
+  );
+
+  queuedImagesArray.forEach((image) => {
+    // create image item and add className
+    var img_item = document.createElement("DIV");
+    img_item.classList.add("request__added_img");
+
+    // add innerHTML to image item
+    img_item.innerHTML = `<img src="${URL.createObjectURL(
+      image
+    )}" alt="фото отзыва"><button class="request__remove" type="button" aria-label="Удалить фото отзыва"></button>`;
+
+    // add image item to the DOM
+    add_label.before(img_item);
+
+    // add listener to remove_btn
+    img_item
+      .querySelector(".request__remove")
+      .addEventListener("click", handleRemoveImage);
+
+    checkLabelWidth();
+  });
+};
+
+// add images by click
+
+var initFileRead = () => {
+  var add_label = document.querySelector(".request__add_img");
+  var file_input = document.querySelector("#images_input");
+
+  if (!add_label || !file_input) return;
+
+  file_input.addEventListener("change", () =>
+    handleFiles(file_input.files, add_label)
+  );
+};
+
+// add images by drag and drop
+var initFileReadByDrop = () => {
+  var drop_container = document.querySelector(".request__fieldset_images");
+
+  if (!drop_container) return;
+
+  var file_input = document.querySelector("#images_input");
+  var add_label = document.querySelector(".request__add_img");
+
+  drop_container.addEventListener("dragover", (e) => {
+    e.preventDefault();
+  });
+
+  drop_container.addEventListener("dragenter", (e) => {
+    e.preventDefault();
+  });
+
+  // when file is inside drag area
+  drop_container.addEventListener("dragover", (event) => {
+    event.preventDefault();
+    drop_container.classList.add("active");
+  });
+  // when file leave the drag area
+  drop_container.addEventListener("dragleave", () => {
+    drop_container.classList.remove("active");
+  });
+
+  var handleDrop = (e) => {
+    e.preventDefault();
+
+    file_input.files = e.dataTransfer.files;
+
+    drop_container.classList.remove("active");
+
+    handleFiles(file_input.files, add_label);
+  };
+
+  drop_container.addEventListener("drop", handleDrop);
+};
+
+function handleRemoveImage(e) {
+  // delete "request__added_img" item
+  var deleted_item = e.target.closest(".request__added_img");
+  deleted_item.remove();
+  checkLabelWidth();
+}
+
+// ========== TEAM SLIDER LOGIC
+
+var initTeamSlider = () => {
+  var teamSlider = document.querySelectorAll(".team__slider");
+  var slider = null;
+
+  if (!teamSlider) return;
+
+  var createSlider = () => {
+    return new Swiper(".team__slider", {
+      spaceBetween: 24,
+      slidesPerView: 1,
+      navigation: {
+        prevEl: ".team__prev",
+        nextEl: ".team__next",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+        1301: {
+          slidesPerView: 4,
+        },
+      },
+    });
+  };
+
+  var handleWideWidth = () => {
+    slider = createSlider();
+  };
+
+  var handleSmallWidth = () => {
+    slider.destroy(true, true);
+    slider = null;
+  };
+
+  // create matchMedia
+  var mqMin768 = window.matchMedia("(min-width: 768px)");
+
+  // create handler
+  var handleMQ = (e, cbMatches, cbNonMatches) =>
+    e.matches ? cbMatches() : cbNonMatches();
+
+  // init sliders if window width >= 992
+  if (window.innerWidth >= 768) {
+    slider = createSlider(teamSlider);
+  }
+
+  // add listeners to resize
+  mqMin768.addEventListener("change", (e) =>
+    handleMQ(e, handleWideWidth, handleSmallWidth)
+  );
+};
+
+// ========== START LOGIC
+
 document.addEventListener("DOMContentLoaded", (event) => {
   headerLogic();
   initMainSlider();
@@ -1126,6 +1337,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
   initFlyButton();
   formSubmit();
   calculateCredit();
+  initCardBoughtOutSlider();
+  initFileRead();
+  initFileReadByDrop();
 
   var catalog_page = document.querySelector(".catalog-page");
 
@@ -1149,4 +1363,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // get all video elements on the page
   var videos = Array.from(document.querySelectorAll(".video_preview__full"));
   videos.length > 0 && initYoutubeVideo(videos);
+
+  var company_page = document.querySelector(".company-page");
+  company_page && initTeamSlider();
 });
