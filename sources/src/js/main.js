@@ -1263,6 +1263,65 @@ function handleRemoveImage(e) {
   checkLabelWidth();
 }
 
+// ========== TEAM SLIDER LOGIC
+
+var initTeamSlider = () => {
+  var teamSlider = document.querySelectorAll(".team__slider");
+  var slider = null;
+
+  if (!teamSlider) return;
+
+  var createSlider = () => {
+    return new Swiper(".team__slider", {
+      spaceBetween: 24,
+      slidesPerView: 1,
+      navigation: {
+        prevEl: ".team__prev",
+        nextEl: ".team__next",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+        1301: {
+          slidesPerView: 4,
+        },
+      },
+    });
+  };
+
+  var handleWideWidth = () => {
+    slider = createSlider();
+  };
+
+  var handleSmallWidth = () => {
+    slider.destroy(true, true);
+    slider = null;
+  };
+
+  // create matchMedia
+  var mqMin768 = window.matchMedia("(min-width: 768px)");
+
+  // create handler
+  var handleMQ = (e, cbMatches, cbNonMatches) =>
+    e.matches ? cbMatches() : cbNonMatches();
+
+  // init sliders if window width >= 992
+  if (window.innerWidth >= 768) {
+    slider = createSlider(teamSlider);
+  }
+
+  // add listeners to resize
+  mqMin768.addEventListener("change", (e) =>
+    handleMQ(e, handleWideWidth, handleSmallWidth)
+  );
+};
+
+// ========== START LOGIC
+
 document.addEventListener("DOMContentLoaded", (event) => {
   headerLogic();
   initMainSlider();
@@ -1304,4 +1363,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // get all video elements on the page
   var videos = Array.from(document.querySelectorAll(".video_preview__full"));
   videos.length > 0 && initYoutubeVideo(videos);
+
+  var company_page = document.querySelector(".company-page");
+  company_page && initTeamSlider();
 });

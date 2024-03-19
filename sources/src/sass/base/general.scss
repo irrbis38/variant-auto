@@ -36,6 +36,26 @@
   display: none !important;
 }
 
+// banner
+
+.page__banner {
+  position: relative;
+  max-width: 3500px;
+  min-height: 500px;
+  margin: 0 auto 240px;
+
+  @include elementSaveRatio(26%, cover);
+
+  @include lg {
+    margin-bottom: 160px;
+  }
+
+  @include xs {
+    min-height: 200px;
+    margin-bottom: 115px;
+  }
+}
+
 // title
 
 .main_fluid__title {

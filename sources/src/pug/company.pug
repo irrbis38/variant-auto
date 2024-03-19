@@ -1,0 +1,237 @@
+extends base/_layout
+block vars
+    - var pageName = 'company-page'
+block head
+    title Вариант Авто - О компании
+block page
+
+
+    section.main_intro
+        .main_intro__container
+            h1.main_intro__title.main_fluid__title Авто с&nbsp;пробегом
+
+            p.main_intro__subtitle На которые #[span можно положиться] всей семьёй
+
+
+    .page__banner 
+        +picture('company_banner', 'jpg', 'x2')
+
+
+    include ./blocks/advantages
+
+
+    .links 
+        .container 
+            .links__wrapper 
+
+                article.links__block.l_buy
+                    +picture('links/l_buy_bg', 'jpg', 'x2')
+                    h3.links__title 
+                        span Купить 
+                        span автомобиль
+                    p.links__subtitle Перейти в каталог
+                    a(href="#") 
+
+                article.links__block.l_buyback
+                    +picture('links/l_buyback_bg', 'jpg', 'x2')
+                    h3.links__title Выкуп автомобиля
+                    p.links__subtitle Продать по максимальной цене
+                    a(href="#")
+
+                article.links__block.l_exchange
+                    +picture('links/l_exchange_bg', 'jpg', 'x2')
+                    h3.links__title Обмен
+                    p.links__subtitle Сдать автомобиль
+                    a(href="#")
+
+                article.links__block.l_credit
+                    +picture('links/l_credit_bg', 'jpg', 'x2')
+                    h3.links__title Автокредит
+                    p.links__subtitle Подать заявку
+                    a(href="#")
+
+                article.links__block.l_commission
+                    +picture('links/l_commission_bg', 'jpg', 'x2')
+                    h3.links__title Комиссия
+                    p.links__subtitle Поставить на комиссию
+                    a(href="#")
+
+
+
+    .gallery 
+        .gallery__slider 
+
+            .gallery__wrapper
+
+                .gallery__slide
+                    +picture('gallery/gallery_1', 'jpg', 'x2')
+
+                .gallery__slide
+                    +picture('gallery/gallery_2', 'jpg', 'x2')
+
+                .gallery__slide
+                    +picture('gallery/gallery_3', 'jpg', 'x2')
+
+                .gallery__slide
+                    +picture('gallery/gallery_2', 'jpg', 'x2')
+
+        .container
+
+            button.offers__show_more.btn__red(type="button") Показать еще
+
+
+
+
+    .container 
+        section.team
+            h2.team__title.block__title Наши сотрудники
+
+
+            .team__slider.swiper
+
+                .team__wrapper.swiper-wrapper
+
+                    .team__slide.swiper-slide
+
+                        .team__picture 
+                            +pictureSizeWithLazy('team/team_1', 'jpg', 'x2', 342, 342)
+
+                        .team__descr
+
+                            p.team__name Алексей Полубот
+
+                            p.team__position Менеджер отдела продаж
+
+                    .team__slide.swiper-slide
+
+                        .team__picture 
+                            +pictureSizeWithLazy('team/team_2', 'jpg', 'x2', 342, 342)
+
+                        .team__descr
+
+                            p.team__name Анатолий Игнатов
+
+                            p.team__position Менеджер отдела продаж
+
+                    .team__slide.swiper-slide
+
+                        .team__picture 
+                            +pictureSizeWithLazy('team/team_3', 'jpg', 'x2', 342, 342)
+
+                        .team__descr
+
+                            p.team__name Анатолий Игнатов
+
+                            p.team__position Менеджер отдела продаж
+
+                    .team__slide.swiper-slide
+
+                        .team__picture 
+                            +pictureSizeWithLazy('team/team_4', 'jpg', 'x2', 342, 342)
+
+                        .team__descr
+
+                            p.team__name Анатолий Игнатов
+
+                            p.team__position Менеджер отдела продаж
+
+                    .team__slide.swiper-slide
+
+                        .team__picture 
+                            +pictureSizeWithLazy('team/team_2', 'jpg', 'x2', 342, 342)
+
+                        .team__descr
+
+                            p.team__name Алексей Полубот
+
+                            p.team__position Менеджер отдела продаж
+
+                
+                .team__nav 
+                    button.team__prev(type='button' aria-label="Показать предыдущий слайд")
+                    button.team__next(type='button' aria-label="Показать следующий слайд")
+
+
+
+
+            button.offers__show_more.btn__red(type="button") Показать еще
+
+
+
+
+
+
+
+    section.ratings
+        .container
+
+            h2.ratings__title Наши рейтинги в&nbsp;интернете
+
+            p.ratings__subtitle Хотите получить больше информации о наших услугах и сервисе? Изучите мнение о нас на независимых авторитетных интернет-ресурсах
+
+        .ratings__wrapper
+            .container.ratings__list
+
+                a.ratings__item(href="https://www.avito.ru/" target="_blank")
+                    span.ratings__icon 
+                        img(src="./images/avito.svg", alt="Авито")
+
+                    span.ratings__value 4.7
+
+                a.ratings__item(href="https://yandex.ru/" target="_blank")
+                    span.ratings__icon 
+                        img(src="./images/yandex.svg", alt="Яндекс")
+
+                    span.ratings__value 4.2
+
+                a.ratings__item(href="https://2gis.ru/" target="_blank")
+                    span.ratings__icon 
+                        img(src="./images/2gis.svg", alt="2gis")
+
+                    span.ratings__value 4.2
+
+
+    section.reviews
+        .container 
+            h2.reviews__title.fluid__title Отзывы
+            p.reviews__subtitle Наши клиенты расскажут  #[span почему выбрали нас] и наши автомобили
+
+            .reviews__wrapper
+
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item_video
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+                include ./blocks/reviews_item
+
+            a.reviews__all.btn__high.btn__arrow_grey(href="#") Все отзывы
+
+
+
+    section.request 
+        .container
+            h2.request__title.block__title нужна помощь с выбором автомобиля?
+            p.request__subtitle Оставьте свои данные в форме - мы перезвоним вам, поможем определиться с выбором и предложим отличные условия покупки
+
+            form.request__form(action="#" id="request-form")
+
+                fieldset.request__fieldset
+
+                    input.request__name(type="text" placeholder="Ваше имя")
+
+                    input.request__phone.input-required(type="text" placeholder="Номер телефона*")
+
+                    input.request__phone(type="text" placeholder="Текст сообщения")
+
+            .request__bottom
+
+                .request__submit_wrapper
+
+                    button.request__submit.btn__high.btn__arrow_green(type="submit" form="request-form") Получить конслультацию
+
+                span.request__rules Нажимая на кнопку "Получить конслультацию", вы даете согласие на обработку своих #[a персональных&nbsp;данных].
+
+
+
+    include ./blocks/modal_msg
