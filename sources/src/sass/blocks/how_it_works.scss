@@ -72,6 +72,10 @@
 
 .how_it_works__item {
   &:first-child {
+    .how_it_works__decr {
+      border-color: $color_green;
+    }
+
     .how_it_works__icon {
       background-color: $color_green;
     }

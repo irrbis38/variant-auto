@@ -672,6 +672,15 @@ var doFiltersMenuLogic = () => {
   options_filters_toggle_btn.addEventListener("click", () => {
     options_nav.classList.toggle("filters-opened");
     filters.classList.toggle("filters-opened");
+    document.body.classList.toggle("non-scroll");
+  });
+
+  var filder_hide_btn = document.querySelector(".filter__hide");
+
+  filder_hide_btn.addEventListener("click", () => {
+    options_nav.classList.remove("filters-opened");
+    filters.classList.remove("filters-opened");
+    document.body.classList.remove("non-scroll");
   });
 
   filters_buttons.forEach((btn) =>

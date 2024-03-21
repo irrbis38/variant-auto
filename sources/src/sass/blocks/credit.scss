@@ -120,6 +120,10 @@
   font-size: 32px;
   text-transform: none;
   color: $color_dark;
+
+  &.credit__hour {
+    font-weight: 400;
+  }
 }
 
 .credit__name {
@@ -169,7 +173,7 @@
 
 ////
 .credit__ticker {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .credit__ticker_wrapper {

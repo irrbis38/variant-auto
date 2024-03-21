@@ -46,294 +46,302 @@ block page
 
                 form.options__filters.filters
 
-                    .filters__block
-                        button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Марка авто
-                            include ./blocks/icon_plus
-                            include ./blocks/icon_minus
-                        .filters__wrapper
-                            .filters__search
-                                input.brand-search(type="search" placeholder='Поиск марки авто' autocomplete="off")
-
-                            .filters__brands
-
-                                -
-                                    var filterBrands = [
-                                        'Lada (ВАЗ)',
-                                        'Audi',
-                                        'Changan',
-                                        'BMW',
-                                        'Daewoo',
-                                        'EXEED',
-                                        'Ford',
-                                        'Geely',
-                                        'Haval'
-                                    ]
-
-                                ul.filters__list
-
-                                    each item in filterBrands
-                                        +filtersItem(item)
-
-                    -
-                        var years = [
-                            "1992",
-                            "1993",
-                            "1994",
-                            "1995",
-                            "1996",
-                            "1997",
-                            "1998",
-                            "1999",
-                            "2000",
-                            "2001",
-                            "2002",
-                            "2003",
-                            "2004",
-                            "2005",
-                            "2006",
-                            "2007",
-                            "2008",
-                            "2009",
-                            "2010",
-                            "2011",
-                            "2012",
-                            "2013",
-                            "2014",
-                            "2015",
-                            "2016",
-                            "2017",
-                            "2018",
-                            "2019",
-                            "2020",
-                            "2021",
-                            "2022",
-                            "2023",
-                            "2024",
-                        ]
-
-
-                    .filters__block.filters__block_year
-                        button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Год выпуска
-                            include ./blocks/icon_plus
-                            include ./blocks/icon_minus
-
-                        .filters__wrapper.filters__wrapper_years
-                            .q_selection__select
-                                input.q_selection__input(type="text" placeholder="От")
-                                span
-                                .q_selection__group
-                                    ul.q_selection__list
-                                        each item in years
-                                            li: input.q_selection__btn(type="button" value= item)
-                            .q_selection__select
-                                input.q_selection__input(type="text" placeholder="До")
-                                span
-                                .q_selection__group
-                                    ul.q_selection__list
-                                        each item in years
-                                            li: input.q_selection__btn(type="button" value= item)
-
-
-
-                    .filters__block
-                        button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Модель
-                            include ./blocks/icon_plus
-                            include ./blocks/icon_minus
-                        .filters__wrapper
-
-                            .filters__brands
-
-                                -
-                                    var filterModels = [
-                                        'Focus',
-                                        'Mondeo',
-                                        'Mondeo',
-                                        'Fiesta',
-                                        'Mondeo',
-                                        'Fiesta',
-                                        'Fiesta'
-                                    ]
+                    .filters__container
+
+                        button.filter__hide(type="button" aria-label="Закрыть фильтр")
+                            include ./blocks/icon_filter
+                            span Фильтр
+                            include ./blocks/icon_hide
+
+
+                        .filters__block
+                            button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Марка авто
+                                include ./blocks/icon_plus
+                                include ./blocks/icon_minus
+                            .filters__wrapper
+                                .filters__search
+                                    input.brand-search(type="search" placeholder='Поиск марки авто' autocomplete="off")
+
+                                .filters__brands
+
+                                    -
+                                        var filterBrands = [
+                                            'Lada (ВАЗ)',
+                                            'Audi',
+                                            'Changan',
+                                            'BMW',
+                                            'Daewoo',
+                                            'EXEED',
+                                            'Ford',
+                                            'Geely',
+                                            'Haval'
+                                        ]
+
+                                    ul.filters__list
+
+                                        each item in filterBrands
+                                            +filtersItem(item)
+
+                        -
+                            var years = [
+                                "1992",
+                                "1993",
+                                "1994",
+                                "1995",
+                                "1996",
+                                "1997",
+                                "1998",
+                                "1999",
+                                "2000",
+                                "2001",
+                                "2002",
+                                "2003",
+                                "2004",
+                                "2005",
+                                "2006",
+                                "2007",
+                                "2008",
+                                "2009",
+                                "2010",
+                                "2011",
+                                "2012",
+                                "2013",
+                                "2014",
+                                "2015",
+                                "2016",
+                                "2017",
+                                "2018",
+                                "2019",
+                                "2020",
+                                "2021",
+                                "2022",
+                                "2023",
+                                "2024",
+                            ]
+
+
+                        .filters__block.filters__block_year
+                            button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Год выпуска
+                                include ./blocks/icon_plus
+                                include ./blocks/icon_minus
+
+                            .filters__wrapper.filters__wrapper_years
+                                .q_selection__select
+                                    input.q_selection__input(type="text" placeholder="От")
+                                    span
+                                    .q_selection__group
+                                        ul.q_selection__list
+                                            each item in years
+                                                li: input.q_selection__btn(type="button" value= item)
+                                .q_selection__select
+                                    input.q_selection__input(type="text" placeholder="До")
+                                    span
+                                    .q_selection__group
+                                        ul.q_selection__list
+                                            each item in years
+                                                li: input.q_selection__btn(type="button" value= item)
+
+
+
+                        .filters__block
+                            button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Модель
+                                include ./blocks/icon_plus
+                                include ./blocks/icon_minus
+                            .filters__wrapper
 
-                                ul.filters__list
+                                .filters__brands
 
-                                    each item in filterModels
-                                        +filtersItem(item)
+                                    -
+                                        var filterModels = [
+                                            'Focus',
+                                            'Mondeo',
+                                            'Mondeo',
+                                            'Fiesta',
+                                            'Mondeo',
+                                            'Fiesta',
+                                            'Fiesta'
+                                        ]
 
+                                    ul.filters__list
 
-                    .filters__block
-                        button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Поколение
-                            include ./blocks/icon_plus
-                            include ./blocks/icon_minus
-                        .filters__wrapper
+                                        each item in filterModels
+                                            +filtersItem(item)
 
-                            .filters__brands
 
-                                -
-                                    var filterGenerations = [
-                                        'I (X164) Рестайлинг',
-                                        'II (X166)',
-                                        'I (X164) '
-                                    ]
+                        .filters__block
+                            button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Поколение
+                                include ./blocks/icon_plus
+                                include ./blocks/icon_minus
+                            .filters__wrapper
 
-                                ul.filters__list
+                                .filters__brands
 
-                                    each item in filterGenerations
-                                        +filtersItem(item)
+                                    -
+                                        var filterGenerations = [
+                                            'I (X164) Рестайлинг',
+                                            'II (X166)',
+                                            'I (X164) '
+                                        ]
 
+                                    ul.filters__list
 
+                                        each item in filterGenerations
+                                            +filtersItem(item)
 
 
 
 
-                    .filters__block
-                        button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Стоимость
-                            include ./blocks/icon_plus
-                            include ./blocks/icon_minus
 
-                        .filters__wrapper.filter__wrapper_price
 
-                            .filters__values
-                                input.filters__valueMin(type="number" placeholder="0₽" min="0" max="1000") 
-                                input.filters__valueMax(type="number" placeholder="1000₽" min="0" max="1000")
+                        .filters__block
+                            button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Стоимость
+                                include ./blocks/icon_plus
+                                include ./blocks/icon_minus
 
-                            .filters__set
-                                .filters__slider
-                                    .filters__track
-                                .filters__inputs
-                                    input.filters__inputMin.filters__range(type='range' min="0" max="1000" value="0" step="1")
-                                    input.filters__inputMax.filters__range(type='range' min="0" max="1000" value="1000" step="1")
+                            .filters__wrapper.filter__wrapper_price
 
+                                .filters__values
+                                    input.filters__valueMin(type="number" placeholder="0₽" min="0" max="1000") 
+                                    input.filters__valueMax(type="number" placeholder="1000₽" min="0" max="1000")
 
+                                .filters__set
+                                    .filters__slider
+                                        .filters__track
+                                    .filters__inputs
+                                        input.filters__inputMin.filters__range(type='range' min="0" max="1000" value="0" step="1")
+                                        input.filters__inputMax.filters__range(type='range' min="0" max="1000" value="1000" step="1")
 
-                    .filters__block
-                        button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Цвет
-                            include ./blocks/icon_plus
-                            include ./blocks/icon_minus
-                        .filters__wrapper
 
-                            .filters__brands
 
-                                -
-                                    var filterColors = [
-                                        {value: 'Синий', firstColor: '1a1a1a'},
-                                        {value: 'Белый/Кремовый', firstColor: 'f0ebef'},
-                                        {value: 'Голубой/Синий', firstColor: '2c22f2'},
-                                        {value: 'Красный', firstColor: 'de0404'},
-                                        {value: 'Бежевый/коричневый', firstColor: 'd9ceab'},
-                                        {value: 'Двухцветные', firstColor: 'e320e0', secondColor: 'f7f36f'}
-                                    ]
+                        .filters__block
+                            button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Цвет
+                                include ./blocks/icon_plus
+                                include ./blocks/icon_minus
+                            .filters__wrapper
 
-                                ul.filters__list
+                                .filters__brands
 
-                                    each item in filterColors
-                                        +filtersColorItem(item)
+                                    -
+                                        var filterColors = [
+                                            {value: 'Синий', firstColor: '1a1a1a'},
+                                            {value: 'Белый/Кремовый', firstColor: 'f0ebef'},
+                                            {value: 'Голубой/Синий', firstColor: '2c22f2'},
+                                            {value: 'Красный', firstColor: 'de0404'},
+                                            {value: 'Бежевый/коричневый', firstColor: 'd9ceab'},
+                                            {value: 'Двухцветные', firstColor: 'e320e0', secondColor: 'f7f36f'}
+                                        ]
 
+                                    ul.filters__list
 
+                                        each item in filterColors
+                                            +filtersColorItem(item)
 
-                    .filters__block
-                        button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Коробка
-                            include ./blocks/icon_plus
-                            include ./blocks/icon_minus
-                        .filters__wrapper
 
-                            .filters__brands
 
-                                -
-                                    var filterTransmission = [
-                                        'Автомат',
-                                        'Механика',
-                                        'Робот',
-                                        'Вариатор'
-                                    ]
+                        .filters__block
+                            button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Коробка
+                                include ./blocks/icon_plus
+                                include ./blocks/icon_minus
+                            .filters__wrapper
 
-                                ul.filters__list
+                                .filters__brands
 
-                                    each item in filterTransmission
-                                        +filtersItem(item)
+                                    -
+                                        var filterTransmission = [
+                                            'Автомат',
+                                            'Механика',
+                                            'Робот',
+                                            'Вариатор'
+                                        ]
 
+                                    ul.filters__list
 
+                                        each item in filterTransmission
+                                            +filtersItem(item)
 
-                    .filters__block
-                        button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Кузов
-                            include ./blocks/icon_plus
-                            include ./blocks/icon_minus
-                        .filters__wrapper.filters__wrapper_car_body
 
-                            .filters__brands
 
+                        .filters__block
+                            button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Кузов
+                                include ./blocks/icon_plus
+                                include ./blocks/icon_minus
+                            .filters__wrapper.filters__wrapper_car_body
 
-                                ul.filters__list
+                                .filters__brands
 
-                                    li.filters__item 
-                                        label.filters__label
-                                            input.filters__checkbox(type="checkbox")
-                                            span
-                                            include ./blocks/icon_car_body_1
-                                            span Хэтчбек
 
-                                    li.filters__item 
-                                        label.filters__label
-                                            input.filters__checkbox(type="checkbox")
-                                            span
-                                            include ./blocks/icon_car_body_2
-                                            span Пикап
+                                    ul.filters__list
 
-                                    li.filters__item 
-                                        label.filters__label
-                                            input.filters__checkbox(type="checkbox")
-                                            span
-                                            include ./blocks/icon_car_body_3
-                                            span Внедорожник
+                                        li.filters__item 
+                                            label.filters__label
+                                                input.filters__checkbox(type="checkbox")
+                                                span
+                                                include ./blocks/icon_car_body_1
+                                                span Хэтчбек
 
-                                    li.filters__item 
-                                        label.filters__label
-                                            input.filters__checkbox(type="checkbox")
-                                            span
-                                            include ./blocks/icon_car_body_4
-                                            span Седан
+                                        li.filters__item 
+                                            label.filters__label
+                                                input.filters__checkbox(type="checkbox")
+                                                span
+                                                include ./blocks/icon_car_body_2
+                                                span Пикап
 
-                                    li.filters__item 
-                                        label.filters__label
-                                            input.filters__checkbox(type="checkbox")
-                                            span
-                                            include ./blocks/icon_car_body_5
-                                            span Минивэн
+                                        li.filters__item 
+                                            label.filters__label
+                                                input.filters__checkbox(type="checkbox")
+                                                span
+                                                include ./blocks/icon_car_body_3
+                                                span Внедорожник
 
-                                    li.filters__item 
-                                        label.filters__label
-                                            input.filters__checkbox(type="checkbox")
-                                            span
-                                            include ./blocks/icon_car_body_1
-                                            span Универсал
-                            
+                                        li.filters__item 
+                                            label.filters__label
+                                                input.filters__checkbox(type="checkbox")
+                                                span
+                                                include ./blocks/icon_car_body_4
+                                                span Седан
 
+                                        li.filters__item 
+                                            label.filters__label
+                                                input.filters__checkbox(type="checkbox")
+                                                span
+                                                include ./blocks/icon_car_body_5
+                                                span Минивэн
 
+                                        li.filters__item 
+                                            label.filters__label
+                                                input.filters__checkbox(type="checkbox")
+                                                span
+                                                include ./blocks/icon_car_body_1
+                                                span Универсал
+                                
 
-                    .filters__block
-                        button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Привод
-                            include ./blocks/icon_plus
-                            include ./blocks/icon_minus
-                        .filters__wrapper
 
-                            .filters__brands
 
-                                -
-                                    var filterВrivetrain = [
-                                        'Передний',
-                                        'Задний',
-                                        'Полный',
-                                        'Переключаемый полный'
-                                    ]
+                        .filters__block
+                            button.filters__button(type="button" aria-label=" Показать / скрыть категорию фильтров") Привод
+                                include ./blocks/icon_plus
+                                include ./blocks/icon_minus
+                            .filters__wrapper
 
-                                ul.filters__list
+                                .filters__brands
 
-                                    each item in filterВrivetrain
-                                        +filtersItem(item)
+                                    -
+                                        var filterВrivetrain = [
+                                            'Передний',
+                                            'Задний',
+                                            'Полный',
+                                            'Переключаемый полный'
+                                        ]
 
+                                    ul.filters__list
 
-                    .filters__buttons
-                        input.filters__submit(type="submit" aria-label="Применить фильтры" value="Применить") 
-                        input.filters__reset(type="reset" aria-label="Сбросить все фильтры" value="Сбросить")
+                                        each item in filterВrivetrain
+                                            +filtersItem(item)
+
+
+                        .filters__buttons
+                            input.filters__submit(type="submit" aria-label="Применить фильтры" value="Применить") 
+                            input.filters__reset(type="reset" aria-label="Сбросить все фильтры" value="Сбросить")
 
 
 

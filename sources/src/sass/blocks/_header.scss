@@ -79,6 +79,15 @@
   }
 }
 
+// for catalog page only
+
+.non-scroll .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .header__container {
   z-index: 2;
   width: 100%;
@@ -277,6 +286,10 @@
 
   @include sm {
     display: none;
+  }
+
+  .cmenu__burger {
+    transform: scale(0.625);
   }
 }
 
@@ -527,7 +540,7 @@ ul.cmenu__list_body {
 
     @media (hover: hover) {
       &:hover {
-        background-color: $color_grey_f8;
+        // background-color: $color_grey_f8;
 
         span {
           color: $color_red_deep;
@@ -629,7 +642,7 @@ ul.cmenu__list_body {
 
   @media (hover: hover) {
     &:hover {
-      background-color: $color_grey_f8;
+      // background-color: $color_grey_f8;
 
       span:nth-child(2) {
         color: $color_red_deep;
@@ -637,6 +650,10 @@ ul.cmenu__list_body {
 
       path {
         fill: $color_red_deep;
+      }
+
+      svg {
+        transform: translateX(5px);
       }
     }
   }
@@ -651,6 +668,7 @@ ul.cmenu__list_body {
     svg {
       width: 24px;
       height: 24px;
+      transition: transform 0.2s ease-out;
     }
 
     path {
@@ -729,6 +747,10 @@ ul.cmenu__list_body {
         path {
           fill: $color_red_deep;
         }
+
+        svg {
+          transform: translateX(5px);
+        }
       }
     }
   }
@@ -736,6 +758,7 @@ ul.cmenu__list_body {
   svg {
     width: 24px;
     height: 24px;
+    transition: transform 0.2s ease-out;
   }
 
   path {

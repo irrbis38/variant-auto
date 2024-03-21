@@ -37,6 +37,7 @@ body {
 }
 
 body.lock,
+body.non-scroll,
 body.noscroll {
   overflow: hidden;
 }

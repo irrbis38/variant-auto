@@ -2,18 +2,31 @@
 
 .filters {
   @include lg {
-    position: absolute;
-    top: 71px;
-    left: -40px;
-    right: -40px;
-    padding: 0 40px 20px 40px;
-    width: unset;
-    background-color: #fff;
+    // position: absolute;
+    // top: 71px;
+    // left: -40px;
+    // right: -40px;
+    // padding: 0 40px 20px 40px;
+    // width: unset;
+    // background-color: #fff;
+    // opacity: 0;
+    // visibility: hidden;
+    // pointer-events: none;
+    // box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.15);
+    // // background-color: $color_grey_f2;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    background-color: $color_white;
+    overflow-y: auto;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.15);
-    // background-color: $color_grey_f2;
+    @include customScrollbar($color_grey_7c, rgba(255, 255, 255, 0.2), 5px);
 
     &.filters-opened {
       opacity: 1;
@@ -22,10 +35,52 @@
     }
   }
 
+  // @include xs {
+  //   // left: -20px;
+  //   // right: -20px;
+  //   padding: 0 20px 20px;
+  // }
+}
+
+.filters__container {
+  @include lg {
+    padding-top: 94px;
+    padding-bottom: 24px;
+  }
+
   @include xs {
-    left: -20px;
-    right: -20px;
-    padding: 0 20px 20px;
+    padding-top: 104px;
+  }
+}
+
+.filter__hide {
+  display: none;
+  width: 100%;
+  height: 64px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 5px 24px 5px 24px;
+  background-color: $color_grey_f2;
+  transition: color 0.2s ease-out;
+
+  path {
+    transition: all 0.2s ease-out;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: #838383;
+
+      path {
+        fill: #838383;
+        stroke: #838383;
+      }
+    }
+  }
+
+  @include lg {
+    display: flex;
   }
 }
 
@@ -39,6 +94,10 @@
 
   @include lg {
     background-color: $color_grey_f2;
+
+    &:nth-child(2) {
+      border-top: none;
+    }
   }
 }
 
@@ -48,8 +107,11 @@
 
 .filters__button {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+  min-height: 80px;
   text-align: left;
   padding: 24px 55px 28px 24px;
 
@@ -60,7 +122,7 @@
 
   svg {
     position: absolute;
-    top: 22px;
+    top: 27px;
     right: 23px;
 
     &:nth-child(1) {
@@ -366,13 +428,13 @@
   position: relative;
   width: 100%;
   margin-bottom: 24px;
-  padding-right: 23px;
+  // padding-right: 23px;
 
   input {
     display: block;
     width: 100%;
     padding: 12px 12px 12px 44px;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 2px solid #d9d9d9;
 
     &::placeholder {
       color: #757575;
@@ -380,6 +442,12 @@
       font-weight: 500;
       line-height: 17px;
     }
+  }
+
+  input,
+  input::placeholder {
+    font-size: 15px;
+    font-weight: 400;
   }
 
   &::before {
@@ -399,9 +467,11 @@
 }
 
 .filters__brands {
-  height: 200px;
+  height: 280px;
   padding: 5px 0;
   overflow-y: auto;
+
+  @include customScrollbar($color_grey_7c, rgba(255, 255, 255, 0.2), 5px);
 }
 
 .filters__buttons {
@@ -418,6 +488,10 @@
     height: 100%;
     background-color: $color_grey_f2;
     pointer-events: none;
+  }
+
+  @include lg {
+    padding: 0 20px;
   }
 }
 
@@ -486,7 +560,7 @@
   line-height: 1.13;
   text-align: center;
   color: $color_dark;
-  border-bottom: 1px solid $color_grey_d8;
+  border-bottom: 2px solid $color_grey_d8;
 
   &::placeholder {
     color: $color_dark;
@@ -494,7 +568,7 @@
 }
 
 .filters__valueMin {
-  border-right: 1px solid $color_grey_d8;
+  border-right: 2px solid $color_grey_d8;
 }
 
 .filters__set {

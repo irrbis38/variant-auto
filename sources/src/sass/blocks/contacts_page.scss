@@ -97,12 +97,16 @@
 .cp__social {
   display: flex;
   align-items: center;
-  gap: 0 12px;
+  gap: 12px 2px;
+
+  @include lg {
+    flex-wrap: wrap;
+  }
 }
 
 .cp__social_item {
-  width: 32px;
-  height: 32px;
+  width: 54px;
+  height: 54px;
 
   a {
     display: inline-block;
@@ -111,21 +115,59 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #b6b6b6;
+    background-color: $color_grey_f2;
     transition: background-color 0.2s ease-out;
 
     @media (hover: hover) {
       &:hover {
         background-color: $color_red_deep;
+
+        path {
+          fill: $color_white;
+        }
       }
     }
   }
 
-  img {
+  svg {
     display: block;
     width: 28px;
     height: 28px;
     object-fit: contain;
+  }
+
+  path {
+    transition: all 0.2s ease-out;
+  }
+}
+
+.cp__social_vk {
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.cp__social_whatsapp {
+  width: auto;
+  flex-shrink: 0;
+
+  a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 15px;
+    padding: 10px 15px;
+    background-color: $color_green;
+    font-weight: 500;
+    font-size: 15px;
+    color: $color_white;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color_green_hover;
+      }
+    }
   }
 }
 

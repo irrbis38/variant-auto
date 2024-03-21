@@ -63,6 +63,10 @@
 
   &:hover {
     filter: grayscale(0);
+
+    .ratings__value {
+      color: $color_green;
+    }
   }
 
   &:first-child {
@@ -126,7 +130,9 @@
   font-size: 48px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: $color_green;
+  // color: $color_green;
+  color: $color_black;
+  transition: color 0.2s ease-out;
 
   @include lg {
     font-size: 38px;

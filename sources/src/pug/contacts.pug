@@ -32,27 +32,39 @@ block page
                 p.cp__heading Социальные сети
                 ul.cp__social 
                     li.cp__social_item: a(href="#" target="_blank" aria-label="Телеграм")
-                        img(src="./images/icon_social_telegram.svg", alt="")
+                        include ./blocks/icon_social_telegram
+                        //- img(src="./images/icon_social_telegram.svg", alt="")
 
-                    li.cp__social_item: a(href="#" target="_blank" aria-label="Вайбер")
-                        img(src="./images/icon_social_viber.svg", alt="")
+                    li.cp__social_item.cp__social_vk: a(href="#" target="_blank" aria-label="Вконтакте")
+                        include ./blocks/icon_social_vk
+                        //- img(src="./images/icon_social_vk.svg", alt="")
 
                     li.cp__social_item: a(href="#" target="_blank" aria-label="Ютуб")
-                        img(src="./images/icon_social_youtube.svg", alt="")
+                        include ./blocks/icon_social_youtube
+                        //- img(src="./images/icon_social_youtube.svg", alt="")
 
                     li.cp__social_item: a(href="#" target="_blank" aria-label="Инстаграм")
-                        img(src="./images/icon_social_instagram.svg", alt="")
+                        include ./blocks/icon_social_instagram
+                        //- img(src="./images/icon_social_instagram.svg", alt="")
 
-                    li.cp__social_item: a(href="#" target="_blank" aria-label="Вконтакте")
-                        img(src="./images/icon_social_vk.svg", alt="")
+                    li.cp__social_item.cp__social_whatsapp: a(href="#" target="_blank" aria-label="Вайбер")
+                        include ./blocks/icon_social_whatsapp
+                        span Написать в «WhatsApp»
+                        //- img(src="./images/icon_social_viber.svg", alt="")
+
+
+
+
+
+
+
+                    //- li.cp__social_item.cp__social_whatsapp: a(href="#" target="_blank" aria-label="Whatsapp")
+                    //-     img(src="./images/icon_social_vk.svg", alt="")
+                    //-     span Написать в «WhatsApp»
 
 
 
     .map_section
-
-        .container
-
-            a.map_section__btn.btn__high.btn__arrow_green(href="#") Написать в «WhatsApp»
 
         .contacts__map#contacts-map
 
