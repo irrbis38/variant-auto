@@ -687,14 +687,28 @@ var doFiltersMenuLogic = () => {
     btn.addEventListener("click", () => {
       const filter_block = btn.closest(".filters__block");
       const filter_wrapper = filter_block.querySelector(".filters__wrapper");
+      const filters_list = filter_block.querySelector(".filters__list");
 
       // toggle filters_list
       filter_block.classList.toggle("filters-block-opened");
 
-      if (filter_block.classList.contains("filters-block-opened")) {
-        filter_wrapper.style.maxHeight = filter_wrapper.scrollHeight + "px";
+      if (filters_list) {
+        if (filter_block.classList.contains("filters-block-opened")) {
+          if (filters_list.scrollHeight < 280) {
+            filter_wrapper.style.maxHeight =
+              filters_list.scrollHeight + 20 + "px";
+          } else {
+            filter_wrapper.style.maxHeight = filter_wrapper.scrollHeight + "px";
+          }
+        } else {
+          filter_wrapper.style.maxHeight = null;
+        }
       } else {
-        filter_wrapper.style.maxHeight = null;
+        if (filter_block.classList.contains("filters-block-opened")) {
+          filter_wrapper.style.maxHeight = filter_wrapper.scrollHeight + "px";
+        } else {
+          filter_wrapper.style.maxHeight = null;
+        }
       }
     })
   );

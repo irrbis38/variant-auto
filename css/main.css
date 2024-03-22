@@ -1034,40 +1034,19 @@ template {
   position: relative;
   padding-left: 10px;
   padding-right: 20px;
-  margin-right: -15px;
+  padding-right: 10px;
   color: #fff
-}
-.colored_bg::after {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: 0;
-  right: 15px;
-  bottom: -3px;
-  z-index: -1
-}
-@media (max-width:1300px) {
-  .colored_bg::after {
-    top: 3px;
-    bottom: 3px
-  }
 }
 @media (max-width:767px) {
   .colored_bg {
     padding: 0;
     margin-right: 0
   }
-  .colored_bg::after {
-    top: 2px;
-    left: -2px;
-    right: -2px;
-    bottom: 2px
-  }
 }
-.green_bg::after {
+.green_bg {
   background-color: #36b555
 }
-.blue_bg::after {
+.blue_bg {
   background-color: #1c69d4
 }
 .fly__btn {
@@ -2968,6 +2947,7 @@ ul.cmenu__list_body span {
   }
 }
 .main_intro__subtitle span {
+  padding: 2px 5px;
   color: #fff;
   background-color: #b01525
 }
@@ -3239,11 +3219,19 @@ ul.cmenu__list_body span {
   color: #1a1a1a
 }
 .q_selection__input {
+  display: inline-block;
+  width: 100%;
   height: 100%;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   padding-right: 34px
+}
+@media (max-width:1300px) {
+  .catalog-page .filters__wrapper_years .q_selection__select {
+    width: 48%
+  }
+  .catalog-page .q_selection__input {
+    padding-right: 0;
+    width: 100%
+  }
 }
 .q_selection__group {
   position: absolute;
@@ -6025,7 +6013,11 @@ ul.cmenu__list_body span {
 .filters__checkbox:checked + span {
   opacity: 1
 }
-.filters__checkbox:checked + span + span {
+.filters__checkbox:checked + span + svg path {
+  fill: #1a1a1a;
+  stroke: #1a1a1a
+}
+.filters__checkbox:checked + span + svg + span {
   color: #1a1a1a
 }
 .filters__listName {
@@ -6310,7 +6302,7 @@ input[type=number]:hover {
   -moz-appearance: textfield
 }
 .catalog-item-page.added-to-favorites .ci__to_favorites {
-  background-image: url(/images/heart-red.svg)
+  background-image: url(../images/heart-red.svg)
 }
 .ci {
   margin-bottom: 240px
@@ -7290,12 +7282,11 @@ a.characteristics__value {
 }
 .calculate__phone {
   margin-bottom: 41px;
-  font-weight: 400;
-  font-size: 24px
+  font-weight: 400
 }
 .calculate__submit {
   width: 100%;
-  height: 60px;
+  height: 80px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -9153,6 +9144,7 @@ a.characteristics__value {
   transition: background-color .2s ease-out
 }
 .how__name {
+  margin-bottom: 20px;
   font-weight: 400;
   font-size: 24px;
   color: #b01525;
