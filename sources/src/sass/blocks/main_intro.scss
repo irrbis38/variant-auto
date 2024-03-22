@@ -36,6 +36,7 @@
   @include fluidFontSize(16px, 40px, 320px, 1920px, 38px);
 
   span {
+    padding: 2px 5px;
     color: $color_white;
     background-color: $color_red_deep;
   }

@@ -409,7 +409,14 @@
   opacity: 1;
 }
 
-.filters__checkbox:checked + span + span {
+.filters__checkbox:checked + span + svg {
+  path {
+    fill: $color_dark;
+    stroke: $color_dark;
+  }
+}
+
+.filters__checkbox:checked + span + svg + span {
   color: $color_dark;
 }
 

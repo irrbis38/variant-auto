@@ -79,9 +79,25 @@
 }
 
 .q_selection__input {
+  display: inline-block;
+  width: 100%;
   height: 100%;
-  flex-grow: 1;
+  // flex-grow: 1;
   padding-right: 34px;
+}
+
+.catalog-page {
+  @include lg {
+    .filters__wrapper_years .q_selection__select {
+      width: 48%;
+      // flex: 1 1 auto;
+    }
+
+    .q_selection__input {
+      padding-right: 0;
+      width: 100%;
+    }
+  }
 }
 
 .q_selection__group {
