@@ -1033,20 +1033,40 @@ template {
 .colored_bg {
   position: relative;
   padding-left: 10px;
-  padding-right: 20px;
   padding-right: 10px;
   color: #fff
+}
+.colored_bg::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  z-index: -1
+}
+@media (max-width:1300px) {
+  .colored_bg::after {
+    top: 3px;
+    bottom: 3px
+  }
 }
 @media (max-width:767px) {
   .colored_bg {
     padding: 0;
     margin-right: 0
   }
+  .colored_bg::after {
+    top: 4px;
+    left: -2px;
+    right: -2px;
+    bottom: 4px
+  }
 }
-.green_bg {
+.green_bg::after {
   background-color: #36b555
 }
-.blue_bg {
+.blue_bg::after {
   background-color: #1c69d4
 }
 .fly__btn {
@@ -8867,12 +8887,17 @@ a.characteristics__value {
   color: #b01525;
   transition: color .2s ease-out
 }
+@media (max-width:767px) {
+  .comfort__heading {
+    margin-bottom: 20px
+  }
+}
 .comfort__text {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   font-weight: 400;
-  font-size: 24px
+  font-size: 18px
 }
 .commission-page .comfort__item:nth-child(1) .comfort__icon,
 .trade-in-page .comfort__item:nth-child(1) .comfort__icon {
