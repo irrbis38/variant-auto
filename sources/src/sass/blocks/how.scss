@@ -49,6 +49,11 @@
     position: relative;
     margin-bottom: 126px;
 
+    .how__decr {
+      border: 2px solid $color_red_deep;
+      border-bottom: none;
+    }
+
     .how__icon {
       background-image: url("../images/icon_serv_letter.svg");
     }

@@ -73,7 +73,8 @@
 .how_it_works__item {
   &:first-child {
     .how_it_works__decr {
-      border-color: $color_green;
+      border: 2px solid $color_green;
+      border-bottom: none;
     }
 
     .how_it_works__icon {
