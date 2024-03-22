@@ -7781,7 +7781,8 @@ a.characteristics__value {
   background-image: url(../images/icon_serv_check.svg)
 }
 .how_it_works__item:first-child .how_it_works__decr {
-  border-color: #36b555
+  border: 2px solid #36b555;
+  border-bottom: none
 }
 .how_it_works__item:first-child .how_it_works__icon {
   background-color: #36b555
@@ -9114,6 +9115,10 @@ a.characteristics__value {
 .how__item:nth-child(1) {
   position: relative;
   margin-bottom: 126px
+}
+.how__item:nth-child(1) .how__decr {
+  border: 2px solid #b01525;
+  border-bottom: none
 }
 .how__item:nth-child(1) .how__icon {
   background-image: url(../images/icon_serv_letter.svg)
