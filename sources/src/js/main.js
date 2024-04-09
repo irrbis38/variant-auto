@@ -688,6 +688,7 @@ var doFiltersMenuLogic = () => {
       const filter_block = btn.closest(".filters__block");
       const filter_wrapper = filter_block.querySelector(".filters__wrapper");
       const filters_list = filter_block.querySelector(".filters__list");
+      const filters_search = filter_block.querySelector(".filters__search");
 
       // toggle filters_list
       filter_block.classList.toggle("filters-block-opened");
@@ -695,8 +696,11 @@ var doFiltersMenuLogic = () => {
       if (filters_list) {
         if (filter_block.classList.contains("filters-block-opened")) {
           if (filters_list.scrollHeight < 280) {
+            var addHeight = filters_search
+              ? filters_search.scrollHeight + 24
+              : 0;
             filter_wrapper.style.maxHeight =
-              filters_list.scrollHeight + 20 + "px";
+              filters_list.scrollHeight + addHeight + 20 + "px";
           } else {
             filter_wrapper.style.maxHeight = filter_wrapper.scrollHeight + "px";
           }
