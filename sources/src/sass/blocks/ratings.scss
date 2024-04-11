@@ -58,11 +58,23 @@
   justify-content: space-between;
   align-items: center;
   padding: 45px 71px 45px;
-  filter: grayscale(100%);
-  transition: filter 0.2s ease-out;
+  // filter: grayscale(100%);
+  // transition: filter 0.2s ease-out;
 
   &:hover {
-    filter: grayscale(0);
+    // filter: grayscale(0);
+
+    .ratings__icon {
+      img {
+        &:nth-child(1) {
+          opacity: 1;
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+      }
+    }
 
     .ratings__value {
       color: $color_green;
@@ -109,11 +121,21 @@
 
 .ratings__icon {
   height: 40px;
+  display: grid;
 
   img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-start: 2;
     display: block;
     height: 100%;
     width: auto;
+    transition: opacity 0.2s ease-out;
+
+    &:nth-child(1) {
+      opacity: 0;
+    }
   }
 
   @include lg {
@@ -131,7 +153,7 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   // color: $color_green;
-  color: $color_black;
+  color: $color_grey_7c;
   transition: color 0.2s ease-out;
 
   @include lg {

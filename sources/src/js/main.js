@@ -1063,7 +1063,7 @@ var initMiniature = () => {
 
   if (!miniature) return;
   window.addEventListener("scroll", () => {
-    if (catalog_item_info.getBoundingClientRect().top <= 0) {
+    if (catalog_item_info.getBoundingClientRect().top <= 60) {
       miniature.classList.add("show");
     } else {
       miniature.classList.remove("show");

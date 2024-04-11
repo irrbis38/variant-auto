@@ -239,9 +239,9 @@
 .ci__slider_preview {
   max-width: 952px;
   margin-bottom: 79px;
-  overflow-x: auto;
+  // overflow-x: auto;
 
-  @include hidescrollbar();
+  // @include hidescrollbar();
 
   @include xs {
     margin-bottom: 24px;
@@ -250,6 +250,7 @@
 
 .ci__slider_preview_list {
   display: flex;
+  flex-wrap: wrap;
   background-color: $color_white;
 
   @include xs {
@@ -258,8 +259,10 @@
 }
 
 .ci__slider_preview_slide {
-  flex: 0 0 120px;
-  width: 120px;
+  // flex: 0 0 120px;
+  // width: 120px;
+  flex: 0 0 12.5%;
+  width: 12.5%;
   @include elementSaveRatio(75%, cover);
 
   opacity: 0.5;
