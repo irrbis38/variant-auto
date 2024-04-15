@@ -65,4 +65,27 @@
       }
     }
   }
+
+  ul li {
+    position: relative;
+    padding-left: 25px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    break-inside: avoid;
+
+    &:not(:last-child) {
+      padding-bottom: 21px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      background-color: $color_red_deep;
+    }
+  }
 }

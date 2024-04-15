@@ -69,29 +69,29 @@
     padding-left: 0;
   }
 
-  &:nth-child(1) {
-    .comfort__icon {
-      background-image: url("../images/icon_serv_rounded_arrow.svg");
-    }
-  }
+  // &:nth-child(1) {
+  //   .comfort__icon {
+  //     background-image: url("../images/icon_serv_rounded_arrow.svg");
+  //   }
+  // }
 
-  &:nth-child(2) {
-    .comfort__icon {
-      background-image: url("../images/icon_serv_dollar.svg");
-    }
-  }
+  // &:nth-child(2) {
+  //   .comfort__icon {
+  //     background-image: url("../images/icon_serv_dollar.svg");
+  //   }
+  // }
 
-  &:nth-child(3) {
-    .comfort__icon {
-      background-image: url("../images/icon_serv_double_arrow.svg");
-    }
-  }
+  // &:nth-child(3) {
+  //   .comfort__icon {
+  //     background-image: url("../images/icon_serv_double_arrow.svg");
+  //   }
+  // }
 
-  &:nth-child(4) {
-    .comfort__icon {
-      background-image: url("../images/icon_serv_person.svg");
-    }
-  }
+  // &:nth-child(4) {
+  //   .comfort__icon {
+  //     background-image: url("../images/icon_serv_person.svg");
+  //   }
+  // }
 
   @include lg {
     &:nth-child(2n + 1) {
@@ -141,8 +141,18 @@
   flex: 0 0 44px;
   width: 44px;
   height: 44px;
-  background: $color_red_deep center / 40px 40px no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background: $color_red_deep center / 40px 40px no-repeat;
+  background-color: $color_red_deep;
   transition: background-color 0.2s ease-out;
+
+  img {
+    display: block;
+    width: 40px;
+    height: auto;
+  }
 
   @include xs {
     &:not(:last-child) {
@@ -170,31 +180,31 @@
 
 // ==== COMMISSION PAGE and TRADE IN PAGE ====
 
-.commission-page,
-.trade-in-page {
-  .comfort__item {
-    &:nth-child(1) {
-      .comfort__icon {
-        background-image: url("../images/icon_serv_double_arrow.svg");
-      }
-    }
+// .commission-page,
+// .trade-in-page {
+//   .comfort__item {
+//     &:nth-child(1) {
+//       .comfort__icon {
+//         background-image: url("../images/icon_serv_double_arrow.svg");
+//       }
+//     }
 
-    &:nth-child(2) {
-      .comfort__icon {
-        background-image: url("../images/icon_serv_star.svg");
-      }
-    }
+//     &:nth-child(2) {
+//       .comfort__icon {
+//         background-image: url("../images/icon_serv_star.svg");
+//       }
+//     }
 
-    &:nth-child(3) {
-      .comfort__icon {
-        background-image: url("../images/icon_serv_crossed_circle.svg");
-      }
-    }
+//     &:nth-child(3) {
+//       .comfort__icon {
+//         background-image: url("../images/icon_serv_crossed_circle.svg");
+//       }
+//     }
 
-    &:nth-child(4) {
-      .comfort__icon {
-        background-image: url("../images/icon_serv_check.svg");
-      }
-    }
-  }
-}
+//     &:nth-child(4) {
+//       .comfort__icon {
+//         background-image: url("../images/icon_serv_check.svg");
+//       }
+//     }
+//   }
+// }

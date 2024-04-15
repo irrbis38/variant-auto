@@ -51,23 +51,23 @@
     }
   }
 
-  &:nth-child(1) {
-    .how_it_works__icon {
-      background-image: url("../images/icon_serv_letter.svg");
-    }
-  }
+  // &:nth-child(1) {
+  //   .how_it_works__icon {
+  //     background-image: url("../images/icon_serv_letter.svg");
+  //   }
+  // }
 
-  &:nth-child(2) {
-    .how_it_works__icon {
-      background-image: url("../images/icon_serv_percentage.svg");
-    }
-  }
+  // &:nth-child(2) {
+  //   .how_it_works__icon {
+  //     background-image: url("../images/icon_serv_percentage.svg");
+  //   }
+  // }
 
-  &:nth-child(3) {
-    .how_it_works__icon {
-      background-image: url("../images/icon_serv_check.svg");
-    }
-  }
+  // &:nth-child(3) {
+  //   .how_it_works__icon {
+  //     background-image: url("../images/icon_serv_check.svg");
+  //   }
+  // }
 }
 
 .how_it_works__item {
@@ -125,9 +125,19 @@
 .how_it_works__icon {
   width: 44px;
   height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 34px;
-  background: $color_red_deep center / 40px 40px no-repeat;
+  // background: $color_red_deep center / 40px 40px no-repeat;
+  background-color: $color_red_deep;
   transition: background-color 0.2s ease-out;
+
+  img {
+    display: block;
+    width: 40px;
+    height: auto;
+  }
 }
 
 .how_it_works__name {
