@@ -7505,6 +7505,28 @@ a.characteristics__value {
     margin-bottom: 21px
   }
 }
+.advantages__descr ul li {
+  position: relative;
+  padding-left: 25px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  break-inside: avoid
+}
+.advantages__descr ul li:not(:last-child) {
+  padding-bottom: 21px
+}
+.advantages__descr ul li:before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #b01525
+}
 .credit {
   margin-bottom: 240px
 }
@@ -7767,15 +7789,6 @@ a.characteristics__value {
     margin-bottom: 35px
   }
 }
-.how_it_works__item:nth-child(1) .how_it_works__icon {
-  background-image: url(../images/icon_serv_letter.svg)
-}
-.how_it_works__item:nth-child(2) .how_it_works__icon {
-  background-image: url(../images/icon_serv_percentage.svg)
-}
-.how_it_works__item:nth-child(3) .how_it_works__icon {
-  background-image: url(../images/icon_serv_check.svg)
-}
 .how_it_works__item:first-child .how_it_works__decr {
   border: 2px solid #36b555;
   border-bottom: none
@@ -7813,9 +7826,23 @@ a.characteristics__value {
 .how_it_works__icon {
   width: 44px;
   height: 44px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 34px;
-  background: #b01525 center/40px 40px no-repeat;
+  background-color: #b01525;
   transition: background-color .2s ease-out
+}
+.how_it_works__icon img {
+  display: block;
+  width: 40px;
+  height: auto
 }
 .how_it_works__name {
   margin-bottom: 20px;
@@ -8812,18 +8839,6 @@ a.characteristics__value {
 .comfort__item:first-child {
   padding-left: 0
 }
-.comfort__item:nth-child(1) .comfort__icon {
-  background-image: url(../images/icon_serv_rounded_arrow.svg)
-}
-.comfort__item:nth-child(2) .comfort__icon {
-  background-image: url(../images/icon_serv_dollar.svg)
-}
-.comfort__item:nth-child(3) .comfort__icon {
-  background-image: url(../images/icon_serv_double_arrow.svg)
-}
-.comfort__item:nth-child(4) .comfort__icon {
-  background-image: url(../images/icon_serv_person.svg)
-}
 @media (max-width:1300px) {
   .comfort__item {
     border-bottom: 1px solid #f2f2f2
@@ -8870,8 +8885,22 @@ a.characteristics__value {
   flex: 0 0 44px;
   width: 44px;
   height: 44px;
-  background: #b01525 center/40px 40px no-repeat;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #b01525;
   transition: background-color .2s ease-out
+}
+.comfort__icon img {
+  display: block;
+  width: 40px;
+  height: auto
 }
 @media (max-width:767px) {
   .comfort__icon:not(:last-child) {
@@ -8895,22 +8924,6 @@ a.characteristics__value {
   flex: 1 1 auto;
   font-weight: 400;
   font-size: 18px
-}
-.commission-page .comfort__item:nth-child(1) .comfort__icon,
-.trade-in-page .comfort__item:nth-child(1) .comfort__icon {
-  background-image: url(../images/icon_serv_double_arrow.svg)
-}
-.commission-page .comfort__item:nth-child(2) .comfort__icon,
-.trade-in-page .comfort__item:nth-child(2) .comfort__icon {
-  background-image: url(../images/icon_serv_star.svg)
-}
-.commission-page .comfort__item:nth-child(3) .comfort__icon,
-.trade-in-page .comfort__item:nth-child(3) .comfort__icon {
-  background-image: url(../images/icon_serv_crossed_circle.svg)
-}
-.commission-page .comfort__item:nth-child(4) .comfort__icon,
-.trade-in-page .comfort__item:nth-child(4) .comfort__icon {
-  background-image: url(../images/icon_serv_check.svg)
 }
 .condition {
   margin-bottom: 250px
@@ -9116,9 +9129,6 @@ a.characteristics__value {
   border: 2px solid #b01525;
   border-bottom: none
 }
-.how__item:nth-child(1) .how__icon {
-  background-image: url(../images/icon_serv_letter.svg)
-}
 @media (max-width:1300px) {
   .how__item:nth-child(1) {
     margin-bottom: 80px
@@ -9128,15 +9138,6 @@ a.characteristics__value {
   .how__item:nth-child(1) {
     margin-bottom: 35px
   }
-}
-.how__item:nth-child(2) .how__icon {
-  background-image: url(../images/icon_serv_eye.svg)
-}
-.how__item:nth-child(3) .how__icon {
-  background-image: url(../images/icon_serv_check.svg)
-}
-.how__item:nth-child(4) .how__icon {
-  background-image: url(../images/icon_serv_dollar.svg)
 }
 .how__item:nth-child(n+2)::after {
   content: "";
@@ -9165,9 +9166,23 @@ a.characteristics__value {
 .how__icon {
   width: 44px;
   height: 44px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 34px;
-  background: #b01525 center/40px 40px no-repeat;
+  background-color: #b01525;
   transition: background-color .2s ease-out
+}
+.how__icon img {
+  display: block;
+  width: 40px;
+  height: 40px
 }
 .how__name {
   margin-bottom: 20px;
@@ -9212,15 +9227,6 @@ a.characteristics__value {
     height: 80px;
     padding: 0 20px
   }
-}
-.trade-in-page .how__item:nth-child(2) .how__icon {
-  background-image: url(../images/icon_serv_search.svg)
-}
-.trade-in-page .how__item:nth-child(3) .how__icon {
-  background-image: url(../images/icon_serv_percentage.svg)
-}
-.trade-in-page .how__item:nth-child(4) .how__icon {
-  background-image: url(../images/icon_serv_check.svg)
 }
 .not_found {
   margin-top: 125px;
