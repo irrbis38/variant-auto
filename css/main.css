@@ -3786,7 +3786,7 @@ ul.cmenu__list_body span {
     color: #b6b6b6
   }
 }
-.card.added-to-favorites .card__favorites {
+.card.added-to-favorites .card__favorites::before {
   background: url(../images/heart-red.svg) center/contain no-repeat
 }
 .card__full,
@@ -3815,8 +3815,36 @@ ul.cmenu__list_body span {
   z-index: 2;
   width: 24px;
   height: 24px;
+  cursor: pointer
+}
+.card__favorites::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #f2f2f2;
+  transition: border-color .2s ease-out,-webkit-transform .2s ease-out;
+  transition: transform .2s ease-out,border-color .2s ease-out;
+  transition: transform .2s ease-out,border-color .2s ease-out,-webkit-transform .2s ease-out
+}
+.card__favorites::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  width: 24px;
+  height: 24px;
   background: url(../images/heart.svg) center/contain no-repeat;
-  cursor: pointer;
   transition: opacity .2s ease-out
 }
 @media (max-width:767px) {
@@ -3826,9 +3854,13 @@ ul.cmenu__list_body span {
   }
 }
 @media (hover:hover) {
-  .card__favorites:hover {
-    opacity: .5
+  .card__favorites:hover::after {
+    border-color: #454545
   }
+}
+.card__favorites:active::after {
+  -webkit-transform: translate(-50%,-50%) scale(.88);
+  transform: translate(-50%,-50%) scale(.88)
 }
 @media (max-width:767px) {
   .card__full {
