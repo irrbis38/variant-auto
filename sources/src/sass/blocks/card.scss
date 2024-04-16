@@ -53,7 +53,9 @@
 
   &.added-to-favorites {
     .card__favorites {
-      background: url("../images/heart-red.svg") center / contain no-repeat;
+      &::before {
+        background: url("../images/heart-red.svg") center / contain no-repeat;
+      }
     }
   }
 }
@@ -78,9 +80,36 @@
   z-index: 2;
   width: 24px;
   height: 24px;
-  background: url("../images/heart.svg") center / contain no-repeat;
+
   cursor: pointer;
-  transition: opacity 0.2s ease-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    background-color: $color_white;
+    border-radius: 50%;
+    border: 1px solid $color_grey_f2;
+    transition: transform 0.2s ease-out, border-color 0.2s ease-out;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    background: url("../images/heart.svg") center / contain no-repeat;
+    transition: opacity 0.2s ease-out;
+  }
 
   @include xs {
     top: 18px;
@@ -89,7 +118,15 @@
 
   @media (hover: hover) {
     &:hover {
-      opacity: 0.5;
+      &::after {
+        border-color: $color_grey_45;
+      }
+    }
+  }
+
+  &:active {
+    &::after {
+      transform: translate(-50%, -50%) scale(0.88);
     }
   }
 }
