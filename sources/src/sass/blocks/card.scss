@@ -95,7 +95,8 @@
     background-color: $color_white;
     border-radius: 50%;
     border: 1px solid $color_grey_f2;
-    transition: transform 0.2s ease-out, border-color 0.2s ease-out;
+    transition: transform 0.2s ease-out, border-color 0.2s ease-out,
+      box-shadow 0.2s ease-out;
   }
 
   &::before {
@@ -119,7 +120,9 @@
   @media (hover: hover) {
     &:hover {
       &::after {
-        border-color: $color_grey_45;
+        transform: translate(-50%, -50%) scale(1.1);
+        border-color: $color_grey_7c;
+        box-shadow: 0px 0px 8px 2px $color_grey_7c;
       }
     }
   }
