@@ -15,21 +15,27 @@
 }
 
 .available__list {
-  column-count: auto;
-  column-width: 170px;
-  column-gap: 83px;
+  // column-count: auto;
+  // column-width: 170px;
+  // column-gap: 83px;
 
-  @include xs {
-    column-count: 2;
-    column-width: auto;
-    column-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 23px 83px;
+
+  @include xxs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 23px 30px;
+    // column-count: 2;
+    // column-width: auto;
+    // column-gap: 30px;
   }
 }
 
-.available__item {
-  padding-bottom: 23px;
-  break-inside: avoid;
-}
+// .available__item {
+//   padding-bottom: 23px;
+//   // break-inside: avoid;
+// }
 
 .available__link {
   font-weight: 300;

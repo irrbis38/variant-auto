@@ -60,18 +60,20 @@
 
 .main_fluid__title {
   font-weight: 500;
-  font-size: 144px;
+  // font-size: 144px;
+  font-size: 146px;
   line-height: 1;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 0.04em;
+  // letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   color: $color_dark_1c;
 
-  @include fluidFontSize(68px, 144px, 992px, 1920px, 80px);
+  @include fluidFontSize(62px, 146px, 768px, 1920px, 80px);
 
-  @include sm {
-    font-size: 68px;
-  }
+  // @include sm {
+  //   font-size: 68px;
+  // }
 
   @include xs {
     max-width: 320px;

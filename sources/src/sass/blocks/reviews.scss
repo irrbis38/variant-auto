@@ -60,6 +60,7 @@
   &:hover {
     .review__descr {
       background-color: $color_dark;
+      border-color: $color_dark;
     }
 
     .reviews__car {
@@ -91,7 +92,7 @@
   padding: 28px 24px 38px 24px;
   border: 1px solid $color_grey_f2;
   border-top: none;
-  transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
 }
 
 .reviews__car {

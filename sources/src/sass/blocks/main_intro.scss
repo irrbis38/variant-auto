@@ -24,16 +24,18 @@
 }
 
 .main_intro__subtitle {
+  transform: translateX(-10px);
   margin-bottom: 54px;
   font-weight: 400;
   font-size: 40px;
   line-height: 1;
-  letter-spacing: 0.03em;
+  // letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   color: $color_dark;
   text-transform: uppercase;
   text-align: center;
 
-  @include fluidFontSize(16px, 40px, 320px, 1920px, 38px);
+  @include fluidFontSize(17px, 40px, 768px, 1920px, 38px);
 
   span {
     padding: 2px 5px;
@@ -41,10 +43,14 @@
     background-color: $color_red_deep;
   }
 
-  @include sm {
-    font-size: 20px;
-    line-height: 1.2;
+  @include lg {
+    transform: translateX(-5px);
   }
+
+  // @include sm {
+  //   font-size: 20px;
+  //   line-height: 1.2;
+  // }
 
   @include xs {
     max-width: 310px;
@@ -58,6 +64,18 @@
       color: $color_dark;
       background-color: transparent;
     }
+  }
+
+  @include r(360px) {
+    font-size: 14px;
+  }
+}
+
+.company-page .main_intro__subtitle {
+  @include fluidFontSize(22px, 53px, 768px, 1920px, 38px);
+
+  @include xs {
+    font-size: 16px;
   }
 
   @include r(360px) {
