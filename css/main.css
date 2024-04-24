@@ -887,28 +887,23 @@ template {
 }
 .main_fluid__title {
   font-weight: 500;
-  font-size: 144px;
+  font-size: 146px;
   line-height: 1;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: .04em;
+  letter-spacing: .02em;
   color: #1c1c20;
-  font-size: 68px
+  font-size: 62px
 }
-@media (min-width:992px) {
+@media (min-width:768px) {
   .main_fluid__title {
     font-size: 80px;
-    font-size: calc(.0818965517 * 100vw + -13.2413793103px)
+    font-size: calc(.0729166667 * 100vw + 6px)
   }
 }
 @media (min-width:1920px) {
   .main_fluid__title {
-    font-size: 144px
-  }
-}
-@media (max-width:991px) {
-  .main_fluid__title {
-    font-size: 68px
+    font-size: 146px
   }
 }
 @media (max-width:767px) {
@@ -2945,20 +2940,22 @@ ul.cmenu__list_body span {
   }
 }
 .main_intro__subtitle {
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
   margin-bottom: 54px;
   font-weight: 400;
   font-size: 40px;
   line-height: 1;
-  letter-spacing: .03em;
+  letter-spacing: .02em;
   color: #1a1a1a;
   text-transform: uppercase;
   text-align: center;
-  font-size: 16px
+  font-size: 17px
 }
-@media (min-width:320px) {
+@media (min-width:768px) {
   .main_intro__subtitle {
     font-size: 38px;
-    font-size: calc(.015 * 100vw + 11.2px)
+    font-size: calc(.0199652778 * 100vw + 1.6666666667px)
   }
 }
 @media (min-width:1920px) {
@@ -2971,10 +2968,10 @@ ul.cmenu__list_body span {
   color: #fff;
   background-color: #b01525
 }
-@media (max-width:991px) {
+@media (max-width:1300px) {
   .main_intro__subtitle {
-    font-size: 20px;
-    line-height: 1.2
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px)
   }
 }
 @media (max-width:767px) {
@@ -2993,6 +2990,30 @@ ul.cmenu__list_body span {
 }
 @media only screen and (max-width:360px) {
   .main_intro__subtitle {
+    font-size: 14px
+  }
+}
+.company-page .main_intro__subtitle {
+  font-size: 22px
+}
+@media (min-width:768px) {
+  .company-page .main_intro__subtitle {
+    font-size: 38px;
+    font-size: calc(.0269097222 * 100vw + 1.3333333333px)
+  }
+}
+@media (min-width:1920px) {
+  .company-page .main_intro__subtitle {
+    font-size: 53px
+  }
+}
+@media (max-width:767px) {
+  .company-page .main_intro__subtitle {
+    font-size: 16px
+  }
+}
+@media only screen and (max-width:360px) {
+  .company-page .main_intro__subtitle {
     font-size: 14px
   }
 }
@@ -3367,34 +3388,15 @@ ul.cmenu__list_body span {
   margin-bottom: 65px
 }
 .available__list {
-  -webkit-column-count: auto;
-  -moz-column-count: auto;
-  column-count: auto;
-  -webkit-column-width: 170px;
-  -moz-column-width: 170px;
-  column-width: 170px;
-  -webkit-column-gap: 83px;
-  -moz-column-gap: 83px;
-  column-gap: 83px
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(170px,1fr));
+  gap: 23px 83px
 }
-@media (max-width:767px) {
+@media (max-width:575px) {
   .available__list {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-    -webkit-column-width: auto;
-    -moz-column-width: auto;
-    column-width: auto;
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px
+    grid-template-columns: repeat(2,1fr);
+    gap: 23px 30px
   }
-}
-.available__item {
-  padding-bottom: 23px;
-  -webkit-column-break-inside: avoid;
-  -moz-column-break-inside: avoid;
-  break-inside: avoid
 }
 .available__link {
   font-weight: 300;
@@ -3502,6 +3504,7 @@ ul.cmenu__list_body span {
   color: #1a1a1a
 }
 .l_buy .links__title span {
+  padding: 0 5px;
   background-color: #fff
 }
 .l_buy .links__subtitle {
@@ -3830,9 +3833,9 @@ ul.cmenu__list_body span {
   background-color: #fff;
   border-radius: 50%;
   border: 1px solid #f2f2f2;
-  transition: border-color .2s ease-out,-webkit-transform .2s ease-out;
-  transition: transform .2s ease-out,border-color .2s ease-out;
-  transition: transform .2s ease-out,border-color .2s ease-out,-webkit-transform .2s ease-out
+  transition: border-color .2s ease-out,box-shadow .2s ease-out,-webkit-transform .2s ease-out;
+  transition: transform .2s ease-out,border-color .2s ease-out,box-shadow .2s ease-out;
+  transition: transform .2s ease-out,border-color .2s ease-out,box-shadow .2s ease-out,-webkit-transform .2s ease-out
 }
 .card__favorites::before {
   content: "";
@@ -3855,7 +3858,10 @@ ul.cmenu__list_body span {
 }
 @media (hover:hover) {
   .card__favorites:hover::after {
-    border-color: #454545
+    -webkit-transform: translate(-50%,-50%) scale(1.1);
+    transform: translate(-50%,-50%) scale(1.1);
+    border-color: #7c7c7c;
+    box-shadow: 0 0 8px 2px #7c7c7c
   }
 }
 .card__favorites:active::after {
@@ -4563,7 +4569,7 @@ ul.cmenu__list_body span {
   font-size: 48px;
   letter-spacing: .02em;
   text-transform: uppercase;
-  color: #7c7c7c;
+  color: #1a1a1a;
   transition: color .2s ease-out
 }
 @media (max-width:1300px) {
@@ -4634,7 +4640,8 @@ ul.cmenu__list_body span {
   flex-direction: column
 }
 .reviews__item:hover .review__descr {
-  background-color: #1a1a1a
+  background-color: #1a1a1a;
+  border-color: #1a1a1a
 }
 .reviews__item:hover .reviews__car span {
   color: #b6b6b6;
@@ -4678,7 +4685,7 @@ ul.cmenu__list_body span {
   padding: 28px 24px 38px 24px;
   border: 1px solid #f2f2f2;
   border-top: none;
-  transition: background-color .2s ease-out
+  transition: background-color .2s ease-out,border-color .2s ease-out
 }
 .reviews__car {
   margin-bottom: 23px
@@ -8249,6 +8256,13 @@ a.characteristics__value {
   -ms-flex: 1 1 294px;
   flex: 1 1 294px
 }
+.car-buyout-page .request__transmission,
+.commission-page .request__transmission,
+.company-page .request__transmission,
+.reviews-page .request__transmission,
+.trade-in-page .request__transmission {
+  min-width: 172px
+}
 .car-buyout-page .request__mileage,
 .car-buyout-page .request__transmission,
 .car-buyout-page .request__year,
@@ -9525,6 +9539,7 @@ a.characteristics__value {
 }
 .team__position {
   display: inline-block;
+  padding: 0 5px;
   font-weight: 300;
   font-size: 13px;
   line-height: 169%;

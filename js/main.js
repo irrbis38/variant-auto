@@ -1,6 +1,8 @@
 // ========== HEADER LOGIC
 
 var toggleCarBodyType = (carBodyTypeList, btn) => {
+  if (!btn) return;
+
   btn.addEventListener("click", () => {
     var isFull = carBodyTypeList.classList.contains("full");
 
