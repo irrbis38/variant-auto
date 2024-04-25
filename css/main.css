@@ -9701,6 +9701,7 @@ a.characteristics__value {
   margin-bottom: 13px
 }
 .models__tag {
+  padding: 0 4px;
   font-weight: 300;
   font-size: 13px;
   line-height: 169%;
