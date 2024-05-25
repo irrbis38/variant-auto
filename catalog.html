@@ -44,6 +44,7 @@
                     <li><a href="#"><span>Автомобили для семьи</span><span>240</span></a></li>
                     <li><a href="#"><span>Электромобили</span><span>84</span></a></li>
                     <li><a href="#"><span>Экономные и надежные</span><span>14</span></a></li>
+                    <li><a href="#"><span>Посмотреть весь каталог</span><span>459</span></a></li>
                   </ul>
                   <div class="cmenu__group cmenu__group--body">
                     <p class="cmenu__name">По типу кузова <span></span></p>
@@ -142,7 +143,19 @@
       <div class="container">
         <div class="breadcrumbs"><a href="#">Главная</a><a href="#">Продажа автомобилей</a><a href="#">С пробегом</a><span>Bentley Continental GT</span></div>
         <h1 class="catalog__title inner__h1">Авто с пробегом</h1>
-        <div class="catalog__container"> 
+        <div class="catalog__container">
+          <div class="catalog__additional">
+            <div class="catalog__banner">
+              <picture>
+                <source media="(min-width: 576px)" srcset="./images/banner/catalog_banner.jpg, ./images/banner/catalog_banner@2x.jpg 2x" width="1074" height="254">
+                <source media="(max-width: 575px)" srcset="./images/banner/catalog_banner_mob.jpg, ./images/banner/catalog_banner_mob@2x.jpg 2x" width="375" height="183"><img src="./images/banner/catalog_banner@2x.webp" alt="" decoding="async" width="1074" height="254">
+              </picture>
+            </div>
+            <form class="catalog__search">
+              <input class="catalog__search_field" type="text" placeholder="Поиск">
+              <button class="catalog__search_submit" type="submit" aria-lable="Начать поиск"></button>
+            </form>
+          </div>
           <aside class="catalog__options options">
             <div class="options__nav">
               <button class="options__filtersToggleBtn" aria-label="Показать / скрыть фильтры" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -723,7 +736,7 @@
               </div>
             </form>
           </aside>
-          <div class="catalog__wrapper"> 
+          <div class="catalog__wrapper">
             <ul class="quick_filters">
               <li class="quick_filters__item">
                 <label>
