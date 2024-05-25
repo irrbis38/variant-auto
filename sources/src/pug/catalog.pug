@@ -15,7 +15,19 @@ block page
 
         h1.catalog__title.inner__h1 Авто с пробегом
 
-        .catalog__container 
+        .catalog__container
+
+            .catalog__additional
+
+                .catalog__banner
+                    picture
+                        source(media="(min-width: 576px)" srcset="./images/banner/catalog_banner.jpg, ./images/banner/catalog_banner@2x.jpg 2x" width="1074" height="254")
+                        source(media="(max-width: 575px)" srcset="./images/banner/catalog_banner_mob.jpg, ./images/banner/catalog_banner_mob@2x.jpg 2x"  width="375" height="183")
+                        img(src="./images/banner/catalog_banner@2x.webp", alt="" decoding="async" width="1074" height="254")
+
+                form.catalog__search
+                    input.catalog__search_field(type="text" placeholder="Поиск")
+                    button.catalog__search_submit(type="submit" aria-lable="Начать поиск")
 
             aside.catalog__options.options
 
@@ -346,7 +358,7 @@ block page
 
 
 
-            .catalog__wrapper 
+            .catalog__wrapper
 
                 include ./blocks/quick_filters
 
