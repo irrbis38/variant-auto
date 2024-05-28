@@ -5531,6 +5531,7 @@ ul.cmenu__list_body span {
 .catalog__container {
   display: grid;
   grid-template-columns: 342px 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-areas: "options additional" "options wrapper";
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
