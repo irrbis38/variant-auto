@@ -6,12 +6,14 @@ block head
 block page
 
     section.serv_intro
-        .serv_intro__banner
-            +picture('serv/autocredit_banner', 'jpg', 'x2')
         .container
             h1.serv_intro__title Авто мечты, ближе чем кажется
             p.serv_intro__subtitle Подберем для вас кредит с самыми выгодными условиями 
-
+        .serv_intro__banner
+            +picture('serv/autocredit_banner', 'jpg', 'x2')
+            +picture('serv/autocredit_banner', 'jpg', 'x2')
+            
+        .container
             button.serv_intro__btn.btn__high.btn__arrow_green(type="button") Рассчитать кредит
 
 

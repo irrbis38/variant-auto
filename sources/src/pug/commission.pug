@@ -6,12 +6,18 @@ block head
 block page
 
     section.serv_intro
-        .serv_intro__banner
-            +picture('serv/commission_banner', 'jpg', 'x2')
         .container
             h1.serv_intro__title Комиссионная продажа
-            p.serv_intro__subtitle Комиссионная продажа позволяет Вам легко и быстро продать Ваш подержанный автомобиль 
+            p.serv_intro__subtitle Комиссионная продажа позволяет Вам легко и быстро продать Ваш подержанный автомобиль
 
+        .serv_intro__banner
+            //- for desktop
+            +picture('serv/commission_banner', 'jpg', 'x2')
+            //- for mobile
+            +picture('serv/commission_banner', 'jpg', 'x2')
+
+
+        .container
             button.serv_intro__btn.btn__high.btn__arrow_red(type="button") Продать авто
 
 

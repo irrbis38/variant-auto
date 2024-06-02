@@ -27,7 +27,24 @@
   @include pictureSaveRatio(cover);
 
   @include xs {
-    display: none;
+    // display: none;
+    min-height: 314px;
+  }
+
+  picture {
+    &:nth-child(2) {
+      display: none;
+    }
+
+    @include xs {
+      &:nth-child(1) {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        display: block;
+      }
+    }
   }
 }
 
@@ -52,7 +69,8 @@
 
 .serv_intro__subtitle {
   display: none;
-  margin-bottom: 42px;
+  // margin-bottom: 42px;
+  margin-bottom: 21px;
   font-weight: 400;
   font-size: 16px;
   color: $color_dark;

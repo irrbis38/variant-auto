@@ -6,12 +6,17 @@ block head
 block page
 
     section.serv_intro
-        .serv_intro__banner
-            +picture('serv/trade_in_banner', 'jpg', 'x2')
         .container
             h1.serv_intro__title Trade in с вариант авто
             p.serv_intro__subtitle Trade-In позволяет Вам легко и быстро обменять Ваш подержанный автомобиль на новый с доплатой
 
+        .serv_intro__banner
+            //- for desktop
+            +picture('serv/trade_in_banner', 'jpg', 'x2')
+            //- for mobile
+            +picture('serv/trade_in_banner', 'jpg', 'x2')
+
+        .container
             button.serv_intro__btn.btn__high.btn__arrow_red(type="button") Обменять свой авто
 
 

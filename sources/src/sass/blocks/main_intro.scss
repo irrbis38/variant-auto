@@ -13,13 +13,14 @@
 
   @include xs {
     margin: 0 auto;
-    padding: 0 20px;
+    // padding: 0 20px;
   }
 }
 
 .main_intro__title {
   @include xs {
     margin-bottom: 15px;
+    padding: 0 20px;
   }
 }
 
@@ -55,6 +56,7 @@
   @include xs {
     max-width: 310px;
     margin-bottom: 40px;
+    padding: 0 20px;
     font-size: 16px;
     text-transform: initial;
     text-align: left;
@@ -103,9 +105,9 @@
     padding-top: 0;
   }
 
-  @include sm {
-    display: none;
-  }
+  // @include sm {
+  //   display: none;
+  // }
 
   // @include r(2000px) {
   //   &::after {
@@ -130,11 +132,13 @@
 
   @include sm {
     gap: 0 10px;
+
+    gap: 0;
   }
 
-  @include xs {
-    display: none;
-  }
+  // @include xs {
+  //   display: none;
+  // }
 }
 
 .main_intro__slide {
@@ -175,6 +179,7 @@
 
   @include sm {
     flex-basis: 40px;
+    flex-basis: 0;
   }
 }
 
