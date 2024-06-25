@@ -6,6 +6,25 @@
   }
 }
 
+.characteristics__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.characteristics__title {
+  margin: 0;
+}
+
+.characteristics__views {
+  display: none;
+
+  @include xs {
+    display: flex;
+  }
+}
+
 .characteristics__wrapper {
   position: relative;
   display: grid;
