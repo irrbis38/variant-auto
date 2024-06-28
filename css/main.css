@@ -4009,6 +4009,7 @@ ul.cmenu__list_body span {
   top: 0;
   left: 0;
   z-index: 1;
+  display: block;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -4068,6 +4069,7 @@ ul.cmenu__list_body span {
   }
 }
 .card_bought_out__item {
+  display: block;
   width: 100%;
   height: 100%;
   position: relative
@@ -4251,7 +4253,8 @@ ul.cmenu__list_body span {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 5px
+  gap: 5px;
+  margin-right: 23px
 }
 .card__cost {
   font-weight: 400;
@@ -7069,7 +7072,6 @@ input[type=number]:hover {
   -ms-flex-align: center;
   align-items: center;
   gap: 0 5px;
-  margin-left: 23px;
   font-weight: 400;
   font-size: 18px;
   color: #7c7c7c;
@@ -7086,42 +7088,12 @@ input[type=number]:hover {
   background-position: center;
   background-size: contain
 }
-@media (max-width:767px) {
-  .ci__views {
-    display: none
-  }
-}
 .characteristics {
   margin-bottom: 51px
 }
 @media (max-width:767px) {
   .characteristics {
     margin-bottom: 24px
-  }
-}
-.characteristics__top {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 25px
-}
-.characteristics__title {
-  margin: 0
-}
-.characteristics__views {
-  display: none
-}
-@media (max-width:767px) {
-  .characteristics__views {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex
   }
 }
 .characteristics__wrapper {
