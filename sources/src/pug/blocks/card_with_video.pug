@@ -20,7 +20,7 @@ article.card.swiper-slide.card-elem
 
                     if slide.isActive
 
-                        .card__full_item.active.swiper-slide
+                        a.card__full_item.active.swiper-slide(href="./catalog-item.html")
                             +pictureSize(src, 'jpg', 'x2', '342', '256')
 
                     else if slide.isVideo
@@ -31,7 +31,7 @@ article.card.swiper-slide.card-elem
 
                     else
 
-                        .card__full_item.swiper-slide
+                        a.card__full_item.swiper-slide(href="./catalog-item.html")
                             +pictureSize(src, 'jpg', 'x2', '342', '256')
 
         .card__full_paggination
