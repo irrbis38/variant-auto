@@ -1,0 +1,89 @@
+extends base/_layout
+block vars
+    - var pageName = 'new_blocks'
+block head
+    title Отдельные блоки
+block page
+
+    .buyout-auto.section-with-slider
+        .container
+            +buyout-auto('green_bg', 'Примеры', 'выкупленных авто')
+
+            .buyout-auto__description
+
+                p.buyout-auto__regular-text Каждый день «Вариант Авто» выкупает десятки автомобилей различных марок и предлагает своим клиентам самые выгодные условия выкупа. Автосалон берет на себя все обязательства по переоформлению ТС. Осуществляет выкуп любым удобным способом в течение 30 минут – налично или безналично.
+
+                p.buyout-auto__attention-text
+                    span Получите честную рыночную цену за автомобиль без торга и ожиданий. Сравните реальные суммы выкупа и убедитесь, что продать авто можно выгоднее без лишних хлопот.
+
+
+
+
+    section.buyout-auto-express
+        .container
+
+            h2.buyout-auto-express__title.block__title Срочный выкуп автомобиля по 2-м документам
+
+            .buyout-auto-express__variants
+
+                .buyout-auto-express__variants-item
+
+                    .buyout-auto-express__variants-item-icon
+                        img(src="./images/buyout-auto/icon-express.svg" alt="")
+
+                    .buyout-auto-express__variants-item-name Паспорт владельца
+
+                    .buyout-auto-express__variants-item-description Для оформления сделки потребуется основной документ, удостоверяющий личность владельца автомобиля
+
+                .buyout-auto-express__variants-item
+
+                    .buyout-auto-express__variants-item-icon
+                        img(src="./images/buyout-auto/icon-express.svg" alt="")
+
+                    .buyout-auto-express__variants-item-name ПТС или ЭПТС
+
+                    .buyout-auto-express__variants-item-description При наличии электронного паспорта транспортного средства нужна выписка или номер самого ЭПТС
+
+
+            .buyout-auto-express__docs
+
+                h3.buyout-auto-express__docs-name Дополнительные документы:
+
+                .buyout-auto-express__docs-list
+
+                    .buyout-auto-express__docs-list-item
+
+                        p.buyout-auto-express__docs-list-item-name Нотариальная доверенность.
+
+                        p.buyout-auto-express__docs-list-item-description В случае, если вы не собственник автомобиля.
+
+
+                    .buyout-auto-express__docs-list-item
+
+                        p.buyout-auto-express__docs-list-item-name Свидетельство о регистрации транспортного средства (СТС).
+
+                        p.buyout-auto-express__docs-list-item-description Если машина не зарегистрирована за продавцом. 
+
+
+
+
+            .buyout-auto-express__increase
+
+                .buyout-auto-express__increase-icon
+                    img(src="./images/buyout-auto/icon-info.svg", alt="")
+
+                .buyout-auto-express__increase-content
+
+                    .buyout-auto-express__increase-name Увеличить стоимость авто может:
+
+                    ul.buyout-auto-express__increase-list
+
+                        li.buyout-auto-express__increase-list-item Сервисная книга и/или заказ-наряды на обслуживание и ремонт.
+
+                        li.buyout-auto-express__increase-list-item Второй комплект сезонных колес или резины.
+
+                        li.buyout-auto-express__increase-list-item Все комплекты ключей от автомобиля.
+
+
+
+

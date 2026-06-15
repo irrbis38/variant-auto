@@ -1,0 +1,73 @@
+-
+    var slides = [
+        {num: 1, isActive: true},
+        {num: 2, isActive: false},
+        {num: 3, isActive: false},
+        {num: 4, isActive: false},
+        {num: 5, isActive: false},
+    ]
+
+article.card.swiper-slide.card-elem
+    button.card__favorites(type="button" aria-label="Добавить в избранное / Убрать из избранного")
+
+
+
+    .card__full.swiper
+        .card__full_wrapper.swiper-wrapper
+
+            each slide in slides
+
+                - var src = 'card/card_full_' + slide.num
+
+                    if slide.isActive
+
+                        a.card__full_item.active.swiper-slide(href="./catalog-item.html")
+                            +pictureSize(src, 'jpg', 'x2', '342', '256')
+
+                    else
+
+                        a.card__full_item.swiper-slide(href="./catalog-item.html")
+                            +pictureSize(src, 'jpg', 'x2', '342', '256')
+
+        .card__full_paggination
+
+    .card__previews.swiper
+        .card__prev_list.swiper-wrapper
+
+            each slide in slides
+
+                - var src = 'card/card_preview_' + slide.num
+
+                    if slide.isActive
+
+                        .card__prev_item.active.swiper-slide
+                            +pictureSize(src, 'jpg', 'x2', '85', '64')
+
+                    else
+
+                        .card__prev_item.swiper-slide
+                            +pictureSize(src, 'jpg', 'x2', '85', '64')
+
+    .card__descr
+
+        a.card__link(href="./catalog-item.html")
+
+        h3.card__name BMW X5 2022
+
+        ul.card__features
+            li.card__feature Бензин
+            li.card__feature 1,6
+            li.card__feature Автомат
+            li.card__feature 245,345 км
+            li.card__feature Передний
+
+        .card__buyback
+            span.card__buyback-name Сумма выкупа:
+            span.card__buyback-price 2 950 000₽
+
+        .card__average
+            span.card__average-name Сумма выкупа:
+            span.card__average-price 2 950 000₽
+
+
+

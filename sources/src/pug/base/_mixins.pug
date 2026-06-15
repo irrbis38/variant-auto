@@ -90,7 +90,7 @@ mixin pagination(amount, current, ellipsis, last, arrows)
 mixin offers(coloredClass, titleFirst, titleSecond)
 
     section.offers.section-with-slider
-        .container 
+        .container
             .offers__top
                 h2.offers__title.block__title #[span.colored_bg(class= coloredClass)= titleFirst] #[span= titleSecond]
 
@@ -111,13 +111,40 @@ mixin offers(coloredClass, titleFirst, titleSecond)
                     include ../blocks/card
                     include ../blocks/card
 
-            
+
             button.offers__show_more.btn__red(type="button") Показать еще
+
+
+mixin buyout-auto(coloredClass, titleFirst, titleSecond)
+
+    .buyout-auto__main
+        .buyout-auto__top
+            h2.buyout-auto__title.block__title #[span.colored_bg(class= coloredClass)= titleFirst] #[span= titleSecond]
+
+            .buyout-auto__nav.slider__nav
+                button.buyout-auto__prev.slider__prev_btn(aria-label="Показать предыдущий слайд")
+                    include ../blocks/icon_slider_prev
+                button.buyout-auto__next.slider__next_btn(aria-label="Показать следующий слайд")
+                    include ../blocks/icon_slider_next
+
+
+        .buyout-auto__slider.block-slider.swiper
+            .buyout-auto__wrapper.block-slider-wrapper.swiper-wrapper
+
+                include ../blocks/card-buyout-auto
+                include ../blocks/card-buyout-auto-with-video
+                include ../blocks/card-buyout-auto
+                include ../blocks/card-buyout-auto-with-video
+                include ../blocks/card-buyout-auto
+                include ../blocks/card-buyout-auto
+
+
+        button.buyout-auto__show_more.btn__red(type="button") Показать еще
 
 mixin boughout_cars(title)
 
     section.offers.section-with-slider
-        .container 
+        .container
             .offers__top
                 h2.offers__title.block__title= title
 
@@ -137,17 +164,17 @@ mixin boughout_cars(title)
                     include ../blocks/card_bought_out
                     include ../blocks/card_bought_out
 
-            
+
             button.offers__show_more.btn__red(type="button") Показать еще
-            
+
 
 mixin filtersItem(value)
-    li.filters__item 
+    li.filters__item
         label.filters__label
             input.filters__checkbox(type="checkbox")
             span
             span= value
-            
+
 
 mixin filtersColorItem(item)
     li.filters__item
@@ -157,7 +184,7 @@ mixin filtersColorItem(item)
                 span
                 span= item.value
 
-        else 
+        else
             label.filters__label.filters__label_color(class="filters__label_" + item.firstColor)
                 input.filters__checkbox(type="checkbox")
                 span
@@ -166,7 +193,7 @@ mixin filtersColorItem(item)
 
 
 //- mixin filtersCarBodyItem(item)
-//-     li.filters__item 
+//-     li.filters__item
 //-         label.filters__label
 //-             input.filters__checkbox(type="checkbox")
 //-             span
